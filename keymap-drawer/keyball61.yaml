@@ -18,7 +18,7 @@ layers:
   - L
   - U
   - F
-  - T
+  - '&kakkos'
   - {t: '!', h: '?'}
   - W
   - R
@@ -30,7 +30,7 @@ layers:
   - I
   - A
   - O
-  - {t: '-', h: _, s: _}
+  - '&hyphen_underscore_tilda_equal'
   - K
   - T
   - N
@@ -274,16 +274,16 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - '&mkp MB2'
+  - '&mkp MB5'
+  - '&mkp MB4'
+  - '&mkp MB3'
   - '&mkp MB1'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&mkp MB2'
   - PgUp
-  - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:mouse-right-click-outline$$
-  - $$mdi:mouse-scroll-wheel$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -307,7 +307,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - FUN
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   SCROLL:
@@ -425,10 +425,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -457,5 +457,5 @@ combos:
   k: Ctl+Sft+$$mdi:arrow-right-bold$$
   l: [NUM]
 - p: [52, 55]
-  k: {t: SNIPE, h: '$$mdi:gesture-tap-hold$$'}
+  k: '&mkp MB1'
   l: [QWRT]
