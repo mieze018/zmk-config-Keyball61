@@ -56,6 +56,7 @@
         enter {
             bindings = <&kp ENTER>;
             key-positions = <28 31>;
+            layers = <0>;
         };
 
         go_linehead {
@@ -73,6 +74,7 @@
         thumb_homes {
             bindings = <&sl 6>;
             key-positions = <52 55>;
+            layers = <0>;
         };
     };
 
