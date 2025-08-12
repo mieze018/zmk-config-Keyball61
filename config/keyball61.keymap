@@ -92,7 +92,7 @@
             #binding-cells = <0>;
             bindings = <&mt LC(S) LC(C)>, <&mt LC(X) LC(V)>;
         };
-        
+
         gui_undo_redo: gui_undo_redo {
             compatible = "zmk,behavior-tap-dance";
             label = "GUI_UNDO_REDO";
@@ -111,7 +111,7 @@
 &kp ESCAPE            &kp Q             &kp L   &kp U   &kp F   &kp T                                               &mt QUESTION EXCLAMATION  &kp W        &kp R            &kp Y      &mt PLUS EQUAL  &mt LG(H) PRINTSCREEN
 &copy_paste_save_cut  &kp E             &kp I   &kp A   &kp O   &mt UNDERSCORE MINUS                                &kp K                     &kp T        &kp N            &kp S      &kp H           &kp P
 &gui_undo_redo    &mt LEFT_SHIFT Z  &kp X   &kp C   &kp V   &kp SQT               &kp COLON        &kp PAGE_UP  &kp G                     &kp D        &kp M            &kp J      &kp B           &slash_pipe_backslash
-&tog 2                &mo 5                    &mt LCTRL ENTER  &lt 1 TAB    &lt 5 TAB                 &lt 1 SPACE  &lt 6 BACKSPACE  &bl BL_ON  &kp RCTRL       &kp RIGHT_ALT
+&tog 2                &mo 5                    &mt LCTRL ENTER  &lt 1 TAB    &lt 5 TAB                 &lt 1 SPACE  &lt 6 BACKSPACE  &bl BL_ON  &kp RCTRL       &kp RIGHT_ALT   &kp RIGHT_SHIFT
             >;
         };
 
