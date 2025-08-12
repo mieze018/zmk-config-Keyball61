@@ -437,12 +437,16 @@ layers:
 combos:
 - p: [28, 27]
   k: LANGUAGE 1
+  l: [QWRT]
 - p: [31, 32]
   k: LANGUAGE 2
+  l: [QWRT]
 - p: [40, 39]
   k: {t: ',', s: <}
+  l: [QWRT]
 - p: [45, 46]
   k: .
+  l: [QWRT]
 - p: [28, 31]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
 - p: [31, 32]
