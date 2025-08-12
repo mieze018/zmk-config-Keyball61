@@ -32,21 +32,25 @@
         eisu {
             bindings = <&kp LANGUAGE_1>;
             key-positions = <28 27>;
+            layers = <0>;
         };
 
         kana {
             bindings = <&kp LANGUAGE_2>;
             key-positions = <31 32>;
+            layers = <0>;
         };
 
         comma {
             bindings = <&kp COMMA>;
             key-positions = <40 39>;
+            layers = <0>;
         };
 
         period {
             bindings = <&kp PERIOD>;
             key-positions = <45 46>;
+            layers = <0>;
         };
 
         enter {
