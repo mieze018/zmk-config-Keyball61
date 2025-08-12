@@ -55,9 +55,9 @@ layers:
   - SCROLL
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:keyboard-tab$$', h: NUM}
-  - {t: '$$mdi:keyboard-tab$$', h: SCROLL}
+  - {t: '$$mdi:keyboard-tab$$', h: SNIPE}
   - {t: '$$mdi:keyboard-space$$', h: NUM}
-  - {t: '$$mdi:backspace$$', h: SNIPE}
+  - {t: '$$mdi:backspace$$', h: SCROLL}
   - '&bl BL_ON'
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
@@ -122,8 +122,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   SYM:
   - Alt+Ctl+$$mdi:backspace-reverse-outline$$
   - '!'
@@ -365,9 +365,9 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -427,9 +427,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -457,5 +457,7 @@ combos:
   k: Ctl+Sft+$$mdi:arrow-right-bold$$
   l: [NUM]
 - p: [52, 55]
-  k: '&mkp MB1'
+  k: Ctl+$$mdi:keyboard-tab$$
   l: [QWRT]
+- p: [25, 34]
+  k: $$mdi:keyboard-esc$$
