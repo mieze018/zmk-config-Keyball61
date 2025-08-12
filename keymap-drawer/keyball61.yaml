@@ -30,14 +30,14 @@ layers:
   - I
   - A
   - O
-  - {t: _, h: '-'}
+  - {t: '-', h: _, s: _}
   - K
   - T
   - N
   - S
   - H
   - P
-  - {t: Ctl+S, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: Ctl+Z, h: '$$mdi:apple-keyboard-command$$'}
   - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
   - X
   - C
@@ -436,10 +436,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
 - p: [28, 27]
-  k: LANGUAGE 1
+  k: LANGUAGE 2
   l: [QWRT]
 - p: [31, 32]
-  k: LANGUAGE 2
+  k: LANGUAGE 1
   l: [QWRT]
 - p: [40, 39]
   k: {t: ',', s: <}
