@@ -42,8 +42,8 @@ layers:
   - X
   - C
   - V
-  - {t: '''', s: '"'}
-  - ':'
+  - '&quotations'
+  - '&colon_semicolon'
   - PgUp
   - G
   - D
