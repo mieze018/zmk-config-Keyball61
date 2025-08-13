@@ -461,3 +461,7 @@ combos:
   l: [QWRT]
 - p: [25, 34]
   k: $$mdi:keyboard-esc$$
+- p: [31, 32, 33]
+  k: Ctl+W
+- p: [19, 20]
+  k: Ctl+R
