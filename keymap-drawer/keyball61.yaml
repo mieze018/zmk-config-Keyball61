@@ -93,7 +93,6 @@ layers:
   - '&mkp MB2'
   - '&mkp MB1'
   - '&mkp MB3'
-  - PgUp
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -107,7 +106,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - PgDn
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -437,10 +437,10 @@ layers:
 combos:
 - p: [28, 27]
   k: LANGUAGE 2
-  l: [QWRT]
+  l: [QWRT, MOUSE]
 - p: [31, 32]
   k: LANGUAGE 1
-  l: [QWRT]
+  l: [QWRT, MOUSE]
 - p: [40, 39]
   k: {t: ',', s: <}
   l: [QWRT]
