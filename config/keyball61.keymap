@@ -80,6 +80,16 @@
             bindings = <&kp ESCAPE>;
             key-positions = <25 34>;
         };
+
+        close {
+            bindings = <&kp RC(W)>;
+            key-positions = <31 32 33>;
+        };
+
+        reload {
+            bindings = <&kp RC(R)>;
+            key-positions = <19 20>;
+        };
     };
 
     behaviors {
