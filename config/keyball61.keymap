@@ -119,6 +119,22 @@
                 <&mt LEFT_BRACKET LEFT_PARENTHESIS>,
                 <&mt LEFT_BRACE LEFT_BRACE>;
         };
+
+        colon_semicolon: colon_semicolon {
+            compatible = "zmk,behavior-tap-dance";
+            label = "COLON_SEMICOLON";
+            #binding-cells = <0>;
+            bindings = <&kp COLON>, <&kp SEMICOLON>;
+        };
+
+        quotations: quotations {
+            compatible = "zmk,behavior-tap-dance";
+            label = "QUOTATIONS";
+            #binding-cells = <0>;
+            bindings =
+                <&mt GRAVE SINGLE_QUOTE>,
+                <&mt LEFT_BRACKET DOUBLE_QUOTES>;
+        };
     };
 
     keymap {
@@ -127,11 +143,11 @@
         default_layer {
             label = "QWRT";
             bindings = <
-&kp DELETE            &kp EXCLAMATION   &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT                                             &kp CARET                 &kp AMPERSAND    &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSPC
-&kp ESCAPE            &kp Q             &kp L   &kp U     &kp F       &kakkos                                                 &mt QUESTION EXCLAMATION  &kp W            &kp R            &kp Y                 &mt PLUS EQUAL         &mt LG(H) PRINTSCREEN
-&copy_paste_save_cut  &kp E             &kp I   &kp A     &kp O       &hyphen_underscore_tilda_equal                          &kp K                     &kp T            &kp N            &kp S                 &kp H                  &kp P
-&gui_undo_redo        &mt LEFT_SHIFT Z  &kp X   &kp C     &kp V       &kp SQT                         &kp COLON  &kp PAGE_UP  &kp G                     &kp D            &kp M            &kp J                 &kp B                  &slash_pipe_backslash
-&kp F18               &kp LC(RS(W))                                   &mt LCTRL ENTER                 &lt 3 TAB  &lt 4 TAB    &lt 3 SPACE               &lt 2 BACKSPACE  &kp RIGHT_SHIFT  &kp RCTRL             &kp RIGHT_ALT          &kp RIGHT_SHIFT
+&kp DELETE            &kp EXCLAMATION   &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT                                                    &kp CARET                 &kp AMPERSAND    &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSPC
+&kp ESCAPE            &kp Q             &kp L   &kp U     &kp F       &kakkos                                                        &mt QUESTION EXCLAMATION  &kp W            &kp R            &kp Y                 &mt PLUS EQUAL         &mt LG(H) PRINTSCREEN
+&copy_paste_save_cut  &kp E             &kp I   &kp A     &kp O       &hyphen_underscore_tilda_equal                                 &kp K                     &kp T            &kp N            &kp S                 &kp H                  &kp P
+&gui_undo_redo        &mt LEFT_SHIFT Z  &kp X   &kp C     &kp V       &quotations                     &colon_semicolon  &kp PAGE_UP  &kp G                     &kp D            &kp M            &kp J                 &kp B                  &slash_pipe_backslash
+&kp F18               &kp LC(RS(W))                                   &mt LCTRL ENTER                 &lt 3 TAB         &lt 4 TAB    &lt 3 SPACE               &lt 2 BACKSPACE  &kp RIGHT_SHIFT  &kp RCTRL             &kp RIGHT_ALT          &kp RIGHT_SHIFT
             >;
         };
 
