@@ -11,6 +11,12 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <input/processors.dtsi>
+
+// マウスキーを押したらタイムアウトを延長（10秒）
+&mkp_input_listener {
+    input-processors = <&zip_temp_layer 1 10000>;
+};
 
 &lt {
     tapping-term-ms = <200>;

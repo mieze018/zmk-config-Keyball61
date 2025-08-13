@@ -4,7 +4,22 @@
  * SPDX-License-Identifier: MIT
  */
  
+#include <input/processors.dtsi>
 #include "keyball61.dtsi"
+
+&zip_temp_layer {
+    require-prior-idle-ms = <200>;  // キー入力から200ms後にAML有効化（誤爆防止）
+    excluded-positions = <
+        // マウスキーのポジション（仮設定）
+        // Row 3 左側: MB4, MB5, MB2, MB1, MB3 (推定位置: 24-28)
+        24 25 26 27 28
+        // Row 3 右側: PAGE_UP (推定位置: 35)
+        35
+        // Row 4 右側: PAGE_DOWN (推定位置: 47) 
+        47
+        // 必要に応じて他のマウス関連キーも追加
+    >;
+};
 
 
 &kscan0 {
@@ -59,7 +74,7 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        automouse-layer = <1>;
+        // automouse-layer = <1>;  // Input Processorを使用するため無効化
 	scroll-layers = <2>;
 	snipe-layers = <4>;
     };
@@ -111,5 +126,6 @@
     compatible = "zmk,input-listener";
     device = <&trackball>;
 
+    input-processors = <&zip_temp_layer 1 10000>;
   };
 };
