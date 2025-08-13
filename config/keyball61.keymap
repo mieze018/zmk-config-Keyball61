@@ -147,6 +147,8 @@
             label = "LANG_MOD";
             #binding-cells = <0>;
             bindings = <&mt RIGHT_SHIFT LANGUAGE_2>, <&kp LANGUAGE_1>;
+
+            tapping-term-ms = <175>;
         };
 
         expressions: expressions {
