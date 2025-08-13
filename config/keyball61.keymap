@@ -8,7 +8,6 @@
 #include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -128,33 +127,33 @@
         default_layer {
             label = "QWRT";
             bindings = <
-&kp DELETE            &kp N1            &kp N2  &kp N3  &kp N4  &kp N5                                                  &kp N6                    &kp N7           &kp N8     &kp N9     &kp N0          &kp BSPC
-&kp ESCAPE            &kp Q             &kp L   &kp U   &kp F   &kakkos                                                 &mt QUESTION EXCLAMATION  &kp W            &kp R      &kp Y      &mt PLUS EQUAL  &mt LG(H) PRINTSCREEN
-&copy_paste_save_cut  &kp E             &kp I   &kp A   &kp O   &hyphen_underscore_tilda_equal                          &kp K                     &kp T            &kp N      &kp S      &kp H           &kp P
-&gui_undo_redo        &mt LEFT_SHIFT Z  &kp X   &kp C   &kp V   &kp SQT                         &kp COLON  &kp PAGE_UP  &kp G                     &kp D            &kp M      &kp J      &kp B           &slash_pipe_backslash
-&kp F18               &mo 2                                     &mt LCTRL ENTER                 &lt 3 TAB  &lt 4 TAB    &lt 3 SPACE               &lt 2 BACKSPACE  &bl BL_ON  &kp RCTRL  &kp RIGHT_ALT   &kp RIGHT_SHIFT
+&kp DELETE            &kp N1            &kp N2  &kp N3  &kp N4  &kp N5                                                  &kp N6                    &kp N7           &kp N8           &kp N9     &kp N0          &kp BSPC
+&kp ESCAPE            &kp Q             &kp L   &kp U   &kp F   &kakkos                                                 &mt QUESTION EXCLAMATION  &kp W            &kp R            &kp Y      &mt PLUS EQUAL  &mt LG(H) PRINTSCREEN
+&copy_paste_save_cut  &kp E             &kp I   &kp A   &kp O   &hyphen_underscore_tilda_equal                          &kp K                     &kp T            &kp N            &kp S      &kp H           &kp P
+&gui_undo_redo        &mt LEFT_SHIFT Z  &kp X   &kp C   &kp V   &kp SQT                         &kp COLON  &kp PAGE_UP  &kp G                     &kp D            &kp M            &kp J      &kp B           &slash_pipe_backslash
+&kp F18               &kp LC(RS(W))                             &mt LCTRL ENTER                 &lt 3 TAB  &lt 4 TAB    &lt 3 SPACE               &lt 2 BACKSPACE  &kp RIGHT_SHIFT  &kp RCTRL  &kp RIGHT_ALT   &kp RIGHT_SHIFT
             >;
         };
 
         mouse_layer {
             label = "MOUSE";
             bindings = <
-&trans  &trans    &trans    &trans     &trans       &trans                    &trans         &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans    &kp LC(R)  &kp RC(TAB)  &trans                    &trans         &trans  &trans  &trans  &trans  &trans
-&trans  &mkp MB5  &mkp MB4  &mkp MB3   &mkp MB1     &mkp MB2                  &kp PAGE_UP    &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans    &trans     &trans       &trans    &trans  &trans  &kp PAGE_DOWN  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                                      &trans    &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans     &trans    &trans                    &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &kp LC(R)  &trans    &trans                    &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &mkp MB5  &mkp MB4  &mkp MB3   &mkp MB1  &mkp MB2                  &kp PAGE_UP    &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans     &trans    &trans    &trans  &trans  &kp PAGE_DOWN  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                                   &trans    &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         scroll_layer {
             label = "SCROLL";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans    &trans    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans    &trans    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mkp MB5  &mkp MB4  &mkp MB3  &mkp MB1  &mkp MB2                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                                  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
