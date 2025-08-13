@@ -118,8 +118,8 @@
             label = "KAKKOS";
             #binding-cells = <0>;
             bindings =
-                <&mt LEFT_BRACKET LEFT_PARENTHESIS>,
-                <&mt LEFT_BRACE LEFT_BRACE>;
+                <&mt LEFT_BRACE LEFT_PARENTHESIS>,
+                <&mt LESS_THAN LEFT_BRACKET>;
         };
 
         colon_semicolon: colon_semicolon {
@@ -158,6 +158,15 @@
             tapping-term-ms = <175>;
             bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
         };
+
+        kakko_tojirus: kakko_tojirus {
+            compatible = "zmk,behavior-tap-dance";
+            label = "KAKKO_TOJIRUS";
+            #binding-cells = <0>;
+            bindings =
+                <&mt RIGHT_BRACE RIGHT_PARENTHESIS>,
+                <&mt GREATER_THAN RIGHT_BRACKET>;
+        };
     };
 
     keymap {
@@ -166,11 +175,11 @@
         default_layer {
             label = "QWRT";
             bindings = <
-&kp DELETE            &kp EXCLAMATION   &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT                                                    &kp CARET     &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSPC
-&kp ESCAPE            &kp Q             &kp L   &kp U     &kp F       &kakkos                                                        &expressions  &kp W            &kp R         &kp Y                 &mt PLUS EQUAL         &mt LG(H) PRINTSCREEN
-&copy_paste_save_cut  &kp E             &kp I   &kp A     &kp O       &hyphen_underscore_tilda_equal                                 &kp K         &kp T            &kp N         &kp S                 &kp H                  &kp P
-&gui_undo_redo        &mt LEFT_SHIFT Z  &kp X   &kp C     &kp V       &quotations                     &colon_semicolon  &kp PAGE_UP  &kp G         &kp D            &kp M         &kp J                 &kp B                  &slash_pipe_backslash
-&kp F18               &kp LC(RS(W))                                   &mt LCTRL ENTER                 &lt 3 TAB         &lt 4 TAB    &lt 3 SPACE   &lt 2 BACKSPACE  &lang_mod     &kp RCTRL             &kp RIGHT_ALT          &kp RIGHT_GUI
+&kp DELETE            &kp EXCLAMATION   &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT                                             &kp CARET     &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSPC
+&kp ESCAPE            &kp Q             &kp L   &kp U     &kp F       &colon_semicolon                                        &expressions  &kp W            &kp R         &kp Y                 &mt PLUS EQUAL         &mt LG(H) PRINTSCREEN
+&copy_paste_save_cut  &kp E             &kp I   &kp A     &kp O       &hyphen_underscore_tilda_equal                          &kp K         &kp T            &kp N         &kp S                 &kp H                  &kp P
+&gui_undo_redo        &mt LEFT_SHIFT Z  &kp X   &kp C     &kp V       &quotations                     &kakkos    &kp PAGE_UP  &kp G         &kp D            &kp M         &kp J                 &kp B                  &slash_pipe_backslash
+&kp F18               &mo 6                                           &mt LCTRL ENTER                 &lt 3 TAB  &lt 4 TAB    &lt 3 SPACE   &lt 2 BACKSPACE  &lang_mod     &kp RCTRL             &kp RIGHT_ALT          &kp RIGHT_GUI
             >;
         };
 
