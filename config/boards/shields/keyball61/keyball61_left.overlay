@@ -13,11 +13,6 @@
         // マウスキーのポジション（仮設定）
         // Row 3 左側: MB4, MB5, MB2, MB1, MB3 (推定位置: 24-28)
         24 25 26 27 28
-        // Row 3 右側: PAGE_UP (推定位置: 35)
-        35
-        // Row 4 右側: PAGE_DOWN (推定位置: 47) 
-        47
-        // 必要に応じて他のマウス関連キーも追加
     >;
 };
 
@@ -126,6 +121,6 @@
     compatible = "zmk,input-listener";
     device = <&trackball>;
 
-    input-processors = <&zip_temp_layer 1 10000>;
+    input-processors = <&zip_temp_layer 1 10000>; //レイヤー番号 タイムアウト時間(ms)
   };
 };
