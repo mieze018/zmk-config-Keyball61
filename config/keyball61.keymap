@@ -96,13 +96,13 @@
             key-positions = <19 20>;
         };
 
-        prev_tab_f19 {
-            bindings = <&kp F19>;
+        prev_tab_f16 {
+            bindings = <&kp F16>;
             key-positions = <26 25>;
         };
 
-        next_tab_f20 {
-            bindings = <&kp F20>;
+        next_tab_f17 {
+            bindings = <&kp F17>;
             key-positions = <34 33>;
         };
     };
