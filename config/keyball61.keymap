@@ -13,7 +13,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-// マウスキーを押したらタイムアウトを延長（10秒）
+// マウスキーを押したらタイムアウトを延長（ドラッグやダブルクリックを考慮 10秒）
 
 &mkp_input_listener { input-processors = <&zip_temp_layer 1 10000>; };
 
@@ -211,7 +211,7 @@
 &kp ESCAPE            &kp Q             &kp L   &kp U     &kp F       &colon_semicolon                                           &expressions  &kp W            &kp R            &kp Y                 &mt PLUS EQUAL         &mt LG(H) PRINTSCREEN
 &copy_paste_save_cut  &kp E             &kp I   &kp A     &kp O       &hyphen_underscore_tilda_equal                             &kp K         &kp T            &kp N            &kp S                 &kp H                  &kp P
 &gui_undo_redo        &mt LEFT_SHIFT Z  &kp X   &kp C     &kp V       &quotations_number              &kakkos    &kakko_tojirus  &kp G         &kp D            &kp M            &kp J                 &kp B                  &slash_pipe_backslash
-&kp F18               &mo 6                                           &mt LCTRL ENTER                 &lt 3 TAB  &lt 1 TAB       &lt 3 SPACE   &lt 2 BACKSPACE  &kp RIGHT_SHIFT  &kp RCTRL             &kp RIGHT_ALT          &kp RIGHT_GUI
+&kp F18               &mo 6                                           &mt LCTRL ENTER                 &lt 3 TAB  &lang_mod       &lt 3 SPACE   &lt 2 BACKSPACE  &kp RIGHT_SHIFT  &kp RCTRL             &kp RIGHT_ALT          &kp RIGHT_GUI
             >;
         };
 
@@ -275,9 +275,10 @@
             label = "FUN";
             bindings = <
 &trans  &kp F1  &kp F2   &kp F3   &kp F4   &kp F5                  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans                  &trans  &trans  &trans  &trans  &trans   &trans
-&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans                  &trans  &trans  &trans  &trans  &trans   &trans
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
+&trans  &trans  &trans   &trans   &kp F4   &trans                  &trans  &trans  &trans  &trans  &trans   &trans
+&trans  &trans  &trans   &trans   &trans   &trans                  &trans  &trans  &trans  &trans  &trans   &trans
+&trans  &trans  &trans   &trans   &trans   &trans  &trans  &trans  &trans   &trans
+&trans  &trans  &trans   &trans   &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
 &trans  &trans                             &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
             >;
         };
