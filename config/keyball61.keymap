@@ -218,11 +218,11 @@
         mouse_layer {
             label = "MOUSE";
             bindings = <
-&trans  &trans    &trans    &trans    &trans    &trans                    &trans              &trans    &trans          &trans     &trans         &trans
-&trans  &trans    &trans    &trans    &trans    &trans                    &trans              &trans    &kp UP_ARROW    &trans     &trans         &trans
-&trans  &mkp MB4  &mkp MB5  &mkp MB2  &mkp MB1  &mkp MB3                  &kp LC(LEFT_ARROW)  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &kp LC(RIGHT)  &trans
-&trans  &trans    &trans    &trans    &trans    &trans    &trans  &trans  &trans              &trans    &trans          &trans     &trans         &trans
-&trans  &trans                                  &trans    &trans  &trans  &trans              &trans    &trans          &trans     &trans         &trans
+&trans  &trans          &trans    &trans    &trans                &trans                    &trans              &trans    &trans          &trans     &trans         &trans
+&trans  &trans          &trans    &trans    &trans                &trans                    &trans              &trans    &kp UP_ARROW    &trans     &trans         &trans
+&trans  &mkp MB4        &mkp MB5  &mkp MB2  &mkp MB1              &mkp MB3                  &kp LC(LEFT_ARROW)  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &kp LC(RIGHT)  &trans
+&trans  &gui_undo_redo  &trans    &trans    &copy_paste_save_cut  &trans    &trans  &trans  &trans              &trans    &trans          &trans     &trans         &trans
+&trans  &trans                                                    &trans    &trans  &trans  &trans              &trans    &trans          &trans     &trans         &trans
             >;
         };
 
