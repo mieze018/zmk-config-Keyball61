@@ -218,22 +218,22 @@
         mouse_layer {
             label = "MOUSE";
             bindings = <
-&trans  &trans    &trans    &trans    &trans    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans    &trans    &trans    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mkp MB4  &mkp MB5  &mkp MB2  &mkp MB1  &mkp MB3                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans    &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                                  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans    &trans    &trans                    &trans              &trans    &trans          &trans     &trans         &trans
+&trans  &trans    &trans    &trans    &trans    &trans                    &trans              &trans    &kp UP_ARROW    &trans     &trans         &trans
+&trans  &mkp MB4  &mkp MB5  &mkp MB2  &mkp MB1  &mkp MB3                  &kp LC(LEFT_ARROW)  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &kp LC(RIGHT)  &trans
+&trans  &trans    &trans    &trans    &trans    &trans    &trans  &trans  &trans              &trans    &trans          &trans     &trans         &trans
+&trans  &trans                                  &trans    &trans  &trans  &trans              &trans    &trans          &trans     &trans         &trans
             >;
         };
 
         scroll_layer {
             label = "SCROLL";
             bindings = <
-&trans  &trans    &trans    &trans    &trans    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans    &trans    &trans    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mkp MB4  &mkp MB5  &mkp MB2  &mkp MB1  &mkp MB3                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans    &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                                  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans    &trans    &trans                    &trans              &trans          &trans          &trans     &trans         &trans
+&trans  &trans    &trans    &trans    &trans    &trans                    &trans              &trans          &kp UP_ARROW    &trans     &trans         &trans
+&trans  &mkp MB4  &mkp MB5  &mkp MB2  &mkp MB1  &mkp MB3                  &kp LC(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp LC(RIGHT)  &trans
+&trans  &trans    &trans    &trans    &trans    &trans    &trans  &trans  &trans              &trans          &trans          &trans     &trans         &trans
+&trans  &trans                                  &trans    &trans  &trans  &trans              &trans          &trans          &trans     &trans         &trans
             >;
         };
 
@@ -241,7 +241,7 @@
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &trans        &trans    &trans          &trans           &trans               &trans
 &trans      &trans        &kp N9        &kp N8        &kp N7        &trans                        &trans        &trans    &kp UP_ARROW    &trans           &trans               &trans
-&trans      &kp LEFT      &kp NUMBER_6  &kp N5        &kp NUMBER_4  &trans                        &kp LA(LEFT)  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LA(RIGHT_ARROW)  &trans
+&trans      &kp LEFT      &kp NUMBER_6  &kp N5        &kp NUMBER_4  &trans                        &kp LC(LEFT)  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LC(RIGHT_ARROW)  &trans
 &trans      &kp N0        &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1  &kp DOT       &trans  &trans  &trans        &trans    &trans          &trans           &trans               &trans
 &trans      &trans                                                  &trans        &trans  &trans  &trans        &trans    &trans          &trans           &trans               &trans
             >;
