@@ -98,12 +98,12 @@
 
         prev_tab_f16 {
             bindings = <&kp F16>;
-            key-positions = <26 25>;
+            key-positions = <26 27>;
         };
 
         next_tab_f17 {
             bindings = <&kp F17>;
-            key-positions = <34 33>;
+            key-positions = <33 32>;
         };
     };
 
@@ -218,22 +218,22 @@
         mouse_layer {
             label = "MOUSE";
             bindings = <
-&trans  &trans          &trans    &trans    &trans                &trans                    &trans              &trans    &trans          &trans     &trans         &trans
-&trans  &trans          &trans    &trans    &trans                &trans                    &trans              &trans    &kp UP_ARROW    &trans     &trans         &trans
-&trans  &mkp MB4        &mkp MB5  &mkp MB2  &mkp MB1              &mkp MB3                  &kp LC(LEFT_ARROW)  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &kp LC(RIGHT)  &trans
-&trans  &gui_undo_redo  &trans    &trans    &copy_paste_save_cut  &trans    &trans  &trans  &trans              &trans    &trans          &trans     &trans         &trans
-&trans  &trans                                                    &trans    &trans  &trans  &trans              &trans    &trans          &trans     &trans         &trans
+&trans  &trans          &trans    &trans    &trans                &trans                       &trans              &trans    &trans          &trans     &trans         &trans
+&trans  &trans          &trans    &trans    &trans                &trans                       &trans              &trans    &kp UP_ARROW    &trans     &trans         &trans
+&trans  &mkp MB4        &mkp MB5  &mkp MB2  &mkp MB1              &mkp MB3                     &kp LC(LEFT_ARROW)  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &kp LC(RIGHT)  &trans
+&trans  &gui_undo_redo  &trans    &trans    &copy_paste_save_cut  &trans    &trans  &kp RC(W)  &trans              &trans    &trans          &trans     &trans         &trans
+&trans  &trans                                                    &trans    &trans  &trans     &trans              &trans    &trans          &trans     &trans         &trans
             >;
         };
 
         scroll_layer {
             label = "SCROLL";
             bindings = <
-&trans  &trans    &trans    &trans    &trans    &trans                    &trans              &trans          &trans          &trans     &trans         &trans
-&trans  &trans    &trans    &trans    &trans    &trans                    &trans              &trans          &kp UP_ARROW    &trans     &trans         &trans
-&trans  &mkp MB4  &mkp MB5  &mkp MB2  &mkp MB1  &mkp MB3                  &kp LC(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp LC(RIGHT)  &trans
-&trans  &trans    &trans    &trans    &trans    &trans    &trans  &trans  &trans              &trans          &trans          &trans     &trans         &trans
-&trans  &trans                                  &trans    &trans  &trans  &trans              &trans          &trans          &trans     &trans         &trans
+&trans  &trans    &trans    &trans    &trans    &trans                       &trans              &trans          &trans          &trans     &trans         &trans
+&trans  &trans    &trans    &trans    &trans    &trans                       &trans              &trans          &kp UP_ARROW    &trans     &trans         &trans
+&trans  &mkp MB4  &mkp MB5  &mkp MB2  &mkp MB1  &mkp MB3                     &kp LC(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp LC(RIGHT)  &trans
+&trans  &trans    &trans    &trans    &trans    &trans    &trans  &kp RC(W)  &trans              &trans          &trans          &trans     &trans         &trans
+&trans  &trans                                  &trans    &trans  &trans     &trans              &trans          &trans          &trans     &trans         &trans
             >;
         };
 
@@ -274,12 +274,11 @@
         function_layer {
             label = "FUN";
             bindings = <
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &kp F5                  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-&trans  &trans  &trans   &trans   &kp F4   &trans                  &trans  &trans  &trans  &trans  &trans   &trans
-&trans  &trans  &trans   &trans   &trans   &trans                  &trans  &trans  &trans  &trans  &trans   &trans
-&trans  &trans  &trans   &trans   &trans   &trans  &trans  &trans  &trans   &trans
-&trans  &trans  &trans   &trans   &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
-&trans  &trans                             &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+&trans  &trans  &trans  &trans  &kp F4  &trans                  &trans  &trans  &trans  &trans  &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
+&trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
             >;
         };
     };
