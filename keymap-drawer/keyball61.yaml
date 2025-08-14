@@ -42,7 +42,7 @@ layers:
   - X
   - C
   - V
-  - '&quotations'
+  - '&quotations_number'
   - '&kakkos'
   - '&kakko_tojirus'
   - G
@@ -58,7 +58,7 @@ layers:
   - {t: '$$mdi:keyboard-tab$$', h: MOUSE}
   - {t: '$$mdi:keyboard-space$$', h: NUM}
   - {t: '$$mdi:backspace$$', h: SCROLL}
-  - '&lang_mod'
+  - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - RIGHT GUI
