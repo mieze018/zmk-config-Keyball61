@@ -126,7 +126,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "GUI_UNDO_REDO";
             #binding-cells = <0>;
-            bindings = <&mt LEFT_GUI LC(Z)>, <&kp (LC(Z))>;
+            bindings = <&mt LEFT_GUI LC(Z)>, <&kp LC(LS(Z))>;
         };
 
         hyphen_underscore_tilda_equal: hyphen_underscore_tilda_equal {
