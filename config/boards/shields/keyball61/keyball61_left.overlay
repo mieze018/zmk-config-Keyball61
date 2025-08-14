@@ -70,8 +70,8 @@
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         // automouse-layer = <1>;  // Input Processorを使用するため無効化
-	scroll-layers = <2>;
-	snipe-layers = <4>;
+        scroll-layers = <2>;
+        snipe-layers = <4>;
     };
 };
 
