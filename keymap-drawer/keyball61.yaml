@@ -102,11 +102,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&gui_undo_redo'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&gui_undo_redo'
   - '&copy_paste_save_cut'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Ctl+W
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -125,6 +125,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   SCROLL:
+  - $$mdi:bluetooth-off$$
+  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '4', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '5', s: '$$mdi:bluetooth-connect$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -139,12 +144,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - PgUp
   - $$mdi:arrow-up-bold$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -169,8 +169,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+W
-  - PgUp
   - {t: '$$mdi:transfer$$', type: trans}
+  - PgDn
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -389,7 +389,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - F4
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -574,22 +574,20 @@ combos:
 - p: [28, 31]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
   l: [QWRT]
-- p: [31, 32]
-  k: Sft+Ctl+$$mdi:arrow-left-bold$$
-  l: [NUM]
-- p: [32, 33]
-  k: Ctl+Sft+$$mdi:arrow-right-bold$$
-  l: [NUM]
 - p: [52, 55]
   k: Ctl+$$mdi:keyboard-tab$$
   l: [QWRT]
-- p: [25, 34]
+- p: [13, 14]
   k: $$mdi:keyboard-esc$$
 - p: [31, 32, 33]
   k: Ctl+W
 - p: [19, 20]
   k: Ctl+R
-- p: [26, 27]
+- p: [26, 25]
   k: F16
-- p: [33, 32]
+- p: [33, 34]
   k: F17
+- p: [26, 27]
+  k: '&mkp MB4'
+- p: [33, 32]
+  k: '&mkp MB5'
