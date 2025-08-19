@@ -69,11 +69,6 @@
             layers = <0>;
         };
 
-        esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <13 14>;
-        };
-
         close {
             bindings = <&kp RC(W)>;
             key-positions = <21 20 19>;
