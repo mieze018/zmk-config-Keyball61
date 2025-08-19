@@ -188,6 +188,15 @@
                 <&mt RIGHT_BRACE RIGHT_PARENTHESIS>,
                 <&mt GREATER_THAN RIGHT_BRACKET>;
         };
+
+        left_thumb_home: left_thumb_home {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LEFT_THUMB_HOME";
+            #binding-cells = <0>;
+            bindings = <&mt LEFT_CONTROL ENTER>, <&mo 3>;
+
+            tapping-term-ms = <175>;
+        };
     };
 
     macros {
@@ -209,7 +218,7 @@
 &kp ESCAPE            &kp Q             &kp L   &kp U     &kp F       &colon_semicolon                                           &expressions  &kp W            &kp R            &kp Y                 &mt PLUS EQUAL         &mt LG(H) PRINTSCREEN
 &copy_paste_save_cut  &kp E             &kp I   &kp A     &kp O       &hyphen_underscore_tilda_equal                             &kp K         &kp T            &kp N            &kp S                 &kp H                  &kp P
 &gui_undo_redo        &mt LEFT_SHIFT Z  &kp X   &kp C     &kp V       &quotations_number              &kakkos    &kakko_tojirus  &kp G         &kp D            &kp M            &kp J                 &kp B                  &slash_pipe_backslash
-&lt 6 F18             &caps_word                                      &mt LCTRL ENTER                 &lt 3 TAB  &lang_mod       &lt 2 SPACE   &lt 2 BACKSPACE  &kp RIGHT_SHIFT  &kp RCTRL             &kp RIGHT_ALT          &kp RIGHT_GUI
+&lt 6 F18             &caps_word                                      &left_thumb_home                &lt 3 TAB  &lang_mod       &lt 2 SPACE   &lt 2 BACKSPACE  &kp RIGHT_SHIFT  &kp RCTRL             &kp RIGHT_ALT          &kp RIGHT_GUI
             >;
         };
 
