@@ -86,22 +86,22 @@
 
         prev_tab_f16 {
             bindings = <&kp F16>;
-            key-positions = <37 38>;
+            key-positions = <14 13>;
         };
 
         next_tab_f17 {
             bindings = <&kp F17>;
-            key-positions = <47 48>;
+            key-positions = <21 22>;
         };
 
         mb4 {
             bindings = <&mkp MB4>;
-            key-positions = <38 39>;
+            key-positions = <14 15>;
         };
 
         mb5 {
             bindings = <&mkp MB5>;
-            key-positions = <46 47>;
+            key-positions = <20 21>;
         };
     };
 
