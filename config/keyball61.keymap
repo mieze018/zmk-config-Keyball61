@@ -18,13 +18,13 @@
 &mkp_input_listener { input-processors = <&zip_temp_layer 1 1000>; };
 
 &lt {
-    tapping-term-ms = <200>;
+    tapping-term-ms = <185>;
     flavor = "balanced";
     quick-tap-ms = <150>;
 };
 
 &mt {
-    tapping-term-ms = <200>;
+    tapping-term-ms = <185>;
     flavor = "tap-preferred";
     quick-tap-ms = <150>;
 };
@@ -169,7 +169,7 @@
             #binding-cells = <0>;
             bindings = <&lt 3 LANGUAGE_2>, <&kp LANGUAGE_1>;
 
-            tapping-term-ms = <175>;
+            tapping-term-ms = <170>;
         };
 
         expressions: expressions {
