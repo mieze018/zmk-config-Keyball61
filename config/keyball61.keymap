@@ -76,7 +76,7 @@
 
         close {
             bindings = <&kp RC(W)>;
-            key-positions = <31 32 33>;
+            key-positions = <21 20 19>;
         };
 
         reload {
@@ -86,22 +86,22 @@
 
         prev_tab_f16 {
             bindings = <&kp F16>;
-            key-positions = <26 25>;
+            key-positions = <37 38>;
         };
 
         next_tab_f17 {
             bindings = <&kp F17>;
-            key-positions = <33 34>;
+            key-positions = <47 48>;
         };
 
         mb4 {
             bindings = <&mkp MB4>;
-            key-positions = <26 27>;
+            key-positions = <38 39>;
         };
 
         mb5 {
             bindings = <&mkp MB5>;
-            key-positions = <33 32>;
+            key-positions = <46 47>;
         };
     };
 
