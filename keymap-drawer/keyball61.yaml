@@ -53,7 +53,7 @@ layers:
   - '&slash_pipe_backslash'
   - {t: F18, h: FUN}
   - $$mdi:alpha-w-box$$
-  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-control$$'}
+  - '&left_thumb_home'
   - {t: '$$mdi:keyboard-tab$$', h: NUM}
   - '&lang_mod'
   - {t: '$$mdi:keyboard-space$$', h: SCROLL}
