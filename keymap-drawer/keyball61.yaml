@@ -61,7 +61,7 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
-  - {t: 'Gui+$$mdi:arrow-up-bold$$', h: RIGHT GUI}
+  - {t: 'Gui+$$mdi:keyboard-tab$$', h: RIGHT GUI}
   MOUSE:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
