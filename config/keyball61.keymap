@@ -81,12 +81,12 @@
 
         prev_tab_f16 {
             bindings = <&kp F16>;
-            key-positions = <14 13>;
+            key-positions = <25 26>;
         };
 
         next_tab_f17 {
             bindings = <&kp F17>;
-            key-positions = <21 22>;
+            key-positions = <33 34>;
         };
 
         mb4 {
