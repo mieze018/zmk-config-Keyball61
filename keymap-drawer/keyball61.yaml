@@ -37,7 +37,7 @@ layers:
   - S
   - H
   - P
-  - '&gui_undo_redo'
+  - '&mod_undo_redo'
   - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
   - X
   - C
@@ -100,9 +100,9 @@ layers:
   - Ctl+$$mdi:arrow-right-bold$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&gui_undo_redo'
+  - '&mod_undo_redo'
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&gui_undo_redo'
+  - '&mod_undo_redo'
   - '&copy_paste_save_cut'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -164,7 +164,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&gui_undo_redo'
+  - '&mod_undo_redo'
   - '&copy_paste_save_cut'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
