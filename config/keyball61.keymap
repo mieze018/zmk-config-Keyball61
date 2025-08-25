@@ -105,7 +105,9 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SLASH_PIPE_BACKSLASH";
             #binding-cells = <0>;
-            bindings = <&kp SLASH>, <&kp PIPE>, <&kp BACKSLASH>;
+            bindings = <&mt PIPE SLASH>, <&mt BACKSLASH SLASH>;
+
+            tapping-term-ms = <175>;
         };
 
         copy_paste_save_cut: copy_paste_save_cut {
@@ -113,13 +115,17 @@
             label = "COPY_PASTE_SAVE_CUT";
             #binding-cells = <0>;
             bindings = <&mt LC(S) LC(C)>, <&mt LC(X) LC(V)>;
+
+            tapping-term-ms = <180>;
         };
 
-        gui_undo_redo: gui_undo_redo {
+        mod_undo_redo: mod_undo_redo {
             compatible = "zmk,behavior-tap-dance";
-            label = "GUI_UNDO_REDO";
+            label = "MOD_UNDO_REDO";
             #binding-cells = <0>;
-            bindings = <&mt LEFT_GUI LC(Z)>, <&kp LC(LS(Z))>;
+            bindings = <&mt LEFT_SHIFT LC(Z)>, <&kp LC(LS(Z))>;
+
+            tapping-term-ms = <174>;
         };
 
         hyphen_underscore_tilda_equal: hyphen_underscore_tilda_equal {
@@ -182,6 +188,8 @@
             bindings =
                 <&mt RIGHT_BRACE RIGHT_PARENTHESIS>,
                 <&mt GREATER_THAN RIGHT_BRACKET>;
+
+            tapping-term-ms = <180>;
         };
 
         left_thumb_home: left_thumb_home {
@@ -209,11 +217,11 @@
         default_layer {
             label = "QWRT";
             bindings = <
-&kp DELETE            &kp EXCLAMATION   &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT                                                &kp CARET     &kp AMPERSAND    &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &tog 7
-&kp ESCAPE            &kp Q             &kp L   &kp U     &kp F       &colon_semicolon                                           &expressions  &kp W            &kp R            &kp Y                 &mt PLUS EQUAL         &mt LG(H) PRINTSCREEN
-&copy_paste_save_cut  &kp E             &kp I   &kp A     &kp O       &hyphen_underscore_tilda_equal                             &kp K         &kp T            &kp N            &kp S                 &kp H                  &kp P
-&gui_undo_redo        &mt LEFT_SHIFT Z  &kp X   &kp C     &kp V       &quotations_number              &kakkos    &kakko_tojirus  &kp G         &kp D            &kp M            &kp J                 &kp B                  &slash_pipe_backslash
-&lt 6 F18             &caps_word                                      &left_thumb_home                &lt 3 TAB  &lang_mod       &lt 2 SPACE   &lt 4 BACKSPACE  &kp RIGHT_SHIFT  &kp RCTRL             &kp RIGHT_ALT          &mt RIGHT_GUI RG(TAB)
+&kp DELETE            &kp EXCLAMATION  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT                                                &kp CARET     &kp AMPERSAND    &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &tog 7
+&kp ESCAPE            &kp Q            &kp L   &kp U     &kp F       &colon_semicolon                                           &expressions  &kp W            &kp R            &kp Y                 &mt PLUS EQUAL         &mt LG(H) PRINTSCREEN
+&copy_paste_save_cut  &kp E            &kp I   &kp A     &kp O       &hyphen_underscore_tilda_equal                             &kp K         &kp T            &kp N            &kp S                 &kp H                  &kp P
+&mod_undo_redo        &kp Z            &kp X   &kp C     &kp V       &quotations_number              &kakkos    &kakko_tojirus  &kp G         &kp D            &kp M            &kp J                 &kp B                  &slash_pipe_backslash
+&lt 6 F18             &caps_word                                     &left_thumb_home                &lt 3 TAB  &lang_mod       &lt 2 SPACE   &lt 4 BACKSPACE  &kp RIGHT_SHIFT  &kp RCTRL             &kp RIGHT_ALT          &mt RIGHT_GUI RG(TAB)
             >;
         };
 
@@ -223,7 +231,7 @@
 &trans  &trans          &trans    &trans          &trans                &trans                    &trans              &trans    &trans          &trans     &trans         &trans
 &trans  &trans          &trans    &trans          &trans                &trans                    &trans              &trans    &kp UP_ARROW    &trans     &trans         &trans
 &trans  &mkp MB4        &mkp MB5  &mkp MB2        &mkp MB1              &mkp MB3                  &kp LC(LEFT_ARROW)  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &kp LC(RIGHT)  &trans
-&trans  &gui_undo_redo  &trans    &gui_undo_redo  &copy_paste_save_cut  &trans    &trans  &trans  &trans              &trans    &trans          &trans     &trans         &trans
+&trans  &mod_undo_redo  &trans    &mod_undo_redo  &copy_paste_save_cut  &trans    &trans  &trans  &trans              &trans    &trans          &trans     &trans         &trans
 &trans  &trans                                                          &trans    &trans  &trans  &trans              &trans    &trans          &trans     &trans         &trans
             >;
         };
@@ -234,14 +242,14 @@
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3          &bt BT_SEL 4                     &trans        &trans          &trans          &trans     &trans         &trans
 &trans      &trans        &trans        &trans          &trans                &trans                           &trans        &kp PAGE_UP     &kp UP_ARROW    &trans     &trans         &trans
 &trans      &mkp MB4      &mkp MB5      &mkp MB2        &mkp MB1              &mkp MB3                         &kp LC(LEFT)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp LC(RIGHT)  &trans
-&trans      &trans        &trans        &gui_undo_redo  &copy_paste_save_cut  &trans        &trans  &kp RC(W)  &trans        &kp PAGE_DOWN   &trans          &trans     &trans         &trans
+&trans      &trans        &trans        &mod_undo_redo  &copy_paste_save_cut  &trans        &trans  &kp RC(W)  &trans        &kp PAGE_DOWN   &trans          &trans     &trans         &trans
 &trans      &trans                                                            &trans        &trans  &trans     &trans        &trans          &trans          &trans     &trans         &trans
             >;
         };
 
         number_layer {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &trans        &trans    &trans          &trans           &trans               &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &trans        &trans    &trans          &trans           &trans               &bootloader
 &trans      &trans        &kp N9        &kp N8        &kp N7        &trans                        &trans        &trans    &kp UP_ARROW    &trans           &trans               &trans
 &trans      &kp LEFT      &kp NUMBER_6  &kp N5        &kp NUMBER_4  &trans                        &kp LC(LEFT)  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LC(RIGHT_ARROW)  &trans
 &trans      &kp N0        &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1  &kp DOT       &trans  &trans  &trans        &trans    &trans          &trans           &trans               &trans
@@ -254,11 +262,11 @@
         snipe_layer {
             label = "SNIPE";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans   &trans        &trans        &trans        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans   &kp N7        &kp N8        &kp N9        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp DOT  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0  &trans
+&trans  &trans                          &trans  &trans  &trans  &trans   &trans        &trans        &trans        &trans  &trans
             >;
         };
 
