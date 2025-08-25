@@ -38,7 +38,7 @@ layers:
   - H
   - P
   - '&mod_undo_redo'
-  - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
+  - Z
   - X
   - C
   - V
