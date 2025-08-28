@@ -200,6 +200,13 @@
 
             tapping-term-ms = <175>;
         };
+
+        trackball_to_key: trackball_to_key {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "TRACKBALL_TO_KEY";
+            #sensor-binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     macros {
@@ -293,6 +300,7 @@
         };
 
         CG2D {
+            sensor-bindings = <&trackball_to_key LEFT_BRACKET RIGHT_BRACKET>;
             bindings = <
 &trans  &trans              &trans     &trans             &trans         &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans              &trans     &kp RIGHT_BRACKET  &trans         &trans                  &trans  &trans  &trans  &trans  &trans  &trans
@@ -303,6 +311,7 @@
         };
 
         CG2D_2 {
+            sensor-bindings = <&trackball_to_key KP_PLUS KP_MINUS>;
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
