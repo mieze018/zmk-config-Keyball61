@@ -303,11 +303,11 @@
 
         CG2D {
             bindings = <
-&trans  &trans     &trans               &trans    &trans    &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LC(D)  &mt LC(T) V          &kp Y     &mt Y F   &kp C                           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mkp MB5   &mkp MB4             &mkp MB2  &mkp MB1  &mkp MB3                        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mt E X    &editor_2D_selectio  &mt P N   &mt A B   &kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                                              &mt LEFT_ALT I  &to 0   &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans               &kp F3    &trans    &trans                                 &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(D)  &mt LC(T) V          &kp Y     &mt Y F   &kp C                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mkp MB5   &mkp MB4             &mkp MB2  &mkp MB1  &mkp MB3                               &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mt E X    &editor_2D_selectio  &mt P N   &mt A B   &kp LEFT_SHIFT  &kp LC(COMMA)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                                              &mt LEFT_ALT I  &to 0          &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
