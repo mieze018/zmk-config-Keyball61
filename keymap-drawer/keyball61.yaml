@@ -450,7 +450,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: X, h: E}
   - {t: V, h: Ctl+T}
-  - Y
+  - {t: ']', s: '}'}
   - {t: F, h: Y}
   - C
   - {t: '$$mdi:transfer$$', type: trans}
@@ -460,9 +460,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&mkp MB2'
-  - '&mkp MB3'
   - '&mkp MB5'
+  - '&mkp MB3'
+  - {t: '[', s: '{'}
   - '&mkp MB4'
   - '&mkp MB1'
   - {t: '$$mdi:transfer$$', type: trans}
@@ -474,7 +474,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: I, h: '$$mdi:apple-keyboard-option$$'}
   - '&editor_2D_selectio'
-  - {t: N, h: P}
+  - {t: P, h: N}
   - {t: B, h: A}
   - $$mdi:apple-keyboard-shift$$
   - {t: 'Ctl+,', s: Ctl+<}
