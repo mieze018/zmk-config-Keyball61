@@ -448,7 +448,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: X, h: Ctl+E}
+  - {t: X, h: E}
   - {t: V, h: Ctl+T}
   - Y
   - {t: F, h: Y}
