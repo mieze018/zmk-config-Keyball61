@@ -293,11 +293,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - <
   - '>'
-  - {t: ., s: '>'}
+  - '0'
   - '1'
   - '2'
   - '3'
-  - {t: '0', s: )}
+  - .
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
