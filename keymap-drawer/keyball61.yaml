@@ -1,31 +1,31 @@
 layout: {zmk_keyboard: keyball61}
 layers:
   QWRT:
-  - $$mdi:backspace-reverse-outline$$
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - ^
-  - '&'
-  - '*'
-  - (
-  - )
   - {t: CG2D, h: toggle}
-  - $$mdi:keyboard-esc$$
+  - {t: '1', h: '!'}
+  - {t: '2', h: '@'}
+  - {t: '3', h: '#'}
+  - {t: '5', h: $, s: '%'}
+  - {t: '6', h: '%'}
+  - {t: '7', h: ^, s: '&'}
+  - {t: '8', h: '&', s: '*'}
+  - {t: '9', h: '*', s: (}
+  - {t: SCROLL, h: toggle}
+  - {t: NUM, h: toggle}
+  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:backspace-reverse-outline$$'}
   - Q
   - L
   - U
   - F
-  - '&colon_semicolon'
-  - '&expressions'
+  - {t: ':', h: ;}
+  - {t: '!', h: '?'}
   - W
   - R
   - Y
   - {t: '=', h: +, s: +}
   - {t: PRINTSCREEN, h: Gui+H}
-  - '&copy_paste_save_cut'
+  - {t: Ctl+C, h: Ctl+X}
   - E
   - I
   - A
@@ -37,23 +37,23 @@ layers:
   - S
   - H
   - P
-  - '&mod_undo_redo'
-  - Z
+  - {t: Ctl+V, h: Ctl+S}
+  - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
   - X
   - C
   - V
   - '&quotations_number'
-  - '&kakkos'
-  - '&kakko_tojirus'
+  - {t: (, h: '{'}
+  - {t: ), h: '}'}
   - G
   - D
   - M
   - J
   - B
-  - '&slash_pipe_backslash'
-  - {t: F18, h: FUN}
+  - {t: /, h: '|', s: '?'}
+  - {t: Ctl+Z, h: Ctl+Sft+Z}
   - $$mdi:alpha-w-box$$
-  - '&left_thumb_home'
+  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:keyboard-tab$$', h: NUM}
   - '&lang_mod'
   - {t: '$$mdi:keyboard-space$$', h: SCROLL}
@@ -149,7 +149,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Ctl+S, h: Ctl+Sft+S}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&mkp MB2'
@@ -167,14 +167,14 @@ layers:
   - '&mod_undo_redo'
   - '&copy_paste_save_cut'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '[', h: <, s: '{'}
+  - {t: ']', h: '>', s: '}'}
   - {t: '$$mdi:transfer$$', type: trans}
   - PgDn
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&slash_pipe_backslash'
   - $$mdi:progress-download$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -193,12 +193,12 @@ layers:
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
   - {h: '5', s: '$$mdi:bluetooth-connect$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:bluetooth-off$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '9', s: (}
@@ -293,11 +293,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - <
   - '>'
-  - {t: ., s: '>'}
+  - '0'
   - '1'
   - '2'
   - '3'
-  - {t: '0', s: )}
+  - .
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -423,7 +423,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -438,6 +438,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - F3
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -447,8 +448,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - Ctl+D
+  - {t: X, h: E}
   - {t: V, h: Ctl+T}
   - Y
   - {t: F, h: Y}
@@ -460,26 +460,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&mkp MB5'
-  - '&mkp MB4'
-  - '&mkp MB2'
-  - '&mkp MB1'
-  - '&mkp MB3'
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: X, h: E}
-  - '&editor_2D_selectio'
-  - {t: N, h: P}
-  - {t: B, h: A}
-  - $$mdi:apple-keyboard-shift$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&mkp MB3'
+  - {t: Ctl+Z, h: '$$mdi:apple-keyboard-option$$'}
+  - '&mkp MB4'
+  - '&mkp MB1'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -488,6 +473,21 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: I, h: '$$mdi:apple-keyboard-option$$'}
+  - '&editor_2D_selectio'
+  - {t: P, h: N}
+  - {t: B, h: A}
+  - $$mdi:apple-keyboard-shift$$
+  - {t: 'Ctl+,', s: Ctl+<}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Sft+O
+  - {t: B, h: '$$mdi:keyboard-space$$'}
   - {t: QWRT, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}

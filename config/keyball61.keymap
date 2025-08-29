@@ -116,7 +116,7 @@
             #binding-cells = <0>;
             bindings = <&mt LC(S) LC(C)>, <&mt LC(X) LC(V)>;
 
-            tapping-term-ms = <180>;
+            tapping-term-ms = <165>;
         };
 
         mod_undo_redo: mod_undo_redo {
@@ -125,7 +125,7 @@
             #binding-cells = <0>;
             bindings = <&mt LEFT_SHIFT LC(Z)>, <&kp LC(LS(Z))>;
 
-            tapping-term-ms = <174>;
+            tapping-term-ms = <170>;
         };
 
         hyphen_underscore_tilda_equal: hyphen_underscore_tilda_equal {
@@ -173,14 +173,6 @@
             tapping-term-ms = <170>;
         };
 
-        expressions: expressions {
-            compatible = "zmk,behavior-tap-dance";
-            label = "EXPRESSIONS";
-            #binding-cells = <0>;
-            tapping-term-ms = <175>;
-            bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
-        };
-
         kakko_tojirus: kakko_tojirus {
             compatible = "zmk,behavior-tap-dance";
             label = "KAKKO_TOJIRUS";
@@ -190,15 +182,6 @@
                 <&mt GREATER_THAN RIGHT_BRACKET>;
 
             tapping-term-ms = <180>;
-        };
-
-        left_thumb_home: left_thumb_home {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LEFT_THUMB_HOME";
-            #binding-cells = <0>;
-            bindings = <&mt LEFT_CONTROL ENTER>, <&mo 3>;
-
-            tapping-term-ms = <175>;
         };
 
         editor_2D_selectio: editor_2D_selectio {
@@ -226,11 +209,11 @@
         default_layer {
             label = "QWRT";
             bindings = <
-&kp DELETE            &kp EXCLAMATION  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT                                                &kp CARET     &kp AMPERSAND    &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &tog 7
-&kp ESCAPE            &kp Q            &kp L   &kp U     &kp F       &colon_semicolon                                           &expressions  &kp W            &kp R            &kp Y                 &mt PLUS EQUAL         &mt LG(H) PRINTSCREEN
-&copy_paste_save_cut  &kp E            &kp I   &kp A     &kp O       &hyphen_underscore_tilda_equal                             &kp K         &kp T            &kp N            &kp S                 &kp H                  &kp P
-&mod_undo_redo        &kp Z            &kp X   &kp C     &kp V       &quotations_number              &kakkos    &kakko_tojirus  &kp G         &kp D            &kp M            &kp J                 &kp B                  &slash_pipe_backslash
-&lt 6 F18             &caps_word                                     &left_thumb_home                &lt 3 TAB  &lang_mod       &lt 2 SPACE   &lt 4 BACKSPACE  &kp RIGHT_SHIFT  &kp RCTRL             &kp RIGHT_ALT          &mt RIGHT_GUI RG(TAB)
+&tog 7               &mt EXCLAMATION NUMBER_1  &mt AT NUMBER_2  &mt HASH NUMBER_3  &mt DOLLAR N5  &mt PERCENT NUMBER_6                                                                                &mt CARET N7              &mt AMPERSAND N8  &mt ASTERISK N9  &tog 2     &tog 3          &kp DELETE
+&mt DELETE ESCAPE    &kp Q                     &kp L            &kp U              &kp F          &mt SEMI COLON                                                                                      &mt QUESTION EXCLAMATION  &kp W             &kp R            &kp Y      &mt PLUS EQUAL  &mt LG(H) PRINTSCREEN
+&mt LC(X) LC(C)      &kp E                     &kp I            &kp A              &kp O          &hyphen_underscore_tilda_equal                                                                      &kp K                     &kp T             &kp N            &kp S      &kp H           &kp P
+&mt LC(S) LC(V)      &mt LEFT_SHIFT Z          &kp X            &kp C              &kp V          &quotations_number              &mt LEFT_BRACE LEFT_PARENTHESIS  &mt RIGHT_BRACE RIGHT_PARENTHESIS  &kp G                     &kp D             &kp M            &kp J      &kp B           &mt PIPE SLASH
+&mt LC(LS(Z)) LC(Z)  &caps_word                                                                   &mt RCTRL ENTER                 &lt 3 TAB                        &lang_mod                          &lt 2 SPACE               &lt 4 BACKSPACE   &kp RIGHT_SHIFT  &kp RCTRL  &kp RIGHT_ALT   &mt RIGHT_GUI RG(TAB)
             >;
         };
 
@@ -248,17 +231,17 @@
         scroll_layer {
             label = "SCROLL";
             bindings = <
-&trans       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3          &bt BT_SEL 4                  &trans        &trans          &trans          &trans     &trans         &bt BT_CLR
-&trans       &trans        &trans        &trans          &trans                &trans                        &trans        &kp PAGE_UP     &kp UP_ARROW    &trans     &trans         &trans
-&trans       &trans        &trans        &mkp MB2        &mkp MB1              &mkp MB3                      &kp LC(LEFT)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp LC(RIGHT)  &trans
-&trans       &trans        &trans        &mod_undo_redo  &copy_paste_save_cut  &trans        &trans  &trans  &trans        &kp PAGE_DOWN   &trans          &trans     &trans         &trans
-&bootloader  &trans                                                            &trans        &trans  &trans  &trans        &trans          &trans          &trans     &trans         &bootloader
+&trans               &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3          &bt BT_SEL 4                                                              &trans        &trans          &trans          &trans     &trans         &bt BT_CLR
+&trans               &trans        &trans        &trans          &trans                &trans                                                                    &trans        &kp PAGE_UP     &kp UP_ARROW    &trans     &trans         &trans
+&mt LC(LS(S)) LC(S)  &trans        &trans        &mkp MB2        &mkp MB1              &mkp MB3                                                                  &kp LC(LEFT)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp LC(RIGHT)  &trans
+&trans               &trans        &trans        &mod_undo_redo  &copy_paste_save_cut  &trans        &mt LESS_THAN LEFT_BRACKET  &mt GREATER_THAN RIGHT_BRACKET  &trans        &kp PAGE_DOWN   &trans          &trans     &trans         &slash_pipe_backslash
+&bootloader          &trans                                                            &trans        &trans                      &trans                          &trans        &trans          &trans          &trans     &trans         &bootloader
             >;
         };
 
         number_layer {
             bindings = <
-&trans       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &trans        &trans    &trans          &trans           &trans               &bt BT_CLR
+&trans       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &bt BT_CLR    &trans    &trans          &trans           &trans               &trans
 &trans       &trans        &kp N9        &kp N8        &kp N7        &trans                        &trans        &trans    &kp UP_ARROW    &trans           &trans               &trans
 &trans       &kp LEFT      &kp NUMBER_6  &kp N5        &kp NUMBER_4  &trans                        &kp LC(LEFT)  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LC(RIGHT_ARROW)  &trans
 &trans       &kp N0        &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1  &kp DOT       &trans  &trans  &trans        &trans    &trans          &trans           &trans               &trans
@@ -271,11 +254,11 @@
         snipe_layer {
             label = "SNIPE";
             bindings = <
-&trans  &trans  &trans  &trans    &trans    &trans                                     &trans   &trans        &trans        &trans        &trans  &trans
-&trans  &trans  &trans  &trans    &trans    &trans                                     &trans   &kp N7        &kp N8        &kp N9        &trans  &trans
-&trans  &trans  &trans  &mkp MB2  &mkp MB1  &mkp MB3                                   &trans   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
-&trans  &trans  &trans  &trans    &trans    &trans    &kp LESS_THAN  &kp GREATER_THAN  &kp DOT  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0  &trans
-&trans  &trans                              &trans    &trans         &trans            &trans   &trans        &trans        &trans        &trans  &trans
+&trans  &trans  &trans  &trans    &trans    &trans                                     &trans        &trans        &trans        &trans        &trans      &trans
+&trans  &trans  &trans  &trans    &trans    &trans                                     &trans        &kp N7        &kp N8        &kp N9        &trans      &trans
+&trans  &trans  &trans  &mkp MB2  &mkp MB1  &mkp MB3                                   &trans        &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans      &trans
+&trans  &trans  &trans  &trans    &trans    &trans    &kp LESS_THAN  &kp GREATER_THAN  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &trans
+&trans  &trans                              &trans    &trans         &trans            &trans        &trans        &trans        &trans        &trans      &trans
             >;
         };
 
@@ -303,11 +286,11 @@
 
         CG2D {
             bindings = <
-&trans  &trans     &trans               &kp F3    &trans    &trans                                 &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LC(D)  &mt LC(T) V          &kp Y     &mt Y F   &kp C                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mkp MB5   &mkp MB4             &mkp MB2  &mkp MB1  &mkp MB3                               &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mt E X    &editor_2D_selectio  &mt P N   &mt A B   &kp LEFT_SHIFT  &kp LC(COMMA)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                                              &mt LEFT_ALT I  &to 0          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans          &trans               &kp F3              &trans    &trans                                 &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mt E X         &mt LC(T) V          &kp Y               &mt Y F   &kp C                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mt E X         &mkp MB3             &mt LEFT_ALT LC(Z)  &mkp MB4  &mkp MB1                               &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mt LEFT_ALT I  &editor_2D_selectio  &mt N P             &mt A B   &kp LEFT_SHIFT  &kp LC(COMMA)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LS(O)                                                          &mt SPACE B     &to 0          &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
