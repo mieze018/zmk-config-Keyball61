@@ -116,7 +116,7 @@
             #binding-cells = <0>;
             bindings = <&mt LC(S) LC(C)>, <&mt LC(X) LC(V)>;
 
-            tapping-term-ms = <180>;
+            tapping-term-ms = <165>;
         };
 
         mod_undo_redo: mod_undo_redo {
@@ -125,7 +125,7 @@
             #binding-cells = <0>;
             bindings = <&mt LEFT_SHIFT LC(Z)>, <&kp LC(LS(Z))>;
 
-            tapping-term-ms = <174>;
+            tapping-term-ms = <170>;
         };
 
         hyphen_underscore_tilda_equal: hyphen_underscore_tilda_equal {
