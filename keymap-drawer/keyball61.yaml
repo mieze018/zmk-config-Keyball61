@@ -10,8 +10,8 @@ layers:
   - ^
   - '&'
   - '*'
-  - (
-  - )
+  - {t: SCROLL, h: toggle}
+  - {t: NUM, h: toggle}
   - {t: CG2D, h: toggle}
   - $$mdi:keyboard-esc$$
   - Q
@@ -25,7 +25,7 @@ layers:
   - Y
   - {t: '=', h: +, s: +}
   - {t: PRINTSCREEN, h: Gui+H}
-  - '&copy_paste_save_cut'
+  - {t: Ctl+C, h: Ctl+V}
   - E
   - I
   - A
@@ -37,20 +37,20 @@ layers:
   - S
   - H
   - P
-  - '&mod_undo_redo'
+  - {t: Ctl+Z, h: Sft+Ctl+Z}
   - Z
   - X
   - C
   - V
   - '&quotations_number'
-  - '&kakkos'
-  - '&kakko_tojirus'
+  - {t: (, h: '{'}
+  - {t: ), h: '}'}
   - G
   - D
   - M
   - J
   - B
-  - '&slash_pipe_backslash'
+  - {t: /, h: '|', s: '?'}
   - {t: F18, h: FUN}
   - $$mdi:alpha-w-box$$
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-control$$'}
@@ -149,7 +149,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Ctl+S, h: Ctl+Sft+S}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&mkp MB2'
@@ -167,14 +167,14 @@ layers:
   - '&mod_undo_redo'
   - '&copy_paste_save_cut'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '[', h: <, s: '{'}
+  - {t: ']', h: '>', s: '}'}
   - {t: '$$mdi:transfer$$', type: trans}
   - PgDn
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&slash_pipe_backslash'
   - $$mdi:progress-download$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -229,8 +229,8 @@ layers:
   - '2'
   - '1'
   - {t: ., s: '>'}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -291,8 +291,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - <
-  - '>'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - '0'
   - '1'
   - '2'
