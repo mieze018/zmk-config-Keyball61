@@ -19,13 +19,13 @@ layers:
   - U
   - F
   - '&colon_semicolon'
-  - {t: '?', h: '!'}
+  - {t: '!', h: '?'}
   - W
   - R
   - Y
   - {t: '=', h: +, s: +}
   - {t: PRINTSCREEN, h: Gui+H}
-  - {t: Ctl+C, h: Ctl+V}
+  - {t: Ctl+C, h: Ctl+X}
   - E
   - I
   - A
@@ -37,7 +37,7 @@ layers:
   - S
   - H
   - P
-  - {t: Ctl+Z, h: Sft+Ctl+Z}
+  - {t: Ctl+V, h: Ctl+S}
   - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
   - X
   - C
@@ -51,7 +51,7 @@ layers:
   - J
   - B
   - {t: /, h: '|', s: '?'}
-  - {t: F18, h: FUN}
+  - {t: Ctl+Z, h: Ctl+Sft+Z}
   - $$mdi:alpha-w-box$$
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:keyboard-tab$$', h: NUM}
@@ -423,7 +423,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
