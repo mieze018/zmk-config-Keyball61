@@ -2,14 +2,14 @@ layout: {zmk_keyboard: keyball61}
 layers:
   QWRT:
   - $$mdi:backspace-reverse-outline$$
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - ^
-  - '&'
-  - '*'
+  - {t: '1', h: '!'}
+  - {t: '2', h: '@'}
+  - {t: '3', h: '#'}
+  - {t: '5', h: $, s: '%'}
+  - {t: '6', h: '%'}
+  - {t: '7', h: ^, s: '&'}
+  - {t: '8', h: '&', s: '*'}
+  - {t: '9', h: '*', s: (}
   - {t: SCROLL, h: toggle}
   - {t: NUM, h: toggle}
   - {t: CG2D, h: toggle}
@@ -18,7 +18,7 @@ layers:
   - L
   - U
   - F
-  - '&colon_semicolon'
+  - {t: ':', h: ;}
   - {t: '!', h: '?'}
   - W
   - R
