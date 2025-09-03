@@ -286,11 +286,11 @@
 
         CG2D {
             bindings = <
-&trans  &trans          &trans               &kp F3             &trans    &trans                                 &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mt E X         &mt LC(T) V          &kp RIGHT_BRACKET  &mt Y F   &kp C                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mkp MB5        &mkp MB3             &kp LEFT_BRACKET   &mkp MB4  &mkp MB1                               &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mt LEFT_ALT I  &editor_2D_selectio  &mt N P            &mt A B   &kp LEFT_SHIFT  &kp LC(COMMA)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LS(O)                                                         &mt LCTRL H     &to 0          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans          &trans               &kp F3              &trans    &trans                                 &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mt E X         &mt LC(T) V          &kp Y               &mt Y F   &kp C                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mt E X         &mkp MB3             &mt LEFT_ALT LC(Z)  &mkp MB4  &mkp MB1                               &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mt LEFT_ALT I  &editor_2D_selectio  &mt N P             &mt A B   &kp LEFT_SHIFT  &kp LC(COMMA)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LS(O)                                                          &mt SPACE B     &to 0          &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
