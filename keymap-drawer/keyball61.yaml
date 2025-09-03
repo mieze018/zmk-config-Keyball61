@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: keyball61}
 layers:
   QWRT:
-  - {t: F18, h: 'Ctl+$$mdi:keyboard-tab$$'}
+  - {t: CG2D, h: toggle}
   - {t: '1', h: '!'}
   - {t: '2', h: '@'}
   - {t: '3', h: '#'}
@@ -12,7 +12,7 @@ layers:
   - {t: '9', h: '*', s: (}
   - {t: SCROLL, h: toggle}
   - {t: NUM, h: toggle}
-  - {t: CG2D, h: toggle}
+  - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:backspace-reverse-outline$$'}
   - Q
   - L
