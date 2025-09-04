@@ -229,8 +229,8 @@ layers:
   - '2'
   - '1'
   - {t: ., s: '>'}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -589,3 +589,7 @@ combos:
   k: '&mkp MB4'
 - p: [20, 21]
   k: '&mkp MB5'
+- p: [37, 38]
+  k: Ctl+Z
+- p: [48, 47]
+  k: Ctl+Sft+Z
