@@ -98,11 +98,6 @@
             key-positions = <37 38>;
         };
 
-        redo {
-            bindings = <&kp LC(LS(Z))>;
-            key-positions = <48 47>;
-        };
-
         window_switch {
             bindings = <&kp LC(TAB)>;
             key-positions = <48 47>;
