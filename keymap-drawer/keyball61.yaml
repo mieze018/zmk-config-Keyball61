@@ -589,6 +589,4 @@ combos:
 - p: [37, 38]
   k: Ctl+Z
 - p: [48, 47]
-  k: Ctl+Sft+Z
-- p: [48, 47]
   k: Ctl+$$mdi:keyboard-tab$$
