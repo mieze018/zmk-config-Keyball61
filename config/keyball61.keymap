@@ -59,7 +59,7 @@
 
         enter {
             bindings = <&kp ENTER>;
-            key-positions = <52 55>;
+            key-positions = <28 31>;
             layers = <0>;
         };
 
@@ -98,8 +98,8 @@
             key-positions = <37 38>;
         };
 
-        redo {
-            bindings = <&kp LC(LS(Z))>;
+        window_switch {
+            bindings = <&kp LC(TAB)>;
             key-positions = <48 47>;
         };
     };
@@ -114,76 +114,20 @@
             tapping-term-ms = <175>;
         };
 
-        copy_paste_save_cut: copy_paste_save_cut {
-            compatible = "zmk,behavior-tap-dance";
-            label = "COPY_PASTE_SAVE_CUT";
-            #binding-cells = <0>;
-            bindings = <&mt LC(S) LC(C)>, <&mt LC(X) LC(V)>;
-
-            tapping-term-ms = <165>;
-        };
-
-        mod_undo_redo: mod_undo_redo {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MOD_UNDO_REDO";
-            #binding-cells = <0>;
-            bindings = <&mt LEFT_SHIFT LC(Z)>, <&kp LC(LS(Z))>;
-
-            tapping-term-ms = <170>;
-        };
-
         hyphen_underscore_tilda_equal: hyphen_underscore_tilda_equal {
             compatible = "zmk,behavior-tap-dance";
             label = "HYPHEN_UNDERSCORE_TILDA_EQUAL";
             #binding-cells = <0>;
-            bindings = <&mt UNDERSCORE MINUS>, <&mt EQUAL TILDE>;
+            bindings = <&mt TILDE MINUS>, <&mt UNDERSCORE EQUAL>;
 
-            tapping-term-ms = <175>;
-        };
-
-        kakkos: kakkos {
-            compatible = "zmk,behavior-tap-dance";
-            label = "KAKKOS";
-            #binding-cells = <0>;
-            bindings =
-                <&mt LEFT_BRACE LEFT_PARENTHESIS>,
-                <&mt LESS_THAN LEFT_BRACKET>;
-        };
-
-        colon_semicolon: colon_semicolon {
-            compatible = "zmk,behavior-tap-dance";
-            label = "COLON_SEMICOLON";
-            #binding-cells = <0>;
-            bindings = <&kp COLON>, <&kp SEMICOLON>;
-
-            tapping-term-ms = <175>;
+            tapping-term-ms = <180>;
         };
 
         quotations_number: quotations_number {
             compatible = "zmk,behavior-tap-dance";
             label = "QUOTATIONS_NUMBER";
             #binding-cells = <0>;
-            bindings = <&lt 3 SINGLE_QUOTE>, <&mt GRAVE DOUBLE_QUOTES>;
-
-            tapping-term-ms = <175>;
-        };
-
-        lang_mod: lang_mod {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LANG_MOD";
-            #binding-cells = <0>;
-            bindings = <&lt 3 LANGUAGE_2>, <&kp LANGUAGE_1>;
-
-            tapping-term-ms = <170>;
-        };
-
-        kakko_tojirus: kakko_tojirus {
-            compatible = "zmk,behavior-tap-dance";
-            label = "KAKKO_TOJIRUS";
-            #binding-cells = <0>;
-            bindings =
-                <&mt RIGHT_BRACE RIGHT_PARENTHESIS>,
-                <&mt GREATER_THAN RIGHT_BRACKET>;
+            bindings = <&mt GRAVE SINGLE_QUOTE>, <&mt BACKSLASH DOUBLE_QUOTES>;
 
             tapping-term-ms = <180>;
         };
@@ -213,33 +157,33 @@
         default_layer {
             label = "QWRT";
             bindings = <
-&tog 7               &mt EXCLAMATION NUMBER_1  &mt AT NUMBER_2  &mt HASH NUMBER_3  &mt DOLLAR N5  &mt PERCENT NUMBER_6                                                                                &mt CARET N7              &mt AMPERSAND N8  &mt ASTERISK N9  &tog 2     &tog 3          &kp DELETE
-&mt DELETE ESCAPE    &kp Q                     &kp L            &kp U              &kp F          &mt SEMI COLON                                                                                      &mt QUESTION EXCLAMATION  &kp W             &kp R            &kp Y      &mt PLUS EQUAL  &mt LG(H) PRINTSCREEN
-&mt LC(X) LC(C)      &kp E                     &kp I            &kp A              &kp O          &hyphen_underscore_tilda_equal                                                                      &kp K                     &kp T             &kp N            &kp S      &kp H           &kp P
-&mt LC(S) LC(V)      &mt LEFT_SHIFT Z          &kp X            &kp C              &kp V          &quotations_number              &mt LEFT_BRACE LEFT_PARENTHESIS  &mt RIGHT_BRACE RIGHT_PARENTHESIS  &kp G                     &kp D             &kp M            &kp J      &kp B           &mt PIPE SLASH
-&mt LC(LS(Z)) LC(Z)  &caps_word                                                                   &mt RCTRL ENTER                 &lt 3 TAB                        &lt 3 SPACE                        &lt 2 RIGHT_CONTROL       &lt 4 BACKSPACE   &kp RIGHT_SHIFT  &kp RCTRL  &kp RIGHT_ALT   &mt RIGHT_GUI RG(TAB)
+&tog 7               &mt EXCLAMATION NUMBER_1  &mt NUMBER_2 AT_SIGN  &mt NUMBER_3 HASH  &mt NUMBER_4 DOLLAR  &mt N5 PERCENT                                                                                      &mt NUMBER_6 CARET        &mt N7 AMPERSAND  &mt N8 ASTERISK  &tog 2           &tog 3             &kp DELETE
+&mt DELETE ESCAPE    &kp Q                     &kp L                 &kp U              &kp F                &mt SEMI COLON                                                                                      &mt QUESTION EXCLAMATION  &kp W             &kp R            &kp Y            &mt PLUS EQUAL     &mt LG(H) PRINTSCREEN
+&mt LC(X) LC(C)      &kp E                     &kp I                 &kp A              &kp O                &hyphen_underscore_tilda_equal                                                                      &kp K                     &kp T             &kp N            &kp S            &kp H              &kp P
+&mt LC(S) LC(V)      &mt LEFT_SHIFT Z          &mt LEFT_ALT X        &kp C              &kp V                &quotations_number              &mt LEFT_BRACE LEFT_PARENTHESIS  &mt RIGHT_BRACE RIGHT_PARENTHESIS  &kp G                     &kp D             &kp M            &mt RIGHT_ALT J  &mt RIGHT_SHIFT B  &mt PIPE SLASH
+&mt LC(LS(Z)) LC(Z)  &caps_word                                                                              &mt RCTRL ENTER                 &lt 3 TAB                        &lt 3 SPACE                        &lt 2 SPACE               &lt 4 BACKSPACE   &kp RIGHT_SHIFT  &kp RCTRL        &kp RIGHT_ALT      &mt RIGHT_GUI RG(TAB)
             >;
         };
 
         mouse_layer {
             label = "MOUSE";
             bindings = <
-&trans  &trans          &trans    &trans          &trans                &trans                    &trans              &trans    &trans          &trans     &trans         &trans
-&trans  &trans          &trans    &trans          &trans                &trans                    &trans              &trans    &kp UP_ARROW    &trans     &trans         &trans
-&trans  &mkp MB4        &mkp MB5  &mkp MB2        &mkp MB1              &mkp MB3                  &kp LC(LEFT_ARROW)  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &kp LC(RIGHT)  &trans
-&trans  &mod_undo_redo  &trans    &mod_undo_redo  &copy_paste_save_cut  &trans    &trans  &trans  &trans              &trans    &trans          &trans     &trans         &trans
-&trans  &trans                                                          &trans    &trans  &trans  &trans              &trans    &trans          &trans     &trans         &trans
+&trans  &trans    &trans    &trans    &trans    &trans                    &trans              &trans    &trans          &trans     &trans         &trans
+&trans  &trans    &trans    &trans    &trans    &trans                    &trans              &trans    &kp UP_ARROW    &trans     &trans         &trans
+&trans  &mkp MB4  &mkp MB5  &mkp MB2  &mkp MB1  &mkp MB3                  &kp LC(LEFT_ARROW)  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &kp LC(RIGHT)  &trans
+&trans  &none     &trans    &none     &none     &trans    &trans  &trans  &trans              &trans    &trans          &trans     &trans         &trans
+&trans  &trans                                  &trans    &trans  &trans  &trans              &trans    &trans          &trans     &trans         &trans
             >;
         };
 
         scroll_layer {
             label = "SCROLL";
             bindings = <
-&trans               &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3          &bt BT_SEL 4                                                              &trans        &trans          &trans          &trans     &trans         &bt BT_CLR
-&trans               &trans        &trans        &trans          &trans                &trans                                                                    &trans        &kp PAGE_UP     &kp UP_ARROW    &trans     &trans         &trans
-&mt LC(LS(S)) LC(S)  &trans        &trans        &mkp MB2        &mkp MB1              &mkp MB3                                                                  &kp LC(LEFT)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp LC(RIGHT)  &trans
-&trans               &trans        &trans        &mod_undo_redo  &copy_paste_save_cut  &trans        &mt LESS_THAN LEFT_BRACKET  &mt GREATER_THAN RIGHT_BRACKET  &trans        &kp PAGE_DOWN   &trans          &trans     &trans         &slash_pipe_backslash
-&bootloader          &trans                                                            &trans        &trans                      &trans                          &trans        &trans          &trans          &trans     &trans         &bootloader
+&trans               &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                                              &trans        &trans             &trans          &trans     &trans         &bt BT_CLR
+&trans               &trans        &trans        &trans        &trans        &trans                                                                    &trans        &mt HOME PAGE_UP   &kp UP_ARROW    &trans     &trans         &trans
+&mt LC(LS(S)) LC(S)  &trans        &trans        &mkp MB2      &mkp MB1      &mkp MB3                                                                  &kp LC(LEFT)  &kp LEFT_ARROW     &kp DOWN_ARROW  &kp RIGHT  &kp LC(RIGHT)  &trans
+&trans               &trans        &trans        &none         &none         &trans        &mt LESS_THAN LEFT_BRACKET  &mt GREATER_THAN RIGHT_BRACKET  &trans        &mt END PAGE_DOWN  &trans          &trans     &trans         &slash_pipe_backslash
+&bootloader          &trans                                                  &trans        &trans                      &trans                          &trans        &trans             &trans          &trans     &trans         &bootloader
             >;
         };
 
@@ -290,11 +234,11 @@
 
         CG2D {
             bindings = <
-&trans  &trans          &trans               &kp F3              &trans    &trans                                 &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mt E X         &mt LC(T) V          &kp Y               &mt Y F   &kp C                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mt E X         &mkp MB3             &mt LEFT_ALT LC(Z)  &mkp MB4  &mkp MB1                               &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mt LEFT_ALT I  &editor_2D_selectio  &mt N P             &mt A B   &kp LEFT_SHIFT  &kp LC(COMMA)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LS(O)                                                          &mt SPACE B     &to 0          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F1       &kp F2       &kp F3              &kp F4       &kp F5                                              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &mt LC(T) V  &kp RIGHT_BRACKET   &mt R LS(R)  &kp C                                               &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mt LC(T) V  &mt D X      &mt LEFT_ALT LC(Z)  &mkp MB4     &editor_2D_selectio                                 &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mkp MB3     &mt F Y      &mt N P             &mt A B      &kp LEFT_SHIFT       &kp LC(COMMA)          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LS(O)                                                  &mkp MB5             &mt LC(LS(N0)) LC(N0)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
