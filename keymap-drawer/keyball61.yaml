@@ -571,7 +571,7 @@ combos:
 - p: [45, 46]
   k: .
   l: [QWRT]
-- p: [52, 55]
+- p: [28, 31]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
   l: [QWRT]
 - p: [16, 15, 14]
