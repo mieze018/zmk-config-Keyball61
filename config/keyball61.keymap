@@ -59,7 +59,7 @@
 
         enter {
             bindings = <&kp ENTER>;
-            key-positions = <52 55>;
+            key-positions = <28 31>;
             layers = <0>;
         };
 
