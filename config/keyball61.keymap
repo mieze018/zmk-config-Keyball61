@@ -48,13 +48,13 @@
         comma {
             bindings = <&kp COMMA>;
             key-positions = <40 39>;
-            layers = <0>;
+            layers = <0 4>;
         };
 
         period {
             bindings = <&kp PERIOD>;
             key-positions = <45 46>;
-            layers = <0>;
+            layers = <0 4>;
         };
 
         enter {
