@@ -567,10 +567,10 @@ combos:
   l: [QWRT, MOUSE]
 - p: [40, 39]
   k: {t: ',', s: <}
-  l: [QWRT]
+  l: [QWRT, SNIPE]
 - p: [45, 46]
   k: .
-  l: [QWRT]
+  l: [QWRT, SNIPE]
 - p: [28, 31]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
   l: [QWRT]
