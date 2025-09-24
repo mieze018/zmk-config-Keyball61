@@ -48,8 +48,8 @@ layers:
   - G
   - D
   - M
-  - {t: J, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: B, h: '$$mdi:apple-keyboard-shift$$'}
+  - J
+  - B
   - {t: /, h: '|', s: '?'}
   - {t: Ctl+Z, h: Ctl+Sft+Z}
   - $$mdi:alpha-w-box$$
