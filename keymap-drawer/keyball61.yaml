@@ -2,16 +2,16 @@ layout: {zmk_keyboard: keyball61}
 layers:
   QWRT:
   - {t: CG2D, h: toggle}
-  - {t: '1', h: '!'}
-  - {t: '@', h: '2'}
-  - {t: '#', h: '3'}
-  - {t: $, h: '4'}
-  - {t: '%', h: '5'}
-  - {t: ^, h: '6'}
-  - {t: '&', h: '7'}
-  - {t: '*', h: '8'}
-  - {t: SCROLL, h: toggle}
-  - {t: NUM, h: toggle}
+  - {t: '!', h: F1}
+  - {t: '@', h: F2}
+  - {t: '#', h: F3}
+  - {t: $, h: F4}
+  - {t: '%', h: F5}
+  - {t: ^, h: F6}
+  - {t: '&', h: F7}
+  - {t: '*', h: F8}
+  - {t: \, h: F9, s: '|'}
+  - {t: F10, h: F10}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:backspace-reverse-outline$$'}
   - Q
