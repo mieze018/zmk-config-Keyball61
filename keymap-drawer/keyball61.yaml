@@ -13,7 +13,7 @@ layers:
   - {t: \, h: F9, s: '|'}
   - {t: F10, h: F10}
   - $$mdi:backspace-reverse-outline$$
-  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:backspace-reverse-outline$$'}
+  - {t: '$$mdi:keyboard-esc$$', h: 'Ctl+Alt+$$mdi:backspace-reverse-outline$$'}
   - Q
   - L
   - U
