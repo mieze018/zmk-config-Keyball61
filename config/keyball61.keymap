@@ -161,7 +161,7 @@
 &mt LC(LA(DELETE)) ESCAPE  &kp Q               &kp L           &kp U        &kp F          &mt SEMI COLON                                                                                      &mt QUESTION EXCLAMATION  &kp W             &kp R            &kp Y             &mt PLUS EQUAL  &mt LG(H) PRINTSCREEN
 &lt 3 LC(TAB)              &kp E               &kp I           &kp A        &kp O          &hyphen_underscore_tilda_equal                                                                      &kp K                     &kp T             &kp N            &kp S             &kp H           &kp P
 &mt LC(S) LC(V)            &mt LEFT_SHIFT Z    &mt LEFT_ALT X  &kp C        &kp V          &quotations_number              &mt LEFT_BRACE LEFT_PARENTHESIS  &mt RIGHT_BRACE RIGHT_PARENTHESIS  &kp G                     &kp D             &kp M            &kp J             &kp B           &lt 4 SLASH
-&mt LC(LS(Z)) LC(Z)        &caps_word                                                      &mt RCTRL ENTER                 &lt 4 TAB                        &lt 3 TAB                          &lt 2 SPACE               &lt 4 BACKSPACE   &kp RIGHT_SHIFT  &kp RCTRL         &kp RIGHT_ALT   &mt RIGHT_GUI RG(TAB)
+&mt LC(LS(Z)) LC(Z)        &caps_word                                                      &mt RCTRL ENTER                 &mt LC(X) LC(C)                  &lt 3 TAB                          &lt 2 SPACE               &lt 4 BACKSPACE   &kp RIGHT_SHIFT  &kp RCTRL         &kp RIGHT_ALT   &mt RIGHT_GUI RG(TAB)
             >;
         };
 
