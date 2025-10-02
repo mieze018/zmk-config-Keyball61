@@ -11,7 +11,7 @@ layers:
   - {t: '&', h: F7}
   - {t: '*', h: F8}
   - {t: \, h: F9, s: '|'}
-  - {t: F10, h: F10}
+  - {t: '|', h: F10}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:keyboard-esc$$', h: 'Ctl+Alt+$$mdi:backspace-reverse-outline$$'}
   - Q
@@ -50,7 +50,7 @@ layers:
   - M
   - J
   - B
-  - {t: /, h: '|', s: '?'}
+  - {t: /, h: SNIPE, s: '?'}
   - {t: Ctl+Z, h: Ctl+Sft+Z}
   - $$mdi:alpha-w-box$$
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-control$$'}
@@ -298,14 +298,14 @@ layers:
   - '2'
   - '3'
   - .
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
