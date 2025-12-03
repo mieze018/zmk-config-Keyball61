@@ -57,12 +57,6 @@
             layers = <0 4>;
         };
 
-        enter {
-            bindings = <&kp ENTER>;
-            key-positions = <28 31>;
-            layers = <0>;
-        };
-
         close {
             bindings = <&kp RC(W)>;
             key-positions = <16 15 14>;
@@ -143,11 +137,39 @@
     };
 
     macros {
-        new_macro: new_macro {
+        switch_win: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
+            bindings = <&bt BT_SEL 1 &to 1>;
             label = "NEW_MACRO";
+        };
+
+        switch_mac: switch_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &to 0>;
+            label = "SWITCH_MAC";
+        };
+
+        switch_ipad: switch_iPad {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2 &to 0>;
+            label = "SWITCH_IPAD";
+        };
+
+        switch_android: switch_android {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 3 &to 1>;
+            label = "SWITCH_ANDROID";
+        };
+
+        switch_unix: switch_ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 4 &to 0>;
+            label = "SWITCH_";
         };
     };
 
