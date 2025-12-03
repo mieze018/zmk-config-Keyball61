@@ -36,25 +36,25 @@
         eisu {
             bindings = <&kp LANGUAGE_2>;
             key-positions = <28 27>;
-            layers = <0 1>;
+            layers = <0 5>;
         };
 
         kana {
             bindings = <&kp LANGUAGE_1>;
             key-positions = <31 32>;
-            layers = <0 1>;
+            layers = <0 5>;
         };
 
         comma {
             bindings = <&kp COMMA>;
             key-positions = <40 39>;
-            layers = <0 4>;
+            layers = <0 8>;
         };
 
         period {
             bindings = <&kp PERIOD>;
             key-positions = <45 46>;
-            layers = <0 4>;
+            layers = <0 8>;
         };
 
         close {
@@ -140,7 +140,7 @@
         switch_win: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &to 1>;
+            bindings = <&bt BT_SEL 1 &to 5>;
             label = "NEW_MACRO";
         };
 
@@ -161,7 +161,7 @@
         switch_android: switch_android {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 3 &to 1>;
+            bindings = <&bt BT_SEL 3 &to 5>;
             label = "SWITCH_ANDROID";
         };
 
@@ -176,14 +176,54 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        default_mac {
             label = "QWRT";
             bindings = <
-&tog 7                     &mt F1 EXCLAMATION  &mt F2 AT_SIGN  &mt F3 HASH  &mt F4 DOLLAR  &mt F5 PERCENT                                                                                      &mt F6 CARET              &mt F7 AMPERSAND  &mt F8 ASTERISK  &mt F9 BACKSLASH  &mt F10 PIPE    &kp DELETE
+&tog 11                    &mt F1 EXCLAMATION  &mt F2 AT_SIGN  &mt F3 HASH  &mt F4 DOLLAR  &mt F5 PERCENT                                                                                      &mt F6 CARET              &mt F7 AMPERSAND  &mt F8 ASTERISK  &mt F9 BACKSLASH  &mt F10 PIPE    &kp DELETE
 &mt LC(LA(DELETE)) ESCAPE  &kp Q               &kp L           &kp U        &kp F          &mt SEMI COLON                                                                                      &mt QUESTION EXCLAMATION  &kp W             &kp R            &kp Y             &mt PLUS EQUAL  &mt LG(H) PRINTSCREEN
-&lt 3 LC(TAB)              &kp E               &kp I           &kp A        &kp O          &hyphen_underscore_tilda_equal                                                                      &kp K                     &kp T             &kp N            &kp S             &kp H           &kp P
-&mt LC(S) LC(V)            &mt LEFT_SHIFT Z    &mt LEFT_ALT X  &kp C        &kp V          &quotations_number              &mt LEFT_BRACE LEFT_PARENTHESIS  &mt RIGHT_BRACE RIGHT_PARENTHESIS  &kp G                     &kp D             &kp M            &kp J             &kp B           &lt 4 SLASH
-&mt LC(LS(Z)) LC(Z)        &caps_word                                                      &mt RCTRL ENTER                 &mt LC(X) LC(C)                  &lt 3 TAB                          &lt 2 SPACE               &lt 4 BACKSPACE   &kp RIGHT_SHIFT  &kp RCTRL         &kp RIGHT_ALT   &mt RIGHT_GUI RG(TAB)
+&lt 7 LC(TAB)              &kp E               &kp I           &kp A        &kp O          &hyphen_underscore_tilda_equal                                                                      &kp K                     &kp T             &kp N            &kp S             &kp H           &kp P
+&mt LC(S) LC(V)            &mt LEFT_SHIFT Z    &mt LEFT_ALT X  &kp C        &kp V          &quotations_number              &mt LEFT_BRACE LEFT_PARENTHESIS  &mt RIGHT_BRACE RIGHT_PARENTHESIS  &kp G                     &kp D             &kp M            &kp J             &kp B           &lt 8 SLASH
+&mt LC(LS(Z)) LC(Z)        &caps_word                                                      &mt RCTRL ENTER                 &mt LC(X) LC(C)                  &lt 7 TAB                          &lt 6 SPACE               &lt 8 BACKSPACE   &kp RIGHT_SHIFT  &kp RCTRL         &kp RIGHT_ALT   &mt RIGHT_GUI RG(TAB)
+            >;
+        };
+
+        default_win {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        default_ipad {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        default_android {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        default_unix {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
