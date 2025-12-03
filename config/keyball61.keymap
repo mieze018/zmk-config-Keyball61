@@ -140,7 +140,7 @@
         switch_win: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &to 5>;
+            bindings = <&bt BT_SEL 1 &to 2>;
             label = "NEW_MACRO";
         };
 
@@ -154,21 +154,21 @@
         switch_ipad: switch_iPad {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2 &to 0>;
+            bindings = <&bt BT_SEL 2 &to 1>;
             label = "SWITCH_IPAD";
         };
 
         switch_android: switch_android {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 3 &to 5>;
+            bindings = <&bt BT_SEL 3 &to 3>;
             label = "SWITCH_ANDROID";
         };
 
         switch_unix: switch_ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 4 &to 0>;
+            bindings = <&bt BT_SEL 4 &to 4>;
             label = "SWITCH_";
         };
     };
@@ -187,7 +187,7 @@
             >;
         };
 
-        default_win {
+        default_ipad {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
@@ -197,7 +197,7 @@
             >;
         };
 
-        default_ipad {
+        default_win {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
