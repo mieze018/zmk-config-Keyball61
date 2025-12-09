@@ -392,7 +392,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: PgUp, h: HOME}
+  - SCROLL UP
   - $$mdi:arrow-up-bold$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -418,7 +418,7 @@ layers:
   - {t: '[', h: <, s: '{'}
   - {t: ']', h: '>', s: '}'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: PgDn, h: END}
+  - PgDn
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
