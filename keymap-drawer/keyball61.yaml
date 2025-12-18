@@ -2,7 +2,7 @@ layout: {zmk_keyboard: keyball61}
 layers:
   QWRT:
   - {t: CG2D, h: toggle}
-  - {t: '!', h: F1}
+  - {t: '`', h: F1, s: '~'}
   - {t: '@', h: F2}
   - {t: '#', h: F3}
   - {t: $, h: F4}
@@ -10,8 +10,8 @@ layers:
   - {t: ^, h: F6}
   - {t: '&', h: F7}
   - {t: '*', h: F8}
-  - {t: \, h: F9, s: '|'}
-  - {t: '|', h: F10}
+  - {t: (, h: <}
+  - {t: '>', h: )}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:keyboard-esc$$', h: 'Ctl+Alt+$$mdi:backspace-reverse-outline$$'}
   - Q
@@ -43,23 +43,23 @@ layers:
   - C
   - V
   - '&quotations_number'
-  - {t: (, h: '{'}
-  - {t: ), h: '}'}
+  - {t: '[', h: '{', s: '{'}
+  - {t: ']', h: '}', s: '}'}
   - G
   - D
   - M
   - J
   - B
-  - {t: /, h: SNIPE, s: '?'}
+  - {t: /, h: \, s: '?'}
   - {t: Ctl+Z, h: Ctl+Sft+Z}
   - $$mdi:alpha-w-box$$
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: Ctl+C, h: Ctl+X}
-  - {t: '$$mdi:keyboard-tab$$', h: NUM}
+  - {t: '$$mdi:apple-keyboard-control$$', h: Ctl+V}
   - {t: '$$mdi:keyboard-space$$', h: SCROLL}
   - {t: '$$mdi:backspace$$', h: SNIPE}
   - $$mdi:apple-keyboard-shift$$
-  - $$mdi:apple-keyboard-control$$
+  - {t: RIGHT GUI, h: NUM}
   - $$mdi:apple-keyboard-option$$
   - {t: 'Gui+$$mdi:keyboard-tab$$', h: RIGHT GUI}
   default_ipad:
@@ -489,11 +489,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:progress-download$$
   SNIPE:
@@ -546,14 +546,14 @@ layers:
   - '2'
   - '3'
   - .
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
