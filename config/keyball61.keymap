@@ -179,11 +179,11 @@
         default_mac {
             label = "QWRT";
             bindings = <
-&tog 11                    &mt F1 GRAVE      &mt F2 AT_SIGN  &mt F3 HASH  &mt F4 DOLLAR  &mt F5 PERCENT                                                                              &mt F6 CARET              &mt F7 AMPERSAND  &mt F8 ASTERISK  &mt LESS_THAN LEFT_PARENTHESIS  &mt RIGHT_PARENTHESIS GREATER_THAN  &kp DELETE
-&mt LC(LA(DELETE)) ESCAPE  &kp Q             &kp L           &kp U        &kp F          &mt SEMI COLON                                                                              &mt QUESTION EXCLAMATION  &kp W             &kp R            &kp Y                           &mt PLUS EQUAL                      &mt LG(H) PRINTSCREEN
-&lt 7 LC(TAB)              &kp E             &kp I           &kp A        &kp O          &hyphen_underscore_tilda_equal                                                              &kp K                     &kp T             &kp N            &kp S                           &kp H                               &kp P
-&mt LC(S) LC(V)            &mt LEFT_SHIFT Z  &mt LEFT_ALT X  &kp C        &kp V          &quotations_number              &mt LEFT_BRACE LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &kp G                     &kp D             &kp M            &kp J                           &kp B                               &mt BACKSLASH SLASH
-&mt LC(LS(Z)) LC(Z)        &caps_word                                                    &mt RCTRL ENTER                 &mt LC(X) LC(C)              &mt LC(V) RCTRL                &lt 6 SPACE               &lt 8 BACKSPACE   &kp RIGHT_SHIFT  &lt 7 RIGHT_GUI                 &kp RIGHT_ALT                       &mt RIGHT_GUI RG(TAB)
+&mt F24 LESS_THAN          &mt F1 GREATER_THAN  &mt F2 AT_SIGN  &mt F3 HASH  &mt F4 DOLLAR  &mt F5 PERCENT                                                                              &mt F6 CARET              &mt F7 AMPERSAND  &mt F8 ASTERISK  &mt LESS_THAN LEFT_PARENTHESIS  &mt RIGHT_PARENTHESIS GREATER_THAN  &kp DELETE
+&mt LC(LA(DELETE)) ESCAPE  &kp Q                &kp L           &kp U        &kp F          &mt SEMI COLON                                                                              &mt QUESTION EXCLAMATION  &kp W             &kp R            &kp Y                           &mt PLUS EQUAL                      &mt LG(H) PRINTSCREEN
+&lt 7 LC(TAB)              &kp E                &kp I           &kp A        &kp O          &hyphen_underscore_tilda_equal                                                              &kp K                     &kp T             &kp N            &kp S                           &kp H                               &kp P
+&mt LC(S) LC(V)            &mt LEFT_SHIFT Z     &mt LEFT_ALT X  &kp C        &kp V          &quotations_number              &mt LEFT_BRACE LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &kp G                     &kp D             &kp M            &kp J                           &kp B                               &mt BACKSLASH SLASH
+&mt LC(LS(Z)) LC(Z)        &caps_word                                                       &mt RCTRL ENTER                 &mt LC(X) LC(C)              &mt LC(V) RCTRL                &lt 6 SPACE               &lt 8 BACKSPACE   &kp RIGHT_SHIFT  &lt 7 RIGHT_GUI                 &kp RIGHT_ALT                       &mt RIGHT_GUI RG(TAB)
             >;
         };
 
@@ -291,26 +291,6 @@
 &trans               &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans   &trans
 &trans               &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
 &trans               &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
-            >;
-        };
-
-        CG2D {
-            bindings = <
-&trans  &kp F1       &kp F2       &kp F3              &kp F4       &kp F5                                              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans       &mt LC(T) V  &kp RIGHT_BRACKET   &mt R LS(R)  &kp C                                               &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mt LC(T) V  &mt D X      &mt LEFT_ALT LC(Z)  &mkp MB4     &editor_2D_selectio                                 &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mkp MB3     &mt F Y      &mt N P             &mt A B      &kp LEFT_SHIFT       &kp LC(COMMA)          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LS(O)                                                  &mkp MB5             &mt LC(LS(N0)) LC(N0)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        CG2D_2 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
