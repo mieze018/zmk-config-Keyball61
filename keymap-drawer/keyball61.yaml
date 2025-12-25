@@ -59,9 +59,9 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: SCROLL}
   - {t: '$$mdi:backspace$$', h: SNIPE}
   - $$mdi:apple-keyboard-shift$$
-  - {t: RIGHT GUI, h: NUM}
+  - {t: RIGHT GUI, h: RIGHT GUI}
   - $$mdi:apple-keyboard-option$$
-  - {t: 'Gui+$$mdi:keyboard-tab$$', h: RIGHT GUI}
+  - {t: 'Gui+$$mdi:keyboard-tab$$', h: NUM}
   default_ipad:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -493,9 +493,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:progress-download$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:progress-download$$', type: held alternate}
   SNIPE:
   - {t: '$$mdi:transfer$$', type: trans}
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
