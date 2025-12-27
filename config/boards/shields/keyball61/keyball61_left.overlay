@@ -71,7 +71,7 @@
         irq-gpios = <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         // automouse-layer = <1>;  // Input Processorを使用するため無効化
         scroll-layers = <6>;
-        snipe-layers = <4>;
+        snipe-layers = <7>;
     };
 };
 
