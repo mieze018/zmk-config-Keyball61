@@ -109,10 +109,12 @@
 };
 
 &zip_temp_layer {
-    require-prior-idle-ms = <200>;  // キー入力から200ms後にAML有効化（誤爆防止）
+    require-prior-idle-ms = <200>;  // トラックボール入力から200ms後にAML有効化（誤爆防止）
     // マウスキー以外のキーを押してマウスレイヤー自動解除 下記のキーをマウスキーとして除外。値はコンボキーの設定から参照するとよい
     excluded-positions = <
-        27 28 29
+        27
+        28
+        29
     >;
 };
 
@@ -120,8 +122,8 @@
     // https://github.com/oleksandrmaslov/zmk-pointing-acceleration?tab=readme-ov-file#general-use
     input-type = <INPUT_EV_REL>; // For relative input devices
     min-factor = <500>;        // ゆっくり動かしたときの倍率 1000 = 1x
-    max-factor = <3000>;       // 速く動かしたときの倍率 1000 = 1x
-    speed-threshold = <1200>;  // 加速が始まる速度（counts/sec）
+    max-factor = <2000>;       // 速く動かしたときの倍率 1000 = 1x
+    speed-threshold = <800>;  // 加速が始まる速度（counts/sec）
     speed-max = <6000>;          // 最大加速度に達する速度 （counts/sec）
     acceleration-exponent = <1>; // 加速速度をコントロール 1 = 線形(滑らかで緩やかな加速) 2 = 二次(加速度がより速く増加) 3 = 立方次(非常に急速な加速度増加)
     track-remainders;          // 細かい動きを蓄積して反映
@@ -138,17 +140,21 @@
         input-processors = <
             &zip_report_rate_limit 16
             &pointer_accel 
-            &zip_temp_layer 2 5000
+            &zip_temp_layer 2 3000
         >;
         // snipe {
         //         layers = <7>;
         //         input-processors = <&zip_xy_scaler 1 3>;
         // };
+
+        // スクロールレイヤーの設定
+        // &zip_scroll_x_scaler はパラメーターを2つ受け取り、1つ目が分子、2つ目が分母となる。 例えば、&zip_xy_scaler 3 2なら、CPIが1.5倍 (3/2倍)になり、&zip_xy_scaler 1 3とすれば0.333倍(1/3倍)になる。
         scroll {
                 layers = <3>;
                 input-processors = <
                     &zip_xy_to_scroll_mapper
-                    &zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_X_INVERT)
+                    &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT
+                    &zip_scroll_scaler 1 3
 
                 >;
         };
