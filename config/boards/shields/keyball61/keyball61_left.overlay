@@ -62,9 +62,9 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        automouse-layer = <2>;
-        scroll-layers = <3>;
-        snipe-layers = <4>;
+        // automouse-layer = <1>;  // Input Processorを使用するため無効化
+        // scroll-layers = <3>;
+        // snipe-layers = <7>;
     };
 };
 
@@ -143,10 +143,10 @@
             &pointer_accel 
             &zip_temp_layer 2 3000
         >;
-        snipe {
-                layers = <4>;
-                input-processors = <&zip_xy_scaler 1 4>;
-        };
+        // snipe {
+        //         layers = <7>;
+        //         input-processors = <&zip_xy_scaler 1 3>;
+        // };
 
         // スクロールレイヤーの設定
         // &zip_scroll_x_scaler はパラメーターを2つ受け取り、1つ目が分子、2つ目が分母となる。 例えば、&zip_xy_scaler 3 2なら、CPIが1.5倍 (3/2倍)になり、&zip_xy_scaler 1 3とすれば0.333倍(1/3倍)になる。
