@@ -46,6 +46,10 @@ Firmware: _[Amos698](https://github.com/Amos698)_ <br>
 
 ```
 
+### 加速度の設定
+
+- [keyball61_left.overlay](config/boards/shields/keyball61/keyball61_left.overlay)の`&pointer_accel`内
+
 # keymap drawer
 
 <img src="keymap-drawer/keyball61.svg" >

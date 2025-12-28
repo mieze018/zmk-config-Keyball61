@@ -5,6 +5,7 @@
  */
  
 #include <input/processors.dtsi>
+#include <behaviors/input_gestures_accel.dtsi>
 #include "keyball61.dtsi"
 
 &zip_temp_layer {
@@ -13,7 +14,7 @@
     excluded-positions = <
         // マウスキーのポジション（仮設定）
         // Row 3 左側: MB4, MB5, MB2, MB1, MB3 (推定位置: 24-28)
-        26 27 28
+        27 28 29
     >;
 };
 
@@ -117,19 +118,33 @@
     };
 };
 
-/ {
-  trackball_listener {
-    compatible = "zmk,input-listener";
-    device = <&trackball>;
+&pointer_accel {
+    // https://github.com/oleksandrmaslov/zmk-pointing-acceleration?tab=readme-ov-file#general-use
+    input-type = <INPUT_EV_REL>; // For relative input devices
+    min-factor = <500>;        // 0.7x minimum
+    max-factor = <4000>;       // 4.0x maximum
+    speed-threshold = <1200>;  // counts/sec for 1x
+    speed-max = <6000>;          // counts/sec for max accel
+    acceleration-exponent = <3>; // Cubic acceleration curve
+    track-remainders;          // Track fractional movements
+};
 
-    input-processors = <&zip_temp_layer 5 10000>; //レイヤー番号 タイムアウト時間(ms)
-    snipe {
-        layers = <7>;
-        input-processors = <&zip_xy_scaler 1 3>;
+/ {
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+
+        input-processors = <
+            &pointer_accel 
+            &zip_temp_layer 5 10000
+        >;
+        snipe {
+                layers = <7>;
+                input-processors = <&zip_xy_scaler 1 3>;
+        };
+        scroller {
+                layers = <6>;
+                input-processors = <&zip_xy_to_scroll_mapper>;
+        };
     };
-    scroller {
-        layers = <6>;
-        input-processors = <&zip_xy_to_scroll_mapper>;
-    };
-  };
 };
