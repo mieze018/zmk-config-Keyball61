@@ -123,5 +123,13 @@
     device = <&trackball>;
 
     input-processors = <&zip_temp_layer 5 10000>; //レイヤー番号 タイムアウト時間(ms)
+    snipe {
+        layers = <7>;
+        input-processors = <&zip_xy_scaler 1 3>;
+    };
+    scroller {
+        layers = <6>;
+        input-processors = <&zip_xy_to_scroll_mapper>;
+    };
   };
 };
