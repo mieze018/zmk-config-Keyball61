@@ -20,9 +20,24 @@ Firmware: _[Amos698](https://github.com/Amos698)_ <br>
 ### カーソル移動速度の設定
 
 [keyball61_left.conf](config/boards/shields/keyball61/keyball61_left.conf) の `CONFIG_PMW3610_CPI`や`CONFIG_PMW3610_SNIPE_CPI`
-a
 
-### マウスキー押下によるマウスレイヤーのタイムアウト時間の設定
+### トラックボールを動かしたら自動的にマウススレイヤーをアクティブにする設定
+
+- [keyball61_left.keymap](config/keyball61_left.keymap)
+
+```
+&trackball_listener
+```
+
+### マウスキーの設定。それ以外のキーを押してマウスレイヤーの自動解除
+
+- [keyball61_left.keymap](config/keyball61_left.keymap)
+
+```
+&zip_temp_layer
+```
+
+### マウスキー押下によるマウスレイヤーのタイムアウト時間延長の設定
 
 - [keyball61.keymap](config/keyball61.keymap)
 

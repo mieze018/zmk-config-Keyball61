@@ -8,11 +8,12 @@
 #include "keyball61.dtsi"
 
 &zip_temp_layer {
+    // マウスキー以外のキーを押してマウスレイヤーの自動解除
     require-prior-idle-ms = <200>;  // キー入力から200ms後にAML有効化（誤爆防止）
     excluded-positions = <
         // マウスキーのポジション（仮設定）
         // Row 3 左側: MB4, MB5, MB2, MB1, MB3 (推定位置: 24-28)
-        27 28 29
+        26 27 28
     >;
 };
 
@@ -121,6 +122,6 @@
     compatible = "zmk,input-listener";
     device = <&trackball>;
 
-    input-processors = <&zip_temp_layer 1 10000>; //レイヤー番号 タイムアウト時間(ms)
+    input-processors = <&zip_temp_layer 5 10000>; //レイヤー番号 タイムアウト時間(ms)
   };
 };
