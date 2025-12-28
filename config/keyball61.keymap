@@ -36,25 +36,21 @@
         eisu {
             bindings = <&kp LANGUAGE_2>;
             key-positions = <28 27>;
-            layers = <0 5>;
         };
 
         kana {
             bindings = <&kp LANGUAGE_1>;
             key-positions = <31 32>;
-            layers = <0 5>;
         };
 
         comma {
             bindings = <&kp COMMA>;
             key-positions = <40 39>;
-            layers = <0 8>;
         };
 
         period {
             bindings = <&kp PERIOD>;
             key-positions = <45 46>;
-            layers = <0 8>;
         };
 
         close {
@@ -85,16 +81,6 @@
         mb5 {
             bindings = <&mkp MB5>;
             key-positions = <20 21>;
-        };
-
-        undo {
-            bindings = <&kp LC(Z)>;
-            key-positions = <37 38>;
-        };
-
-        window_switch {
-            bindings = <&kp LC(TAB)>;
-            key-positions = <48 47>;
         };
     };
 
@@ -230,11 +216,11 @@
         mouse_layer {
             label = "MOUSE";
             bindings = <
-&trans  &trans    &trans    &trans    &trans    &trans                    &trans              &trans    &trans          &trans     &trans         &trans
-&trans  &trans    &trans    &trans    &trans    &trans                    &trans              &trans    &kp UP_ARROW    &trans     &trans         &trans
-&trans  &mkp MB4  &mkp MB5  &mkp MB2  &mkp MB1  &mkp MB3                  &kp LC(LEFT_ARROW)  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &kp LC(RIGHT)  &trans
-&trans  &none     &trans    &none     &none     &trans    &trans  &trans  &trans              &trans    &trans          &trans     &trans         &trans
-&trans  &trans                                  &trans    &trans  &trans  &trans              &trans    &trans          &trans     &trans         &trans
+&trans  &trans  &trans    &trans    &trans    &trans                  &trans              &trans    &trans          &trans     &trans         &trans
+&trans  &trans  &trans    &trans    &trans    &trans                  &trans              &trans    &kp UP_ARROW    &trans     &trans         &trans
+&trans  &trans  &mkp MB3  &mkp MB2  &mkp MB1  &trans                  &kp LC(LEFT_ARROW)  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &kp LC(RIGHT)  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans              &trans    &trans          &trans     &trans         &trans
+&trans  &trans                                &trans  &trans  &trans  &trans              &trans    &trans          &trans     &trans         &trans
             >;
         };
 
