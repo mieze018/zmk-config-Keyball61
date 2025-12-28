@@ -386,10 +386,18 @@ combos:
 - p: [16, 15]
   k: Ctl+R
 - p: [26, 27]
-  k: F16
+  k: Ctl+Alt+$$mdi:arrow-left-bold$$
+  l: [MAC]
 - p: [33, 32]
-  k: F17
+  k: Ctl+Alt+$$mdi:arrow-right-bold$$
+  l: [MAC]
 - p: [14, 15]
   k: '&mkp MB4'
 - p: [20, 21]
   k: '&mkp MB5'
+- p: [26, 27]
+  k: Sft+Ctl+$$mdi:keyboard-tab$$
+  l: [WIN]
+- p: [32, 33]
+  k: Ctl+$$mdi:keyboard-tab$$
+  l: [WIN]
