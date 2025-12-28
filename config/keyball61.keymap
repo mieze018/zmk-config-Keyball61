@@ -7,8 +7,10 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // マウスキーを押したらタイムアウトを延長（ドラッグやダブルクリックを考慮 1秒）
+// Note: temp-layer は「指定レイヤーを一時的に有効化→解除時に無効化」なので、
+// ここはマウスレイヤー（このキーマップでは index=2）を延長対象にする。
 
-&mkp_input_listener { input-processors = <&zip_temp_layer 1 1000>; };
+&mkp_input_listener { input-processors = <&zip_temp_layer 2 1000>; };
 
 &lt {
     tapping-term-ms = <185>;
