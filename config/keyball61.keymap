@@ -56,14 +56,16 @@
             key-positions = <16 15>;
         };
 
-        prev_tab_f16 {
-            bindings = <&kp F16>;
+        prev_tab_mac {
+            bindings = <&kp LC(LA(LEFT))>;
             key-positions = <26 27>;
+            layers = <0>;
         };
 
-        next_tab_f17 {
-            bindings = <&kp F17>;
+        next_tab_mac {
+            bindings = <&kp LC(LA(RIGHT))>;
             key-positions = <33 32>;
+            layers = <0>;
         };
 
         mb4 {
@@ -74,6 +76,18 @@
         mb5 {
             bindings = <&mkp MB5>;
             key-positions = <20 21>;
+        };
+
+        prev_tab_win {
+            bindings = <&kp LS(LC(TAB))>;
+            key-positions = <26 27>;
+            layers = <1>;
+        };
+
+        next_tab_win {
+            bindings = <&kp LC(TAB)>;
+            key-positions = <32 33>;
+            layers = <1>;
         };
     };
 
