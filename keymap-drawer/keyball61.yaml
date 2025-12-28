@@ -336,11 +336,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&mkp MB4'
-  - '&mkp MB5'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - '&mkp MB3'
   - '&mkp MB2'
   - '&mkp MB1'
-  - '&mkp MB3'
+  - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+$$mdi:arrow-left-bold$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -685,16 +685,12 @@ layers:
 combos:
 - p: [28, 27]
   k: LANGUAGE 2
-  l: [QWRT, MOUSE]
 - p: [31, 32]
   k: LANGUAGE 1
-  l: [QWRT, MOUSE]
 - p: [40, 39]
   k: {t: ',', s: <}
-  l: [QWRT, SNIPE]
 - p: [45, 46]
   k: .
-  l: [QWRT, SNIPE]
 - p: [16, 15, 14]
   k: Ctl+W
 - p: [16, 15]
@@ -707,7 +703,3 @@ combos:
   k: '&mkp MB4'
 - p: [20, 21]
   k: '&mkp MB5'
-- p: [37, 38]
-  k: Ctl+Z
-- p: [48, 47]
-  k: Ctl+$$mdi:keyboard-tab$$
