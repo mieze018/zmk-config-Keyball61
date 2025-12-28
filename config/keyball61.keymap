@@ -187,7 +187,7 @@
         mouse_layer {
             label = "MOUSE";
             bindings = <
-&trans  &switch_mac  &switch_win  &switch_ipad  &switch_android  &switch_win2                  &trans              &trans    &trans          &trans     &trans         &trans
+&trans               &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                        &trans              &trans    &trans          &trans     &trans         &trans
 &trans  &trans       &trans       &trans        &trans           &trans                        &trans              &trans    &trans    &trans     &trans         &trans
 &trans  &trans       &mkp MB3     &mkp MB2      &mkp MB1         &trans                        &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans       &trans       &trans        &trans           &trans        &trans  &trans  &trans              &trans    &trans          &trans     &trans         &trans
@@ -198,7 +198,7 @@
         scroll_func_layer {
             label = "SCROLL";
             bindings = <
-&trans               &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                                              &trans        &trans           &trans          &trans     &trans         &bt BT_CLR
+&trans  &switch_mac  &switch_win  &switch_ipad  &switch_android  &switch_win2                                                              &trans        &trans           &trans          &trans     &trans         &bt BT_CLR
 &trans               &trans        &trans        &trans        &trans        &trans                                                                    &trans        &kp K_SCROLL_UP  &kp UP_ARROW    &trans     &trans         &trans
 &mt LC(LS(S)) LC(S)  &trans        &trans        &mkp MB2      &mkp MB1      &mkp MB3                                                                  &kp LC(LEFT)  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT  &kp LC(RIGHT)  &trans
 &trans               &trans        &trans        &trans         &trans         &trans        &mt LESS_THAN LEFT_BRACKET  &mt GREATER_THAN RIGHT_BRACKET  &trans        &kp PAGE_DOWN    &trans          &trans     &trans         &slash_pipe_backslash
