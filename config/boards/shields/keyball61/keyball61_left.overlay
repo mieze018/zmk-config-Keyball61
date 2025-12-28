@@ -6,6 +6,7 @@
  
 #include <input/processors.dtsi>
 #include <behaviors/input_gestures_accel.dtsi>
+#include <input/processors/report_rate_limit.dtsi>
 #include "keyball61.dtsi"
 
 &zip_temp_layer {
@@ -135,6 +136,7 @@
         device = <&trackball>;
 
         input-processors = <
+            &zip_report_rate_limit 16
             &pointer_accel 
             &zip_temp_layer 5 10000
         >;
