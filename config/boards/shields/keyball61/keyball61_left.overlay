@@ -3,23 +3,11 @@
  *
  * SPDX-License-Identifier: MIT
  */
- 
 #include <input/processors.dtsi>
 #include <behaviors/input_gestures_accel.dtsi>
 #include <input/processors/report_rate_limit.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 #include "keyball61.dtsi"
-
-&zip_temp_layer {
-    // マウスキー以外のキーを押してマウスレイヤーの自動解除
-    require-prior-idle-ms = <200>;  // キー入力から200ms後にAML有効化（誤爆防止）
-    excluded-positions = <
-        // マウスキーのポジション（仮設定）
-        // Row 3 左側: MB4, MB5, MB2, MB1, MB3 (推定位置: 24-28)
-        27 28 29
-    >;
-};
-
 
 &kscan0 {
     row-gpios
@@ -74,8 +62,8 @@
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         // automouse-layer = <1>;  // Input Processorを使用するため無効化
-        scroll-layers = <6>;
-        snipe-layers = <7>;
+        // scroll-layers = <3>;
+        // snipe-layers = <7>;
     };
 };
 
@@ -120,6 +108,14 @@
     };
 };
 
+&zip_temp_layer {
+    require-prior-idle-ms = <200>;  // キー入力から200ms後にAML有効化（誤爆防止）
+    // マウスキー以外のキーを押してマウスレイヤー自動解除 下記のキーをマウスキーとして除外。値はコンボキーの設定から参照するとよい
+    excluded-positions = <
+        27 28 29
+    >;
+};
+
 &pointer_accel {
     // https://github.com/oleksandrmaslov/zmk-pointing-acceleration?tab=readme-ov-file#general-use
     input-type = <INPUT_EV_REL>; // For relative input devices
@@ -135,18 +131,21 @@
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-
+        // Input Processors
+        // zip_report_rate_limit: param: レポートレート制限
+        // pointer_accel: ポインター加速
+        // zip_temp_layer: オートマウスレイヤー param: 切り替えるレイヤー番号 持続時間(ms)
         input-processors = <
             &zip_report_rate_limit 16
             &pointer_accel 
-            &zip_temp_layer 5 10000
+            &zip_temp_layer 2 5000
         >;
-        snipe {
-                layers = <7>;
-                input-processors = <&zip_xy_scaler 1 3>;
-        };
-        scroller {
-                layers = <6>;
+        // snipe {
+        //         layers = <7>;
+        //         input-processors = <&zip_xy_scaler 1 3>;
+        // };
+        scroll {
+                layers = <3>;
                 input-processors = <
                     &zip_xy_to_scroll_mapper
                     &zip_scroll_transform INPUT_TRANSFORM_X_INVERT

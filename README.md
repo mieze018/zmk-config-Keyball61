@@ -13,23 +13,14 @@ Firmware: _[Amos698](https://github.com/Amos698)_ <br>
 
 ## トラックボール関連の設定
 
-### スクロールレイヤー、スナイプレイヤーなどのトラックボールの挙動を変えるレイヤーの設定
+input processors で行う
 
-- [keyball61_left.overlay](./config/boards/shields/keyball61/keyball61_left.overlay)の`&spi1.trackball`内
+- スクロールレイヤー、スナイプレイヤーなどのトラックボールの挙動を変えるレイヤーの設定
+- トラックボールを動かしたら自動的にマウススレイヤーをアクティブにする設定
 
-### カーソル移動速度の設定
+[keyball61_left.overlay](./config/boards/shields/keyball61/keyball61_left.overlay)の`trackball_listener`
 
-[keyball61_left.conf](config/boards/shields/keyball61/keyball61_left.conf) の `CONFIG_PMW3610_CPI`や`CONFIG_PMW3610_SNIPE_CPI`
-
-### トラックボールを動かしたら自動的にマウススレイヤーをアクティブにする設定
-
-- [keyball61_left.keymap](config/keyball61_left.keymap)
-
-```
-&trackball_listener
-```
-
-### マウスキーの設定。それ以外のキーを押してマウスレイヤーの自動解除
+### マウスキーの設定 （それ以外のキーを押してマウスレイヤーの自動解除）
 
 - [keyball61_left.keymap](config/keyball61_left.keymap)
 
@@ -37,16 +28,7 @@ Firmware: _[Amos698](https://github.com/Amos698)_ <br>
 &zip_temp_layer
 ```
 
-### マウスキー押下によるマウスレイヤーのタイムアウト時間延長の設定
-
-- [keyball61.keymap](config/keyball61.keymap)
-
-```
-&mkp_input_listener { input-processors = <&zip_temp_layer 1 1000>; };
-
-```
-
-### 加速度の設定
+### マウスポインター加速度の設定
 
 - [keyball61_left.overlay](config/boards/shields/keyball61/keyball61_left.overlay)の`&pointer_accel`内
 
