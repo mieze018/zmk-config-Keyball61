@@ -122,9 +122,9 @@
 &pointer_accel {
     // https://github.com/oleksandrmaslov/zmk-pointing-acceleration?tab=readme-ov-file#general-use
     input-type = <INPUT_EV_REL>; // For relative input devices
-    min-factor = <300>;        // ゆっくり動かしたときの倍率 1000 = 1x
-    max-factor = <6000>;       // 速く動かしたときの倍率 1000 = 1x
-    speed-threshold = <1000>;  // 加速が始まる速度（counts/sec）
+    min-factor = <500>;        // ゆっくり動かしたときの倍率 1000 = 1x
+    max-factor = <8000>;       // 速く動かしたときの倍率 1000 = 1x
+    speed-threshold = <1200>;  // 加速が始まる速度（counts/sec）
     speed-max = <3000>;          // 最大加速度に達する速度 （counts/sec）
     acceleration-exponent = <5>; // 加速速度をコントロール 1 = 線形(滑らかで緩やかな加速) 2 = 二次(加速度がより速く増加) 3 = 立方次(非常に急速な加速度増加)
     track-remainders;          // 細かい動きを蓄積して反映
@@ -155,7 +155,7 @@
                 input-processors = <
                     &zip_xy_to_scroll_mapper
                     &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT
-                    &zip_scroll_scaler 1 3
+                    &zip_scroll_scaler 1 4
                     &zip_scroll_snap
                 >;
         };
