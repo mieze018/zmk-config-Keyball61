@@ -27,7 +27,7 @@ layers:
   - {t: PRINTSCREEN, h: Gui+H}
   - $$mdi:keyboard-tab$$
   - E
-  - I
+  - {t: I, h: SCROLL}
   - A
   - O
   - '&hyphen_underscore_tilda_equal'
@@ -213,7 +213,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
-  - {type: held alternate}
+  - {type: held}
   - '&mkp MB2'
   - '&mkp MB1'
   - '&mkp MB3'
@@ -238,7 +238,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:progress-download$$
-  - {type: held}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
