@@ -130,6 +130,10 @@
     track-remainders;          // 細かい動きを蓄積して反映
 };
 
+&zip_report_rate_limit {
+  limit-ble-only; // BLE接続時のみレポートレート制限を有効化
+};
+
 / {
     trackball_listener {
         compatible = "zmk,input-listener";
@@ -139,7 +143,7 @@
         // pointer_accel: ポインター加速
         // zip_temp_layer: オートマウスレイヤー param: 切り替えるレイヤー番号 持続時間(ms)
         input-processors = <
-            &zip_report_rate_limit 16
+            &zip_report_rate_limit 8
             &pointer_accel 
             &zip_temp_layer 2 3000
         >;
