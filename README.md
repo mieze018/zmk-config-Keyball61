@@ -10,6 +10,7 @@ Firmware: _[Amos698](https://github.com/Amos698)_ <br>
 - left ball (mirrored)
 - micro controller: NRF52840
 - trackball sensor: PMW3610
+- COROPIT
 
 ## トラックボール関連の設定
 
