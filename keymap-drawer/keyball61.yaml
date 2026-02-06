@@ -374,7 +374,7 @@ layers:
   - {type: held}
 combos:
 - p: [28, 27]
-  k: '&eisu_with_exit_mouselayer'
+  k: LANG2
 - p: [31, 32]
   k: LANGUAGE 1
 - p: [40, 39]

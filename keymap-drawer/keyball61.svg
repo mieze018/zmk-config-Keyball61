@@ -609,7 +609,7 @@ rect.held, rect.combo.held {
 </a></g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="210" y="134" width="28" height="26" class="combo"/>
-<text x="224" y="147" class="combo tap"><tspan style="font-size: 60%">&amp;eisu_wit…</tspan></text>
+<text x="224" y="147" class="combo tap">LANG2</text>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="658" y="134" width="28" height="26" class="combo"/>
@@ -980,7 +980,7 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="210" y="134" width="28" height="26" class="combo"/>
-<text x="224" y="147" class="combo tap"><tspan style="font-size: 60%">&amp;eisu_wit…</tspan></text>
+<text x="224" y="147" class="combo tap">LANG2</text>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="658" y="134" width="28" height="26" class="combo"/>
@@ -1362,7 +1362,7 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="210" y="134" width="28" height="26" class="combo"/>
-<text x="224" y="147" class="combo tap"><tspan style="font-size: 60%">&amp;eisu_wit…</tspan></text>
+<text x="224" y="147" class="combo tap">LANG2</text>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="658" y="134" width="28" height="26" class="combo"/>
@@ -1724,7 +1724,7 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="210" y="134" width="28" height="26" class="combo"/>
-<text x="224" y="147" class="combo tap"><tspan style="font-size: 60%">&amp;eisu_wit…</tspan></text>
+<text x="224" y="147" class="combo tap">LANG2</text>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="658" y="134" width="28" height="26" class="combo"/>
@@ -2092,7 +2092,7 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="210" y="134" width="28" height="26" class="combo"/>
-<text x="224" y="147" class="combo tap"><tspan style="font-size: 60%">&amp;eisu_wit…</tspan></text>
+<text x="224" y="147" class="combo tap">LANG2</text>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="658" y="134" width="28" height="26" class="combo"/>
@@ -2455,7 +2455,7 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="210" y="134" width="28" height="26" class="combo"/>
-<text x="224" y="147" class="combo tap"><tspan style="font-size: 60%">&amp;eisu_wit…</tspan></text>
+<text x="224" y="147" class="combo tap">LANG2</text>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="658" y="134" width="28" height="26" class="combo"/>
