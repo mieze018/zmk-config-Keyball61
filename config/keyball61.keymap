@@ -96,6 +96,11 @@
             bindings = <&mo 3>;
             key-positions = <26 25>;
         };
+
+        symbol_layer {
+            bindings = <&mo 5>;
+            key-positions = <55 52>;
+        };
     };
 
     behaviors {
@@ -234,11 +239,11 @@
         function_layer {
             label = "FUN";
             bindings = <
-&kp LS(LC(LA(DEL)))  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-&trans               &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans   &trans
-&trans               &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans   &trans
-&trans               &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
-&trans               &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
+&kp LS(LC(LA(DEL)))  &kp F1  &kp F2    &kp F3       &kp F4  &kp F5                  &kp F6        &kp F7      &kp F8         &kp F9         &kp F10        &kp F11
+&trans               &trans  &trans    &trans       &trans  &trans                  &trans        &trans      &trans         &kp BACKSLASH  &trans         &trans
+&trans               &trans  &kp PIPE  &kp AT_SIGN  &trans  &trans                  &kp ASTERISK  &trans      &kp AMPERSAND  &kp SLASH      &kp HASH       &kp PERCENT
+&trans               &trans  &trans    &kp CARET    &trans  &trans  &trans  &trans  &trans        &kp DOLLAR  &trans         &trans         &kp BACKSLASH  &trans
+&trans               &trans                                 &trans  &trans  &trans  &trans        &trans      &trans         &trans         &trans         &trans
             >;
         };
     };
