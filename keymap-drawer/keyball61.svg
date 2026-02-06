@@ -609,9 +609,7 @@ rect.held, rect.combo.held {
 </a></g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="210" y="134" width="28" height="26" class="combo"/>
-<text x="224" y="147" class="combo tap">
-<tspan x="224" dy="-0.6em" style="font-size: 75%">LANGUAGE</tspan><tspan x="224" dy="1.2em" style="font-size: 75%">2</tspan>
-</text>
+<text x="224" y="147" class="combo tap"><tspan style="font-size: 60%">&amp;eisu_wit…</tspan></text>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="658" y="134" width="28" height="26" class="combo"/>
@@ -982,9 +980,7 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="210" y="134" width="28" height="26" class="combo"/>
-<text x="224" y="147" class="combo tap">
-<tspan x="224" dy="-0.6em" style="font-size: 75%">LANGUAGE</tspan><tspan x="224" dy="1.2em" style="font-size: 75%">2</tspan>
-</text>
+<text x="224" y="147" class="combo tap"><tspan style="font-size: 60%">&amp;eisu_wit…</tspan></text>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="658" y="134" width="28" height="26" class="combo"/>
@@ -1366,9 +1362,7 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="210" y="134" width="28" height="26" class="combo"/>
-<text x="224" y="147" class="combo tap">
-<tspan x="224" dy="-0.6em" style="font-size: 75%">LANGUAGE</tspan><tspan x="224" dy="1.2em" style="font-size: 75%">2</tspan>
-</text>
+<text x="224" y="147" class="combo tap"><tspan style="font-size: 60%">&amp;eisu_wit…</tspan></text>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="658" y="134" width="28" height="26" class="combo"/>
@@ -1559,26 +1553,20 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key held"/>
 </g>
-<g transform="translate(196, 140)" class="key keypos-27">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">MB2</tspan>
-</text>
+<g transform="translate(196, 140)" class="key trans keypos-27">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
+<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-9" y="-13" height="18" width="18.0" class="key trans tap glyph mdi:transfer"/>
 </g>
-<g transform="translate(252, 154)" class="key keypos-28">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">MB1</tspan>
-</text>
+<g transform="translate(252, 154)" class="key trans keypos-28">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
+<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-9" y="-13" height="18" width="18.0" class="key trans tap glyph mdi:transfer"/>
 </g>
-<g transform="translate(308, 165)" class="key keypos-29">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">MB3</tspan>
-</text>
+<g transform="translate(308, 165)" class="key trans keypos-29">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
+<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-9" y="-13" height="18" width="18.0" class="key trans tap glyph mdi:transfer"/>
 </g>
 <g transform="translate(588, 165)" class="key keypos-30">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -1736,9 +1724,7 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="210" y="134" width="28" height="26" class="combo"/>
-<text x="224" y="147" class="combo tap">
-<tspan x="224" dy="-0.6em" style="font-size: 75%">LANGUAGE</tspan><tspan x="224" dy="1.2em" style="font-size: 75%">2</tspan>
-</text>
+<text x="224" y="147" class="combo tap"><tspan style="font-size: 60%">&amp;eisu_wit…</tspan></text>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="658" y="134" width="28" height="26" class="combo"/>
@@ -1936,26 +1922,20 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held alternate side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key held alternate"/>
 </g>
-<g transform="translate(196, 140)" class="key keypos-27">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">MB2</tspan>
-</text>
+<g transform="translate(196, 140)" class="key trans keypos-27">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
+<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-9" y="-13" height="18" width="18.0" class="key trans tap glyph mdi:transfer"/>
 </g>
-<g transform="translate(252, 154)" class="key keypos-28">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">MB1</tspan>
-</text>
+<g transform="translate(252, 154)" class="key trans keypos-28">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
+<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-9" y="-13" height="18" width="18.0" class="key trans tap glyph mdi:transfer"/>
 </g>
-<g transform="translate(308, 165)" class="key keypos-29">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">MB3</tspan>
-</text>
+<g transform="translate(308, 165)" class="key trans keypos-29">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
+<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-9" y="-13" height="18" width="18.0" class="key trans tap glyph mdi:transfer"/>
 </g>
 <g transform="translate(588, 165)" class="key trans keypos-30">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
@@ -2112,9 +2092,7 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="210" y="134" width="28" height="26" class="combo"/>
-<text x="224" y="147" class="combo tap">
-<tspan x="224" dy="-0.6em" style="font-size: 75%">LANGUAGE</tspan><tspan x="224" dy="1.2em" style="font-size: 75%">2</tspan>
-</text>
+<text x="224" y="147" class="combo tap"><tspan style="font-size: 60%">&amp;eisu_wit…</tspan></text>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="658" y="134" width="28" height="26" class="combo"/>
@@ -2477,9 +2455,7 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="210" y="134" width="28" height="26" class="combo"/>
-<text x="224" y="147" class="combo tap">
-<tspan x="224" dy="-0.6em" style="font-size: 75%">LANGUAGE</tspan><tspan x="224" dy="1.2em" style="font-size: 75%">2</tspan>
-</text>
+<text x="224" y="147" class="combo tap"><tspan style="font-size: 60%">&amp;eisu_wit…</tspan></text>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="658" y="134" width="28" height="26" class="combo"/>
