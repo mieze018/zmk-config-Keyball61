@@ -29,7 +29,7 @@
         compatible = "zmk,combos";
 
         eisu {
-            bindings = <&eisu_with_exit_mouselayer>;
+            bindings = <&kp LANG2>;
             key-positions = <28 27>;
         };
 
@@ -175,13 +175,6 @@
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 4 &to 1>;
             label = "SWITCH_WIN2";
-        };
-
-        eisu_with_exit_mouselayer: eisu_with_exit_mouselayer {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mo 4 &kp LANG2>;
-            label = "EISU_WITH_EXIT_MOUSELAYER";
         };
     };
 
