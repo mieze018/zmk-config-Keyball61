@@ -203,7 +203,7 @@
             bindings = <
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans        &trans        &trans        &trans        &trans                        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans        &mkp MB2      &mkp MB1      &mkp MB3                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mkp MB3      &trans        &mkp MB2      &mkp MB1      &trans                        &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans                                                  &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
@@ -216,18 +216,18 @@
 &trans       &trans       &trans       &trans        &trans           &trans                        &trans        &kp K_SCROLL_UP  &kp UP_ARROW    &trans     &trans         &trans
 &trans       &trans       &trans       &mkp MB2      &mkp MB1         &mkp MB3                      &kp LC(LEFT)  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT  &kp LC(RIGHT)  &trans
 &trans       &trans       &trans       &trans        &trans           &trans        &trans  &trans  &trans        &kp PAGE_DOWN    &trans          &trans     &trans         &trans
-&bootloader  &trans                                                   &trans        &trans  &trans  &trans        &trans           &trans          &trans     &trans         &bootloader
+&bootloader  &trans                                                   &mo 4         &trans  &trans  &trans        &trans           &trans          &trans     &trans         &bootloader
             >;
         };
 
         number_layer {
             label = "NUM";
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &trans        &trans        &trans        &trans        &trans      &trans
-&trans  &trans        &trans        &trans        &trans        &trans                        &trans        &kp N7        &kp N8        &kp N9        &trans      &trans
-&trans  &trans        &trans        &mkp MB2      &mkp MB1      &mkp MB3                      &trans        &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans      &trans
-&trans  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &trans
-&trans  &trans                                                  &trans        &trans  &trans  &trans        &trans        &trans        &trans        &trans      &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &trans  &trans        &trans        &trans        &trans      &trans
+&trans  &trans        &trans        &trans        &trans        &trans                        &trans  &kp N7        &kp N8        &kp N9        &trans      &trans
+&trans  &trans        &trans        &mkp MB2      &mkp MB1      &mkp MB3                      &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PERIOD  &trans
+&trans  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0      &trans
+&trans  &trans                                                  &trans        &trans  &trans  &trans  &trans        &trans        &trans        &trans      &trans
             >;
         };
 
