@@ -217,11 +217,11 @@
         scroll_num_bt_layer {
             label = "SCROLL";
             bindings = <
-&trans       &switch_mac  &switch_win   &switch_ipad  &switch_android  &switch_win2                  &trans        &trans           &trans          &trans     &trans         &bt BT_CLR
-&trans       &trans       &kp K_SCROLL_UP       &kp UP_ARROW         &trans           &trans                       &trans  &kp N7        &kp N8        &kp N9        &trans      &trans
-&trans       &kp LC(LEFT)  &kp LEFT_ARROW  &kp DOWN_ARROW        &kp RIGHT     &kp LC(RIGHT)                       &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
-&trans  &trans        &trans        &trans        &trans        &trans        &trans  &trans     &kp PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0      &trans
-&bootloader  &trans                                                    &mo 4         &trans  &trans  &trans        &trans           &trans          &trans     &trans         &bootloader
+&trans       &switch_mac   &switch_win     &switch_ipad    &switch_android    &switch_win2                   &trans      &trans        &trans        &trans        &trans  &bt BT_CLR
+&trans       &trans        &trans          &kp UP_ARROW    &kp K_SCROLL_UP    &trans                         &trans      &kp N7        &kp N8        &kp N9        &trans  &trans
+&trans       &kp LC(LEFT)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT          &kp LC(RIGHT)                  &trans      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
+&trans       &trans        &trans          &trans          &kp K_SCROLL_DOWN  &trans         &trans  &trans  &kp PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0  &trans
+&bootloader  &trans                                                           &mo 4          &trans  &trans  &trans      &trans        &trans        &trans        &trans  &bootloader
             >;
         };
 
