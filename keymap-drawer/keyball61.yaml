@@ -27,7 +27,7 @@ layers:
   - {t: PRINTSCREEN, h: Gui+H}
   - $$mdi:keyboard-tab$$
   - E
-  - {t: I, h: SCROLL}
+  - {t: I, h: SCROLL_NUM}
   - A
   - O
   - '&hyphen_underscore_tilda_equal'
@@ -52,11 +52,11 @@ layers:
   - B
   - {t: /, h: \, s: '?'}
   - {t: Ctl+Z, h: Ctl+Sft+Z}
-  - {t: F24, h: SCROLL}
+  - {t: F24, h: SCROLL_NUM}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: Ctl+C, h: Ctl+X}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '$$mdi:keyboard-space$$', h: SCROLL}
+  - {t: '$$mdi:keyboard-space$$', h: SCROLL_NUM}
   - {t: '$$mdi:backspace$$', h: NUM}
   - $$mdi:apple-keyboard-shift$$
   - {t: RIGHT GUI, h: RIGHT GUI}
@@ -186,7 +186,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  SCROLL:
+  SCROLL_NUM:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&switch_mac'
   - '&switch_win'
@@ -239,7 +239,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:progress-download$$
   - {type: held alternate}
-  - NUM
+  - FUN
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
@@ -275,7 +275,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -300,11 +300,11 @@ layers:
   - {t: '0', s: )}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
-  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -337,7 +337,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '|'
+  - {t: '|', type: held alternate}
   - '@'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -362,7 +362,7 @@ layers:
   - {t: \, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -402,6 +402,6 @@ combos:
   k: Ctl+$$mdi:keyboard-tab$$
   l: [WIN]
 - p: [26, 25]
-  k: SCROLL
+  k: SCROLL_NUM
 - p: [55, 52]
   k: FUN
