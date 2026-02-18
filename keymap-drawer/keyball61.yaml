@@ -405,3 +405,5 @@ combos:
   k: SCROLL_NUM
 - p: [55, 52]
   k: FUN
+- p: [26, 33]
+  k: $$mdi:alpha-w-box$$

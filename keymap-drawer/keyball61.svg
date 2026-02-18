@@ -1,5 +1,8 @@
 <svg width="976" height="2240" viewBox="0 0 976 2240" class="keymap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>/* start glyphs */
+<svg id="mdi:alpha-w-box">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-alpha-w-box" viewBox="0 0 24 24"><path d="M9,17H15A2,2 0 0,0 17,15V7H15V15H13V8H11V15H9V7H7V15A2,2 0 0,0 9,17M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3Z" /></svg>
+</svg>
 <svg id="mdi:apple-keyboard-control">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
 </svg>
@@ -690,6 +693,12 @@ rect.held, rect.combo.held {
 <a href="#FUN">
 <text x="448" y="280" class="combo tap layer-activator">FUN</text>
 </a></g>
+<g class="combo combopos-12">
+<path d="M448,154 l-289,0" class="combo"/>
+<path d="M448,154 l289,0" class="combo"/>
+<rect rx="6" ry="6" x="434" y="141" width="28" height="26" class="combo"/>
+<use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="439" y="145" height="18" width="18.0" class="combo tap glyph mdi:alpha-w-box"/>
+</g>
 </g>
 </g>
 <g transform="translate(40, 364)" class="layer-WIN">
@@ -1061,6 +1070,12 @@ rect.held, rect.combo.held {
 <a href="#FUN">
 <text x="448" y="280" class="combo tap layer-activator">FUN</text>
 </a></g>
+<g class="combo combopos-12">
+<path d="M448,154 l-289,0" class="combo"/>
+<path d="M448,154 l289,0" class="combo"/>
+<rect rx="6" ry="6" x="434" y="141" width="28" height="26" class="combo"/>
+<use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="439" y="145" height="18" width="18.0" class="combo tap glyph mdi:alpha-w-box"/>
+</g>
 </g>
 </g>
 <g transform="translate(40, 728)" class="layer-MOUSE">
@@ -1433,6 +1448,12 @@ rect.held, rect.combo.held {
 <a href="#FUN">
 <text x="448" y="280" class="combo tap layer-activator">FUN</text>
 </a></g>
+<g class="combo combopos-10">
+<path d="M448,154 l-289,0" class="combo"/>
+<path d="M448,154 l289,0" class="combo"/>
+<rect rx="6" ry="6" x="434" y="141" width="28" height="26" class="combo"/>
+<use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="439" y="145" height="18" width="18.0" class="combo tap glyph mdi:alpha-w-box"/>
+</g>
 </g>
 </g>
 <g transform="translate(40, 1092)" class="layer-SCROLL_NUM">
@@ -1803,6 +1824,12 @@ rect.held, rect.combo.held {
 <a href="#FUN">
 <text x="448" y="280" class="combo tap layer-activator">FUN</text>
 </a></g>
+<g class="combo combopos-10">
+<path d="M448,154 l-289,0" class="combo"/>
+<path d="M448,154 l289,0" class="combo"/>
+<rect rx="6" ry="6" x="434" y="141" width="28" height="26" class="combo"/>
+<use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="439" y="145" height="18" width="18.0" class="combo tap glyph mdi:alpha-w-box"/>
+</g>
 </g>
 </g>
 <g transform="translate(40, 1456)" class="layer-NUM">
@@ -2176,6 +2203,12 @@ rect.held, rect.combo.held {
 <a href="#FUN">
 <text x="448" y="280" class="combo tap layer-activator">FUN</text>
 </a></g>
+<g class="combo combopos-10">
+<path d="M448,154 l-289,0" class="combo"/>
+<path d="M448,154 l289,0" class="combo"/>
+<rect rx="6" ry="6" x="434" y="141" width="28" height="26" class="combo"/>
+<use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="439" y="145" height="18" width="18.0" class="combo tap glyph mdi:alpha-w-box"/>
+</g>
 </g>
 </g>
 <g transform="translate(40, 1820)" class="layer-FUN">
@@ -2537,6 +2570,12 @@ rect.held, rect.combo.held {
 <a href="#FUN">
 <text x="448" y="280" class="combo tap layer-activator">FUN</text>
 </a></g>
+<g class="combo combopos-10">
+<path d="M448,154 l-289,0" class="combo"/>
+<path d="M448,154 l289,0" class="combo"/>
+<rect rx="6" ry="6" x="434" y="141" width="28" height="26" class="combo"/>
+<use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="439" y="145" height="18" width="18.0" class="combo tap glyph mdi:alpha-w-box"/>
+</g>
 </g>
 </g>
 </svg>
