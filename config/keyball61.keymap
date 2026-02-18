@@ -31,11 +31,13 @@
         eisu {
             bindings = <&kp LANG2>;
             key-positions = <28 27>;
+            require-prior-idle-ms = <40>;
         };
 
         kana {
             bindings = <&kp LANGUAGE_1>;
             key-positions = <31 32>;
+            require-prior-idle-ms = <40>;
         };
 
         comma {
@@ -48,25 +50,15 @@
             key-positions = <45 46>;
         };
 
-        close {
-            bindings = <&kp RC(W)>;
-            key-positions = <16 15 14>;
-        };
-
-        reload {
-            bindings = <&kp RC(R)>;
-            key-positions = <16 15>;
-        };
-
         prev_tab_mac {
             bindings = <&kp LC(LA(LEFT))>;
-            key-positions = <26 27>;
+            key-positions = <38 39>;
             layers = <0>;
         };
 
         next_tab_mac {
             bindings = <&kp LC(LA(RIGHT))>;
-            key-positions = <33 32>;
+            key-positions = <46 47>;
             layers = <0>;
         };
 
@@ -82,19 +74,14 @@
 
         prev_tab_win {
             bindings = <&kp LS(LC(TAB))>;
-            key-positions = <26 27>;
+            key-positions = <38 39>;
             layers = <1>;
         };
 
         next_tab_win {
             bindings = <&kp LC(TAB)>;
-            key-positions = <32 33>;
+            key-positions = <46 47>;
             layers = <1>;
-        };
-
-        scroll_layer {
-            bindings = <&mo 3>;
-            key-positions = <26 25>;
         };
 
         symbol_layer {
@@ -251,7 +238,7 @@
 &trans       &switch_mac   &switch_win     &switch_ipad    &switch_android    &switch_win2                   &trans      &trans        &trans        &trans        &trans  &bt BT_CLR
 &trans       &trans        &trans          &kp UP_ARROW    &kp K_SCROLL_UP    &kp LC(W)                      &trans      &kp N7        &kp N8        &kp N9        &trans  &trans
 &trans       &kp LC(LEFT)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT          &kp LC(RIGHT)                  &trans      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
-&trans       &trans        &trans          &trans          &kp K_SCROLL_DOWN  &trans         &trans  &trans  &kp PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0  &trans
+&trans       &trans        &trans          &trans          &kp K_SCROLL_DOWN  &kp LC(R)      &trans  &trans  &kp PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0  &trans
 &bootloader  &trans                                                           &mo 5          &trans  &trans  &trans      &trans        &trans        &trans        &trans  &bootloader
             >;
         };
