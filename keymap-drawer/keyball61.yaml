@@ -25,31 +25,31 @@ layers:
   - Y
   - {t: '=', h: +, s: +}
   - {t: PRINTSCREEN, h: Gui+H}
-  - $$mdi:keyboard-tab$$
-  - {t: E, h: SCROLL_NUM}
-  - {t: I, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: A, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '$$mdi:keyboard-tab$$', h: SCROLL_NUM}
+  - {t: E, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: I, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: A, s: '$$mdi:apple-keyboard-command$$'}
   - {t: O, h: '$$mdi:apple-keyboard-control$$'}
   - '&hyphen_underscore_tilda_equal'
   - K
   - {t: T, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: N, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: H, h: SCROLL_NUM}
+  - {t: N, h: RIGHT GUI}
+  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: H, h: '$$mdi:apple-keyboard-shift$$'}
   - P
   - {t: Ctl+V, h: Ctl+S}
-  - Z
-  - X
-  - C
-  - V
+  - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: X, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: C, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: V, h: '$$mdi:apple-keyboard-control$$'}
   - '&quotations_number'
   - {t: '[', h: '{', s: '{'}
   - {t: ']', h: '}', s: '}'}
   - G
-  - D
-  - M
-  - J
-  - B
+  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: M, h: RIGHT GUI}
+  - {t: J, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: B, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: /, h: \, s: '?'}
   - {t: Ctl+Z, h: Ctl+Sft+Z}
   - {t: F24, h: SCROLL_NUM}
@@ -211,9 +211,9 @@ layers:
   - {t: '9', s: (}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: 'Ctl+$$mdi:arrow-left-bold$$', type: held}
-  - {t: '$$mdi:arrow-left-bold$$', type: held alternate}
+  - {type: held}
+  - Ctl+$$mdi:arrow-left-bold$$
+  - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
   - Ctl+$$mdi:arrow-right-bold$$
@@ -221,14 +221,14 @@ layers:
   - '4'
   - {t: '5', s: '%'}
   - '6'
-  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - SCROLL DOWN
-  - {t: '$$mdi:transfer$$', type: trans}
+  - Ctl+R
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - .
@@ -335,8 +335,8 @@ layers:
   - {t: \, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
   - '|'
   - '@'
   - {t: '$$mdi:transfer$$', type: trans}
@@ -345,7 +345,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&'
   - {t: /, s: '?'}
-  - {t: '#', type: held alternate}
+  - '#'
   - '%'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -381,29 +381,23 @@ combos:
   k: {t: ',', s: <}
 - p: [45, 46]
   k: .
-- p: [16, 15, 14]
-  k: Ctl+W
-- p: [16, 15]
-  k: Ctl+R
-- p: [26, 27]
+- p: [38, 39]
   k: Ctl+Alt+$$mdi:arrow-left-bold$$
   l: [MAC]
-- p: [33, 32]
+- p: [46, 47]
   k: Ctl+Alt+$$mdi:arrow-right-bold$$
   l: [MAC]
 - p: [14, 15]
   k: '&mkp MB4'
 - p: [20, 21]
   k: '&mkp MB5'
-- p: [26, 27]
+- p: [38, 39]
   k: Sft+Ctl+$$mdi:keyboard-tab$$
   l: [WIN]
-- p: [32, 33]
+- p: [46, 47]
   k: Ctl+$$mdi:keyboard-tab$$
   l: [WIN]
-- p: [26, 25]
-  k: SCROLL_NUM
 - p: [55, 52]
   k: FUN
-- p: [26, 33]
+- p: [38, 47]
   k: $$mdi:alpha-w-box$$
