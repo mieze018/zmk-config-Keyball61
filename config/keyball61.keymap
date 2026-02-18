@@ -104,7 +104,7 @@
 
         caps_word {
             bindings = <&caps_word>;
-            key-positions = <26 33>;
+            key-positions = <38 47>;
         };
     };
 
@@ -215,11 +215,11 @@
         default_mac {
             label = "MAC";
             bindings = <
-&mt F24 LESS_THAN          &mt F1 C_MUTE  &mt F2 C_PLAY_PAUSE  &mt LEFT_BRACE LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &mt F5 C_PREV                                                                               &mt F6 C_NEXT             &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt F9 C_VOLUME_DOWN  &mt F10 C_VOLUME_UP  &kp DELETE
-&mt LC(LA(DELETE)) ESCAPE  &kp Q          &kp L                &kp U                        &kp F                          &mt SEMI COLON                                                                              &mt QUESTION EXCLAMATION  &kp W                           &kp R                               &kp Y                 &mt PLUS EQUAL       &mt LG(H) PRINTSCREEN
-&kp TAB                    &hl 3 E        &hm LEFT_SHIFT I     &hm LEFT_ALT A               &hm LCTRL O                    &hyphen_underscore_tilda_equal                                                              &kp K                     &hm RCTRL T                     &hm RIGHT_ALT N                     &hm RIGHT_SHIFT S     &hl 3 H              &kp P
-&mt LC(S) LC(V)            &kp Z          &kp X                &kp C                        &kp V                          &quotations_number              &mt LEFT_BRACE LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &kp G                     &kp D                           &kp M                               &kp J                 &kp B                &mt BACKSLASH SLASH
-&mt LC(LS(Z)) LC(Z)        &lt 3 F24                                                                                       &mt RCTRL ENTER                 &mt LC(X) LC(C)              &mt RCTRL TAB                  &lt 3 SPACE               &lt 2 BACKSPACE                 &kp RIGHT_SHIFT                     &kp RIGHT_ALT         &kp LEFT_SHIFT       &lt 5 RG(TAB)
+&mt F24 LESS_THAN          &mt F1 C_MUTE     &mt F2 C_PLAY_PAUSE  &mt LEFT_BRACE LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &mt F5 C_PREV                                                                               &mt F6 C_NEXT             &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt F9 C_VOLUME_DOWN  &mt F10 C_VOLUME_UP  &kp DELETE
+&mt LC(LA(DELETE)) ESCAPE  &kp Q             &kp L                &kp U                        &kp F                          &mt SEMI COLON                                                                              &mt QUESTION EXCLAMATION  &kp W                           &kp R                               &kp Y                 &mt PLUS EQUAL       &mt LG(H) PRINTSCREEN
+&hl 3 TAB                  &hm LEFT_SHIFT E  &hm LEFT_ALT I       &hm LEFT_GUI A               &hm LCTRL O                    &hyphen_underscore_tilda_equal                                                              &kp K                     &hm RCTRL T                     &hm RIGHT_GUI N                     &hm RIGHT_ALT S       &hm RIGHT_SHIFT H    &kp P
+&mt LC(S) LC(V)            &hm LEFT_SHIFT Z  &hm LEFT_ALT X       &hm LEFT_GUI C               &hm LCTRL V                    &quotations_number              &mt LEFT_BRACE LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &kp G                     &hm RCTRL D                     &hm RIGHT_GUI M                     &hm RIGHT_ALT J       &hm RIGHT_SHIFT B    &mt BACKSLASH SLASH
+&mt LC(LS(Z)) LC(Z)        &lt 3 F24                                                                                          &mt RCTRL ENTER                 &mt LC(X) LC(C)              &mt RCTRL TAB                  &lt 3 SPACE               &lt 2 BACKSPACE                 &kp RIGHT_SHIFT                     &kp RIGHT_ALT         &kp LEFT_SHIFT       &lt 5 RG(TAB)
             >;
         };
 
