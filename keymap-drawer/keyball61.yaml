@@ -26,20 +26,20 @@ layers:
   - {t: '=', h: +, s: +}
   - {t: PRINTSCREEN, h: Gui+H}
   - $$mdi:keyboard-tab$$
-  - E
-  - {t: I, h: SCROLL_NUM}
-  - A
-  - O
+  - {t: E, h: SCROLL_NUM}
+  - {t: I, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: A, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: O, h: '$$mdi:apple-keyboard-control$$'}
   - '&hyphen_underscore_tilda_equal'
   - K
-  - T
-  - N
-  - S
-  - H
+  - {t: T, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: N, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: H, h: SCROLL_NUM}
   - P
   - {t: Ctl+V, h: Ctl+S}
-  - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: X, h: '$$mdi:apple-keyboard-option$$'}
+  - Z
+  - X
   - C
   - V
   - '&quotations_number'
@@ -204,7 +204,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-up-bold$$
   - SCROLL UP
-  - {t: '$$mdi:transfer$$', type: trans}
+  - Ctl+W
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
@@ -212,8 +212,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: 'Ctl+$$mdi:arrow-left-bold$$', type: held alternate}
-  - {t: '$$mdi:arrow-left-bold$$', type: held}
+  - {t: 'Ctl+$$mdi:arrow-left-bold$$', type: held}
+  - {t: '$$mdi:arrow-left-bold$$', type: held alternate}
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
   - Ctl+$$mdi:arrow-right-bold$$
@@ -221,7 +221,7 @@ layers:
   - '4'
   - {t: '5', s: '%'}
   - '6'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -336,8 +336,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '|', type: held alternate}
+  - {type: held alternate}
+  - '|'
   - '@'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -345,7 +345,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&'
   - {t: /, s: '?'}
-  - '#'
+  - {t: '#', type: held alternate}
   - '%'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
