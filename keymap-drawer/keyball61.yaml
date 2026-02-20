@@ -154,7 +154,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&mkp MB2'
   - '&mkp MB1'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&mkp MB3'
   - Ctl+$$mdi:arrow-left-bold$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -203,8 +203,8 @@ layers:
   - '&mkp MB4'
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-up-bold$$
-  - {t: Ctl+PG UP, h: Ctl+R}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Ctl+PG UP, h: Ctl+HOME}
+  - Ctl+W
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
@@ -227,8 +227,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Ctl+PG DN, h: Ctl+W}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Ctl+PG DN, h: Ctl+END}
+  - Ctl+R
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - .
@@ -327,10 +327,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '{'
+  - <
+  - '>'
+  - '}'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: \, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -339,12 +339,12 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '|'
   - '@'
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - '*'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '[', h: '{', s: '{'}
+  - {t: (, h: <}
+  - {t: ), h: '>'}
+  - {t: ']', h: '}', s: '}'}
   - '&'
-  - {t: /, s: '?'}
+  - '*'
   - '#'
   - '%'
   - {t: '$$mdi:transfer$$', type: trans}
