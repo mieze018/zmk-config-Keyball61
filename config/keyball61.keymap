@@ -202,11 +202,11 @@
         default_mac {
             label = "MAC";
             bindings = <
-&mt F24 LESS_THAN          &mt F1 C_MUTE     &mt F2 C_PLAY_PAUSE  &mt LEFT_BRACE LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &mt F5 C_PREV                                                                               &mt F6 C_NEXT             &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt F9 C_VOLUME_DOWN  &mt F10 C_VOLUME_UP  &kp DELETE
-&mt LC(LA(DELETE)) ESCAPE  &kp Q             &kp L                &kp U                        &kp F                          &mt SEMI COLON                                                                              &mt QUESTION EXCLAMATION  &kp W                           &kp R                               &kp Y                 &mt PLUS EQUAL       &mt LG(H) PRINTSCREEN
-&hl 3 TAB                  &kp E             &kp I                &kp A                        &kp O                          &hyphen_underscore_tilda_equal                                                              &kp K                     &hm RIGHT_CONTROL T             &kp N                               &hm RIGHT_ALT S       &hm RIGHT_SHIFT H    &kp P
-&mt LC(S) LC(V)            &hm LEFT_SHIFT Z  &hm LEFT_ALT X       &hm LEFT_GUI C               &hm LCTRL V                    &quotations_number              &mt LEFT_BRACE LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &kp G                     &hm RCTRL D                     &hm RIGHT_GUI M                     &hm RIGHT_ALT J       &hm RIGHT_SHIFT B    &mt BACKSLASH SLASH
-&mt LC(LS(Z)) LC(Z)        &lt 3 F24                                                                                          &mt RCTRL ENTER                 &mt LC(X) LC(C)              &mt RCTRL TAB                  &lt 3 SPACE               &lt 2 BACKSPACE                 &kp RIGHT_SHIFT                     &kp RIGHT_ALT         &kp LEFT_SHIFT       &lt 5 RG(TAB)
+&mt F24 LESS_THAN          &mt F1 C_MUTE     &mt F2 C_PLAY_PAUSE  &mt LEFT_BRACE LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &mt F5 C_PREV                                                                   &mt F6 C_NEXT             &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt F9 C_VOLUME_DOWN  &mt F10 C_VOLUME_UP  &kp DELETE
+&mt LC(LA(DELETE)) ESCAPE  &kp Q             &kp L                &kp U                        &kp F                          &mt SEMI COLON                                                                  &mt QUESTION EXCLAMATION  &kp W                           &kp R                               &kp Y                 &mt PLUS EQUAL       &mt LG(H) PRINTSCREEN
+&hl 3 TAB                  &kp E             &kp I                &kp A                        &kp O                          &hyphen_underscore_tilda_equal                                                  &kp K                     &hm RIGHT_CONTROL T             &kp N                               &hm RIGHT_ALT S       &hm RIGHT_SHIFT H    &kp P
+&mt LC(S) LC(V)            &hm LEFT_SHIFT Z  &hm LEFT_ALT X       &hm LEFT_GUI C               &hm LCTRL V                    &quotations_number              &caps_word       &mt RIGHT_BRACE RIGHT_BRACKET  &kp G                     &hm RCTRL D                     &hm RIGHT_GUI M                     &hm RIGHT_ALT J       &hm RIGHT_SHIFT B    &mt BACKSLASH SLASH
+&mt LC(LS(Z)) LC(Z)        &lt 3 F24                                                                                          &mt RCTRL ENTER                 &mt LC(X) LC(C)  &mt RCTRL TAB                  &lt 3 SPACE               &lt 2 BACKSPACE                 &kp RIGHT_SHIFT                     &kp RIGHT_ALT         &kp LEFT_SHIFT       &lt 5 RG(TAB)
             >;
         };
 
@@ -257,11 +257,11 @@
         function_layer {
             label = "FUN";
             bindings = <
-&kp LS(LC(LA(DEL)))  &kp F1  &kp F2    &kp F3       &kp F4                       &kp F5                                          &kp F6                              &kp F7                         &kp F8         &kp F9         &kp F10        &kp F11
-&trans               &trans  &trans    &trans       &kp LEFT_BRACE               &kp LESS_THAN                                   &kp GREATER_THAN                    &kp RIGHT_BRACE                &trans         &kp BACKSLASH  &trans         &trans
-&trans               &trans  &kp PIPE  &kp AT_SIGN  &mt LEFT_BRACE LEFT_BRACKET  &mt LESS_THAN LEFT_PARENTHESIS                  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt RIGHT_BRACE RIGHT_BRACKET  &kp AMPERSAND  &kp ASTERISK   &kp HASH       &kp PERCENT
-&trans               &trans  &trans    &kp CARET    &trans                       &trans                          &trans  &trans  &trans                              &kp DOLLAR                     &trans         &trans         &kp BACKSLASH  &trans
-&trans               &trans                                                      &trans                          &trans  &trans  &trans                              &trans                         &trans         &trans         &trans         &trans
+&kp LS(LC(LA(DEL)))  &kp F1  &kp F2    &kp F3          &kp F4                       &kp F5                                          &kp F6                              &kp F7                         &kp F8         &kp F9         &kp F10        &kp F11
+&trans               &trans  &trans    &kp UNDERSCORE  &kp LEFT_BRACE               &kp LESS_THAN                                   &kp GREATER_THAN                    &kp RIGHT_BRACE                &trans         &kp BACKSLASH  &trans         &trans
+&trans               &trans  &kp PIPE  &kp AT_SIGN     &mt LEFT_BRACE LEFT_BRACKET  &mt LESS_THAN LEFT_PARENTHESIS                  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt RIGHT_BRACE RIGHT_BRACKET  &kp AMPERSAND  &kp ASTERISK   &kp HASH       &kp PERCENT
+&trans               &trans  &trans    &kp CARET       &trans                       &trans                          &trans  &trans  &trans                              &kp DOLLAR                     &trans         &trans         &kp BACKSLASH  &trans
+&trans               &trans                                                         &trans                          &trans  &trans  &trans                              &trans                         &trans         &trans         &trans         &trans
             >;
         };
     };
