@@ -43,7 +43,7 @@ layers:
   - {t: C, h: '$$mdi:apple-keyboard-command$$'}
   - {t: V, h: '$$mdi:apple-keyboard-control$$'}
   - '&quotations_number'
-  - {t: '[', h: '{', s: '{'}
+  - $$mdi:alpha-w-box$$
   - {t: ']', h: '}', s: '}'}
   - G
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
@@ -326,7 +326,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - _
   - '{'
   - <
   - '>'
