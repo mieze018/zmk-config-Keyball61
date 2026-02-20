@@ -141,7 +141,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "balanced";
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <180>;
             retro-tap;
         };
 
@@ -154,7 +154,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "balanced";
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <180>;
             retro-tap;
         };
     };
@@ -226,7 +226,7 @@
             bindings = <
 &trans  &switch_mac  &switch_win  &switch_ipad  &switch_android  &switch_win2                  &trans        &trans             &trans        &trans     &trans         &trans
 &trans  &trans       &trans       &trans        &trans           &trans                        &trans        &kp K_SCROLL_UP    &kp UP_ARROW  &trans     &trans         &trans
-&trans  &mkp MB3     &trans       &mkp MB2      &mkp MB1         &trans                        &kp LC(LEFT)  &kp LEFT_ARROW     &kp DOWN      &kp RIGHT  &kp LC(RIGHT)  &trans
+&trans  &mkp MB3     &trans       &mkp MB2      &mkp MB1         &mkp MB3                      &kp LC(LEFT)  &kp LEFT_ARROW     &kp DOWN      &kp RIGHT  &kp LC(RIGHT)  &trans
 &trans  &trans       &trans       &trans        &trans           &trans        &trans  &trans  &trans        &kp K_SCROLL_DOWN  &trans        &trans     &trans         &trans
 &trans  &trans                                                   &trans        &trans  &trans  &trans        &trans             &trans        &trans     &trans         &trans
             >;
@@ -235,11 +235,11 @@
         scroll_num_bt_layer {
             label = "SCROLL_NUM";
             bindings = <
-&trans       &switch_mac   &switch_win     &switch_ipad    &switch_android      &switch_win2                   &trans      &trans        &trans        &trans        &trans    &bt BT_CLR
-&trans       &mkp MB4      &trans          &kp UP_ARROW    &mt LC(R) LC(PG_UP)  &trans                         &trans      &kp N7        &kp N8        &kp N9        &mkp MB5  &trans
-&trans       &kp LC(LEFT)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT            &kp LC(RIGHT)                  &trans      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans    &trans
-&trans       &trans        &trans          &trans          &mt LC(W) LC(PG_DN)  &trans         &trans  &trans  &kp PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0    &trans
-&bootloader  &trans                                                             &mo 5          &trans  &trans  &trans      &trans        &trans        &trans        &trans    &bootloader
+&trans       &switch_mac   &switch_win     &switch_ipad    &switch_android         &switch_win2                   &trans      &trans        &trans        &trans        &trans    &bt BT_CLR
+&trans       &mkp MB4      &trans          &kp UP_ARROW    &mt LC(HOME) LC(PG_UP)  &kp LC(W)                      &trans      &kp N7        &kp N8        &kp N9        &mkp MB5  &trans
+&trans       &kp LC(LEFT)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT               &kp LC(RIGHT)                  &trans      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans    &trans
+&trans       &trans        &trans          &trans          &mt LC(END) LC(PG_DN)   &kp LC(R)      &trans  &trans  &kp PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0    &trans
+&bootloader  &trans                                                                &mo 5          &trans  &trans  &trans      &trans        &trans        &trans        &trans    &bootloader
             >;
         };
 
@@ -257,11 +257,11 @@
         function_layer {
             label = "FUN";
             bindings = <
-&kp LS(LC(LA(DEL)))  &kp F1  &kp F2    &kp F3       &kp F4  &kp F5                  &kp F6        &kp F7      &kp F8         &kp F9         &kp F10        &kp F11
-&trans               &trans  &trans    &trans       &trans  &trans                  &trans        &trans      &trans         &kp BACKSLASH  &trans         &trans
-&trans               &trans  &kp PIPE  &kp AT_SIGN  &trans  &trans                  &kp ASTERISK  &trans      &kp AMPERSAND  &kp SLASH      &kp HASH       &kp PERCENT
-&trans               &trans  &trans    &kp CARET    &trans  &trans  &trans  &trans  &trans        &kp DOLLAR  &trans         &trans         &kp BACKSLASH  &trans
-&trans               &trans                                 &trans  &trans  &trans  &trans        &trans      &trans         &trans         &trans         &trans
+&kp LS(LC(LA(DEL)))  &kp F1  &kp F2    &kp F3       &kp F4                       &kp F5                                          &kp F6                              &kp F7                         &kp F8         &kp F9         &kp F10        &kp F11
+&trans               &trans  &trans    &trans       &kp LEFT_BRACE               &kp LESS_THAN                                   &kp GREATER_THAN                    &kp RIGHT_BRACE                &trans         &kp BACKSLASH  &trans         &trans
+&trans               &trans  &kp PIPE  &kp AT_SIGN  &mt LEFT_BRACE LEFT_BRACKET  &mt LESS_THAN LEFT_PARENTHESIS                  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt RIGHT_BRACE RIGHT_BRACKET  &kp AMPERSAND  &kp ASTERISK   &kp HASH       &kp PERCENT
+&trans               &trans  &trans    &kp CARET    &trans                       &trans                          &trans  &trans  &trans                              &kp DOLLAR                     &trans         &trans         &kp BACKSLASH  &trans
+&trans               &trans                                                      &trans                          &trans  &trans  &trans                              &trans                         &trans         &trans         &trans         &trans
             >;
         };
     };
