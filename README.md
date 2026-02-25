@@ -33,6 +33,11 @@ input processors で行う
 
 - [keyball61_left.overlay](config/boards/shields/keyball61/keyball61_left.overlay)の`&pointer_accel`内
 
+### デバウンスの設定
+
+- [config/keyball61.conf](config/keyball61.conf)
+- https://zmk.dev/docs/features/debouncing
+
 # keymap drawer
 
 <img src="keymap-drawer/keyball61.svg" >

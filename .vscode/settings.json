@@ -4,7 +4,15 @@
     "editor.lineHighlightBorder": "#9fced11f",
     "activityBar.background": "#0D3516",
     "titleBar.activeBackground": "#134A1F",
-    "titleBar.activeForeground": "#F5FDF7"
+    "titleBar.activeForeground": "#F5FDF7",
+    "titleBar.inactiveBackground": "#0D3516",
+    "titleBar.inactiveForeground": "#F5FDF7",
+    "statusBar.background": "#0D3516",
+    "statusBar.foreground": "#F5FDF7",
+    "statusBar.debuggingBackground": "#0D3516",
+    "statusBar.debuggingForeground": "#F5FDF7",
+    "statusBar.noFolderBackground": "#0D3516",
+    "statusBar.noFolderForeground": "#F5FDF7"
   },
   "files.associations": {
     "*.overlay": "dts"
