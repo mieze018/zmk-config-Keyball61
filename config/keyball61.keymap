@@ -257,11 +257,11 @@
         function_layer {
             label = "FUN";
             bindings = <
-&kp LS(LC(LA(DEL)))  &kp F1  &kp F2    &kp F3          &kp F4                       &kp F5                                          &kp F6                              &kp F7                         &kp F8         &kp F9         &kp F10        &kp F11
-&trans               &trans  &trans    &kp UNDERSCORE  &kp LEFT_BRACE               &kp LESS_THAN                                   &kp GREATER_THAN                    &kp RIGHT_BRACE                &trans         &kp BACKSLASH  &trans         &trans
-&trans               &trans  &kp PIPE  &kp AT_SIGN     &mt LEFT_BRACE LEFT_BRACKET  &mt LESS_THAN LEFT_PARENTHESIS                  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt RIGHT_BRACE RIGHT_BRACKET  &kp AMPERSAND  &kp ASTERISK   &kp HASH       &kp PERCENT
-&trans               &trans  &trans    &kp CARET       &trans                       &trans                          &trans  &trans  &trans                              &kp DOLLAR                     &trans         &trans         &kp BACKSLASH  &trans
-&trans               &trans                                                         &trans                          &trans  &trans  &trans                              &trans                         &trans         &trans         &trans         &trans
+&kp LS(LC(LA(DEL)))  &kp F1     &kp F2    &kp F3          &kp F4                       &kp F5                                          &kp F6                              &kp F7                         &kp F8         &kp F9         &kp F10        &kp F11
+&trans               &trans     &trans    &kp UNDERSCORE  &kp LEFT_BRACE               &kp LESS_THAN                                   &kp GREATER_THAN                    &kp RIGHT_BRACE                &trans         &kp BACKSLASH  &trans         &trans
+&trans               &kp EQUAL  &kp PIPE  &kp AT_SIGN     &mt LEFT_BRACE LEFT_BRACKET  &mt LESS_THAN LEFT_PARENTHESIS                  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt RIGHT_BRACE RIGHT_BRACKET  &kp AMPERSAND  &kp ASTERISK   &kp HASH       &kp PERCENT
+&trans               &trans     &trans    &kp CARET       &trans                       &trans                          &trans  &trans  &trans                              &kp DOLLAR                     &trans         &trans         &kp BACKSLASH  &trans
+&trans               &trans                                                            &trans                          &trans  &trans  &trans                              &trans                         &trans         &trans         &trans         &trans
             >;
         };
     };
