@@ -26,7 +26,7 @@ layers:
   - {t: '=', h: +, s: +}
   - {t: PRINTSCREEN, h: Gui+H}
   - {t: '$$mdi:keyboard-tab$$', h: SCROLL_NUM}
-  - E
+  - {t: E, h: SCROLL_NUM}
   - I
   - A
   - O
@@ -34,32 +34,32 @@ layers:
   - K
   - {t: T, h: '$$mdi:apple-keyboard-control$$'}
   - N
-  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: H, h: '$$mdi:apple-keyboard-shift$$'}
+  - S
+  - H
   - P
   - {t: Ctl+V, h: Ctl+S}
   - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: X, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: C, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: V, h: '$$mdi:apple-keyboard-control$$'}
+  - C
+  - {t: V, h: toggle}
   - '&quotations_number'
-  - $$mdi:alpha-w-box$$
-  - {t: ']', h: '}', s: '}'}
+  - {t: Ctl+Z, h: Ctl+Sft+Z}
+  - {t: Ctl+S, h: Ctl+V}
   - G
-  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: M, h: RIGHT GUI}
+  - D
+  - M
   - {t: J, h: '$$mdi:apple-keyboard-option$$'}
   - {t: B, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: /, h: \, s: '?'}
   - {t: Ctl+Z, h: Ctl+Sft+Z}
-  - {t: F24, h: SCROLL_NUM}
+  - $$mdi:alpha-w-box$$
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: Ctl+C, h: Ctl+X}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:keyboard-space$$', h: SCROLL_NUM}
-  - {t: '$$mdi:backspace$$', h: MOUSE}
-  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:apple-keyboard-option$$
+  - RIGHT GUI
   - $$mdi:apple-keyboard-shift$$
   - {t: 'Gui+$$mdi:keyboard-tab$$', h: FUN}
   WIN:
@@ -181,7 +181,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -212,7 +212,7 @@ layers:
   - '&mkp MB5'
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - Ctl+$$mdi:arrow-left-bold$$
+  - {t: 'Ctl+$$mdi:arrow-left-bold$$', type: held alternate}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
@@ -238,7 +238,7 @@ layers:
   - {t: '0', s: )}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:progress-download$$
-  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
   - FUN
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -336,7 +336,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
-  - {t: '=', s: +}
+  - {t: '=', s: +, type: held alternate}
   - '|'
   - '@'
   - {t: '[', h: '{', s: '{'}
@@ -362,7 +362,7 @@ layers:
   - {t: \, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
