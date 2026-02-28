@@ -23,7 +23,7 @@ layers:
   - W
   - R
   - Y
-  - {t: '=', h: +, s: +}
+  - {t: +, h: '='}
   - {t: PRINTSCREEN, h: Gui+H}
   - {t: '$$mdi:keyboard-tab$$', h: SCROLL_NUM}
   - {t: E, h: SCROLL_NUM}
