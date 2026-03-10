@@ -50,18 +50,6 @@
             key-positions = <45 46>;
         };
 
-        prev_tab_mac {
-            bindings = <&kp LC(LA(LEFT))>;
-            key-positions = <38 39>;
-            layers = <0>;
-        };
-
-        next_tab_mac {
-            bindings = <&kp LC(LA(RIGHT))>;
-            key-positions = <46 47>;
-            layers = <0>;
-        };
-
         mb4 {
             bindings = <&mkp MB4>;
             key-positions = <14 13>;
@@ -72,26 +60,26 @@
             key-positions = <21 22>;
         };
 
-        prev_tab_win {
-            bindings = <&kp LS(LC(TAB))>;
-            key-positions = <38 39>;
-            layers = <1>;
-        };
-
-        next_tab_win {
-            bindings = <&kp LC(TAB)>;
-            key-positions = <46 47>;
-            layers = <1>;
-        };
-
         symbol_layer {
             bindings = <&mo 5>;
             key-positions = <55 52>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <175>;
+        };
+
+        close {
+            bindings = <&kp LC(W)>;
+            key-positions = <16 14>;
+        };
+
+        reload {
+            bindings = <&kp LC(R)>;
+            key-positions = <40 38>;
         };
 
         caps_word {
             bindings = <&caps_word>;
-            key-positions = <38 47>;
+            key-positions = <28 27 26>;
         };
     };
 
@@ -204,20 +192,20 @@
             bindings = <
 &mt F24 LESS_THAN          &mt F1 C_MUTE     &mt F2 C_PLAY_PAUSE  &mt LEFT_BRACE LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &mt F5 C_PREV                                                         &mt F6 C_NEXT             &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt F9 C_VOLUME_DOWN  &mt F10 C_VOLUME_UP  &kp DELETE
 &mt LC(LA(DELETE)) ESCAPE  &kp Q             &kp L                &kp U                        &kp F                          &mt SEMI COLON                                                        &mt QUESTION EXCLAMATION  &kp W                           &kp R                               &kp Y                 &mt EQUAL PLUS       &mt LG(H) PRINTSCREEN
-&hl 3 TAB                  &hl 3 E           &kp I                &kp A                        &kp O                          &hyphen_underscore_tilda_equal                                        &kp K                     &hm RIGHT_CONTROL T             &kp N                               &kp S                 &kp H                &kp P
-&mt LC(S) LC(V)            &mt LEFT_SHIFT Z  &mt LEFT_ALT X       &kp C                        &kt V                          &quotations_number              &mt LC(LS(Z)) LC(Z)  &mt RC(V) LC(S)  &kp G                     &kp D                           &kp M                               &mt RIGHT_ALT J       &hm RIGHT_SHIFT B    &mt BACKSLASH SLASH
-&mt LC(LS(Z)) LC(Z)        &caps_word                                                                                         &mt RCTRL ENTER                 &mt LC(X) LC(C)      &mt RCTRL TAB    &lt 3 SPACE               &mt RIGHT_SHIFT BACKSPACE       &kp RIGHT_ALT                       &kp RIGHT_GUI         &kp LEFT_SHIFT       &lt 5 RG(TAB)
+&hl 4 TAB                  &hl 4 E           &kp I                &kp A                        &kp O                          &hyphen_underscore_tilda_equal                                        &kp K                     &hm RIGHT_CONTROL T             &kp N                               &kp S                 &kp H                &kp P
+&mt LC(S) LC(V)            &mt LEFT_SHIFT Z  &mt LEFT_ALT X       &kp C                        &kp V                          &quotations_number              &mt LC(S) LC(V)  &mt LC(LS(Z)) LC(Z)  &kp G                     &kp D                           &kp M                               &mt RIGHT_ALT J       &hm RIGHT_SHIFT B    &mt BACKSLASH SLASH
+&mt LC(LS(Z)) LC(Z)        &tog 5                                                                                             &mt RCTRL ENTER                 &mt LC(X) LC(C)  &mt RCTRL TAB        &lt 4 SPACE               &mt RIGHT_SHIFT BACKSPACE       &kp RIGHT_ALT                       &kp RIGHT_GUI         &kp LEFT_SHIFT       &lt 5 RG(TAB)
             >;
         };
 
         default_win {
             label = "WIN";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans   &trans  &trans  &trans  &trans                  &trans       &trans  &trans  &trans  &trans  &trans
+&trans     &trans   &trans  &trans  &trans  &trans                  &trans       &trans  &trans  &trans  &trans  &trans
+&lt 3 TAB  &lt 3 E  &trans  &trans  &trans  &trans                  &trans       &trans  &trans  &trans  &trans  &trans
+&trans     &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
+&trans     &trans                           &trans  &trans  &trans  &lt 3 SPACE  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -233,7 +221,7 @@
         };
 
         scroll_num_bt_layer {
-            label = "SCROLL_NUM";
+            label = "SCROLL_NUM Win";
             bindings = <
 &trans       &switch_mac   &switch_win     &switch_ipad    &switch_android         &switch_win2                   &trans      &trans        &trans        &trans        &trans    &bt BT_CLR
 &trans       &mkp MB4      &trans          &kp UP_ARROW    &mt LC(HOME) LC(PG_UP)  &kp LC(W)                      &trans      &kp N7        &kp N8        &kp N9        &mkp MB5  &trans
@@ -243,14 +231,14 @@
             >;
         };
 
-        number_layer {
-            label = "NUM";
+        scroll_num_bt_layer-mac {
+            label = "SCROLL_NUM Mac";
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &trans  &trans        &trans        &trans        &trans      &trans
-&trans  &trans        &trans        &trans        &trans        &trans                        &trans  &kp N7        &kp N8        &kp N9        &trans      &trans
-&trans  &trans        &trans        &trans        &trans        &trans                        &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PERIOD  &trans
-&trans  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0      &trans
-&trans  &trans                                                  &trans        &trans  &trans  &trans  &trans        &trans        &trans        &trans      &trans
+&trans       &switch_mac   &switch_win     &switch_ipad    &switch_android         &switch_win2                   &trans      &trans        &trans        &trans        &trans    &bt BT_CLR
+&trans       &mkp MB4      &trans          &kp UP_ARROW    &mt LG(HOME) LG(PG_UP)  &kp LC(W)                      &trans      &kp N7        &kp N8        &kp N9        &mkp MB5  &trans
+&trans       &kp LC(LEFT)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT               &kp LC(RIGHT)                  &trans      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans    &trans
+&trans       &trans        &trans          &trans          &mt LG(END) LG(PG_DN)   &kp LC(R)      &trans  &trans  &kp PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0    &trans
+&bootloader  &trans                                                                &mo 5          &trans  &trans  &trans      &trans        &trans        &trans        &trans    &bootloader
             >;
         };
 
