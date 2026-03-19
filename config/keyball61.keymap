@@ -32,7 +32,7 @@
             bindings = <&eisu>;
             key-positions = <28 27>;
             require-prior-idle-ms = <40>;
-            layers = <0 1 2>;
+            layers = <0 1>;
         };
 
         kana_mac {
@@ -98,10 +98,17 @@
         };
 
         kana_chrome {
-            bindings = <&mt LC(SPACE) INT2>;
+            bindings = <&mt LC(SPACE) INT_HENKAN>;
             key-positions = <31 32>;
             require-prior-idle-ms = <40>;
             layers = <2>;
+        };
+
+        eisu_chrome {
+            bindings = <&eisu_chrome>;
+            key-positions = <28 27>;
+            require-prior-idle-ms = <40>;
+            layers = <0 1>;
         };
     };
 
@@ -174,7 +181,7 @@
             bindings = <&mo>, <&ctrl_spc_to_meta>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <185>;
+            tapping-term-ms = <200>;
         };
 
         eisu: eisu {
@@ -191,6 +198,15 @@
             label = "KANA_WIN";
             #binding-cells = <0>;
             bindings = <&kp LANGUAGE_1>, <&kp LG(SLASH)>;
+
+            tapping-term-ms = <180>;
+        };
+
+        eisu_chrome: eisu_chrome {
+            compatible = "zmk,behavior-tap-dance";
+            label = "EISU_CHROME";
+            #binding-cells = <0>;
+            bindings = <&kp LC(SPACE)>, <&to_alphabet_then_enter>;
 
             tapping-term-ms = <180>;
         };
