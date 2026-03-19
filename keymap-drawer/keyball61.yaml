@@ -55,7 +55,7 @@ layers:
   - {t: FUN, h: toggle}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: Ctl+C, h: Ctl+X}
-  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: Ctl+V, h: Ctl+S}
   - {t: '$$mdi:keyboard-space$$', h: SCROLL_NUM Mac}
   - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:apple-keyboard-option$$
@@ -461,3 +461,5 @@ combos:
 - p: [31, 32]
   k: INT KANA
   l: [CHROME]
+- p: [39, 38]
+  k: $$mdi:keyboard-tab$$
