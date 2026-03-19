@@ -90,6 +90,11 @@
             key-positions = <31 32>;
             layers = <2>;
         };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <39 38>;
+        };
     };
 
     behaviors {
@@ -203,7 +208,7 @@
 &mt LC(LA(DELETE)) ESCAPE  &kp Q             &kp L                &kp U                        &kp F                          &mt SEMI COLON                                                        &mt QUESTION EXCLAMATION  &kp W                           &kp R                               &kp Y                 &mt EQUAL PLUS       &mt LG(H) PRINTSCREEN
 &hl 4 TAB                  &hl 4 E           &hm LCTRL I          &hm LEFT_ALT A               &hm LEFT_SHIFT O               &hyphen_underscore_tilda_equal                                        &kp K                     &hm RIGHT_SHIFT T               &hm RIGHT_ALT N                     &hm RCTRL S           &hm LEFT_GUI H       &kp P
 &mt LC(S) LC(V)            &mt LEFT_SHIFT Z  &mt LEFT_ALT X       &kp C                        &kp V                          &quotations_number              &mt LC(S) LC(V)  &mt LC(LS(Z)) LC(Z)  &kp G                     &kp D                           &kp M                               &mt RIGHT_ALT J       &hm RIGHT_SHIFT B    &mt BACKSLASH SLASH
-&mt LC(LS(Z)) LC(Z)        &tog 6                                                                                             &mt RCTRL ENTER                 &mt LC(X) LC(C)  &mt RCTRL TAB        &lt 4 SPACE               &mt RIGHT_SHIFT BACKSPACE       &kp RIGHT_ALT                       &kp RIGHT_GUI         &kp LEFT_SHIFT       &lt 6 RG(TAB)
+&mt LC(LS(Z)) LC(Z)        &tog 6                                                                                             &mt RCTRL ENTER                 &mt LC(X) LC(C)  &mt RC(S) RC(V)      &lt 4 SPACE               &mt RIGHT_SHIFT BACKSPACE       &kp RIGHT_ALT                       &kp RIGHT_GUI         &kp LEFT_SHIFT       &lt 6 RG(TAB)
             >;
         };
 
