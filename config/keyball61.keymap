@@ -76,7 +76,7 @@
 
         reload {
             bindings = <&kp LC(R)>;
-            key-positions = <40 38>;
+            key-positions = <19 21>;
         };
 
         caps_word {
