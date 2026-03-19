@@ -39,7 +39,7 @@
             bindings = <&mt INT_HENKAN LANGUAGE_1>;
             key-positions = <31 32>;
             require-prior-idle-ms = <40>;
-            layers = <0 2>;
+            layers = <0 1>;
         };
 
         comma {
