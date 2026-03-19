@@ -436,10 +436,10 @@ layers:
   - {type: held}
 combos:
 - p: [28, 27]
-  k: '&eisu'
+  k: {t: LANGUAGE 2, h: '&to_alphabet_then_enter'}
   l: [MAC, WIN]
 - p: [31, 32]
-  k: LANGUAGE 1
+  k: {t: LANGUAGE 1, h: Gui+Sft+R}
   l: [MAC]
 - p: [40, 39]
   k: {t: ',', s: <}
@@ -455,17 +455,14 @@ combos:
   k: Ctl+W
 - p: [19, 21]
   k: Ctl+R
-- p: [31, 32]
-  k: INT KANA
-  l: [CHROME]
 - p: [39, 38]
   k: $$mdi:keyboard-tab$$
 - p: [31, 32]
-  k: '&kana_win'
+  k: {t: LANGUAGE 1, h: Gui+/}
   l: [WIN]
 - p: [31, 32]
   k: {t: INT HENKAN, h: 'Ctl+$$mdi:keyboard-space$$'}
   l: [CHROME]
 - p: [28, 27]
-  k: '&eisu_chrome'
+  k: {t: 'Ctl+$$mdi:keyboard-space$$', h: '&to_alphabet_then_enter'}
   l: [CHROME]
