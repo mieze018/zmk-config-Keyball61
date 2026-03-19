@@ -28,15 +28,15 @@
     combos {
         compatible = "zmk,combos";
 
-        eisu {
-            bindings = <&eisu>;
+        eisu_macwin {
+            bindings = <&eisu 0 LANGUAGE_2>;
             key-positions = <28 27>;
             require-prior-idle-ms = <40>;
             layers = <0 1>;
         };
 
         kana_mac {
-            bindings = <&kp LANGUAGE_1>;
+            bindings = <&mt LG(LS(R)) LANGUAGE_1>;
             key-positions = <31 32>;
             require-prior-idle-ms = <40>;
             layers = <0>;
@@ -79,19 +79,13 @@
             key-positions = <19 21>;
         };
 
-        kana_jis {
-            bindings = <&kp INT_KANA>;
-            key-positions = <31 32>;
-            layers = <2>;
-        };
-
         tab {
             bindings = <&kp TAB>;
             key-positions = <39 38>;
         };
 
         kana_win {
-            bindings = <&kana_win>;
+            bindings = <&mt RG(SLASH) LANGUAGE_1>;
             key-positions = <31 32>;
             require-prior-idle-ms = <40>;
             layers = <1>;
@@ -105,7 +99,7 @@
         };
 
         eisu_chrome {
-            bindings = <&eisu_chrome>;
+            bindings = <&eisu 0 RC(SPACE)>;
             key-positions = <28 27>;
             require-prior-idle-ms = <40>;
             layers = <2>;
@@ -185,30 +179,13 @@
         };
 
         eisu: eisu {
-            compatible = "zmk,behavior-tap-dance";
+            compatible = "zmk,behavior-hold-tap";
             label = "EISU";
-            #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2>, <&to_alphabet_then_enter>;
+            bindings = <&to_alphabet_then_enter>, <&kp>;
 
-            tapping-term-ms = <180>;
-        };
-
-        kana_win: kana_win {
-            compatible = "zmk,behavior-tap-dance";
-            label = "KANA_WIN";
-            #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_1>, <&kp LG(SLASH)>;
-
-            tapping-term-ms = <180>;
-        };
-
-        eisu_chrome: eisu_chrome {
-            compatible = "zmk,behavior-tap-dance";
-            label = "EISU_CHROME";
-            #binding-cells = <0>;
-            bindings = <&kp LC(SPACE)>, <&to_alphabet_then_enter>;
-
-            tapping-term-ms = <180>;
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <220>;
         };
     };
 
