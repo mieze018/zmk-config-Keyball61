@@ -41,3 +41,11 @@ input processors で行う
 # keymap drawer
 
 <img src="keymap-drawer/keyball61.svg" >
+
+## レイヤーを追加した後変更すべき点
+
+デバイスごとのレイヤーはベースレイヤーの後に、ほかの特殊レイヤーの前に追加する必要がある。（transparentが正しく機能するため）
+
+- マウスレイヤー番号
+- 既存のレイヤー切り替えキーの切り替え先レイヤー番号
+
