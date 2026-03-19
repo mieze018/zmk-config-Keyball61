@@ -159,6 +159,24 @@
             require-prior-idle-ms = <180>;
             retro-tap;
         };
+
+        ctrl_spc_to_meta: ctrl_spc_to_meta {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRL_SPC_TO_META";
+            bindings = <&kp SPACE>, <&kp LEFT_GUI>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        ht_cb_space: ht_cb_space {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_CB_SPACE";
+            bindings = <&mo>, <&ctrl_spc_to_meta>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <185>;
+        };
     };
 
     macros {
@@ -225,11 +243,11 @@
 
         chromebook {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &mt LG(D) LG(F5)
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans            &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans            &trans  &trans  &trans  &trans  &mt LG(D) LG(F5)
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans            &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans
+&trans  &trans                          &trans  &trans  &trans  &ht_cb_space 5 0  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "CHROME";
