@@ -29,17 +29,17 @@
         compatible = "zmk,combos";
 
         eisu {
-            bindings = <&mt F10 LANGUAGE_2>;
+            bindings = <&eisu>;
             key-positions = <28 27>;
             require-prior-idle-ms = <40>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
-        kana {
-            bindings = <&mt INT_HENKAN LANGUAGE_1>;
+        kana_mac {
+            bindings = <&kp LANGUAGE_1>;
             key-positions = <31 32>;
             require-prior-idle-ms = <40>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         comma {
@@ -79,12 +79,6 @@
             key-positions = <19 21>;
         };
 
-        to_alphabet {
-            bindings = <&kp F10>;
-            key-positions = <27 28>;
-            layers = <2>;
-        };
-
         kana_jis {
             bindings = <&kp INT_KANA>;
             key-positions = <31 32>;
@@ -95,18 +89,23 @@
             bindings = <&kp TAB>;
             key-positions = <39 38>;
         };
+
+        kana_win {
+            bindings = <&kana_win>;
+            key-positions = <31 32>;
+            require-prior-idle-ms = <40>;
+            layers = <1>;
+        };
+
+        kana_chrome {
+            bindings = <&mt LC(SPACE) INT2>;
+            key-positions = <31 32>;
+            require-prior-idle-ms = <40>;
+            layers = <2>;
+        };
     };
 
     behaviors {
-        slash_pipe_backslash: slash_pipe_backslash {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SLASH_PIPE_BACKSLASH";
-            #binding-cells = <0>;
-            bindings = <&mt PIPE SLASH>, <&mt BACKSLASH SLASH>;
-
-            tapping-term-ms = <175>;
-        };
-
         hyphen_underscore_tilda_equal: hyphen_underscore_tilda_equal {
             compatible = "zmk,behavior-tap-dance";
             label = "HYPHEN_UNDERSCORE_TILDA_EQUAL";
@@ -177,6 +176,24 @@
             #binding-cells = <2>;
             tapping-term-ms = <185>;
         };
+
+        eisu: eisu {
+            compatible = "zmk,behavior-tap-dance";
+            label = "EISU";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2>, <&to_alphabet_then_enter>;
+
+            tapping-term-ms = <180>;
+        };
+
+        kana_win: kana_win {
+            compatible = "zmk,behavior-tap-dance";
+            label = "KANA_WIN";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_1>, <&kp LG(SLASH)>;
+
+            tapping-term-ms = <180>;
+        };
     };
 
     macros {
@@ -214,6 +231,14 @@
             bindings = <&bt BT_SEL 4 &to 0>;
             label = "SWITCH_MAC2";
         };
+
+        to_alphabet_then_enter: to_alphabet_then_enter {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F10>, <&macro_wait_time 5>, <&kp ENTER>;
+
+            label = "TO_ALPHABET_THEN_ENTER";
+        };
     };
 
     keymap {
@@ -226,7 +251,7 @@
 &mt LC(LA(DELETE)) ESCAPE  &kp Q             &kp L                &kp U                        &kp F                          &mt SEMI COLON                                                        &mt QUESTION EXCLAMATION  &kp W                           &kp R                               &kp Y                 &mt EQUAL PLUS       &mt LG(H) PRINTSCREEN
 &hl 4 TAB                  &hl 4 E           &hm LCTRL I          &hm LEFT_ALT A               &hm LEFT_SHIFT O               &hyphen_underscore_tilda_equal                                        &kp K                     &hm RIGHT_SHIFT T               &hm RIGHT_ALT N                     &hm RCTRL S           &hm LEFT_GUI H       &kp P
 &mt LC(S) LC(V)            &mt LEFT_SHIFT Z  &mt LEFT_ALT X       &kp C                        &kp V                          &quotations_number              &mt LC(S) LC(V)  &mt LC(LS(Z)) LC(Z)  &kp G                     &kp D                           &kp M                               &mt RIGHT_ALT J       &hm RIGHT_SHIFT B    &mt BACKSLASH SLASH
-&mt LC(LS(Z)) LC(Z)        &tog 6                                                                                             &mt RCTRL ENTER                 &mt LC(X) LC(C)  &mt RC(S) RC(V)      &lt 4 SPACE               &mt RIGHT_SHIFT BACKSPACE       &kp RIGHT_ALT                       &kp RIGHT_GUI         &kp LEFT_SHIFT       &lt 6 RG(TAB)
+&mt LC(LS(Z)) LC(Z)        &tog 6                                                                                             &mt LCTRL ENTER                 &mt LC(X) LC(C)  &mt RC(S) RC(V)      &lt 4 SPACE               &mt RIGHT_SHIFT BACKSPACE       &kp RIGHT_ALT                       &kp RIGHT_GUI         &kp LEFT_SHIFT       &lt 6 RG(TAB)
             >;
         };
 
@@ -289,11 +314,11 @@
         function_layer {
             label = "FUN";
             bindings = <
-&kp LS(LC(LA(DEL)))  &kp F1     &kp F2    &kp F3          &kp F4                       &kp F5                                          &kp F6                              &kp F7                              &kp F8         &kp F9         &kp F10        &kp F11
-&trans               &trans     &trans    &kp UNDERSCORE  &mt LESS_THAN LEFT_BRACKET   &kp LESS_THAN                                   &kp GREATER_THAN                    &mt GREATER_THAN RIGHT_PARENTHESIS  &trans         &kp BACKSLASH  &trans         &trans
-&trans               &kp EQUAL  &kp PIPE  &kp AT_SIGN     &mt LEFT_BRACE LEFT_BRACKET  &mt LESS_THAN LEFT_PARENTHESIS                  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt RIGHT_BRACE RIGHT_BRACKET       &kp AMPERSAND  &kp ASTERISK   &kp HASH       &kp PERCENT
-&trans               &trans     &trans    &kp CARET       &trans                       &trans                          &trans  &trans  &trans                              &kp DOLLAR                          &trans         &trans         &kp BACKSLASH  &trans
-&trans               &trans                                                            &trans                          &trans  &trans  &trans                              &trans                              &trans         &trans         &trans         &trans
+&kp LS(LC(LA(DEL)))  &kp F1     &kp F2    &kp F3         &kp F4                          &kp F5                                          &kp F6                              &kp F7                              &kp F8            &kp F9         &kp F10        &kp F11
+&trans               &trans     &trans    &kp LESS_THAN  &mt LESS_THAN LEFT_PARENTHESIS  &kp LESS_THAN                                   &kp GREATER_THAN                    &mt GREATER_THAN RIGHT_PARENTHESIS  &kp GREATER_THAN  &kp BACKSLASH  &trans         &trans
+&trans               &kp EQUAL  &kp PIPE  &kp AT_SIGN    &mt LEFT_BRACE LEFT_BRACKET     &mt LESS_THAN LEFT_PARENTHESIS                  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt RIGHT_BRACE RIGHT_BRACKET       &kp AMPERSAND     &kp ASTERISK   &kp HASH       &kp PERCENT
+&trans               &trans     &trans    &kp CARET      &trans                          &trans                          &trans  &trans  &trans                              &kp DOLLAR                          &trans            &trans         &kp BACKSLASH  &trans
+&trans               &trans                                                              &trans                          &trans  &trans  &trans                              &trans                              &trans            &trans         &trans         &trans
             >;
         };
     };

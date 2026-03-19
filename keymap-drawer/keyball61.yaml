@@ -388,12 +388,12 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - _
-  - {t: '[', h: <, s: '{'}
+  - <
+  - {t: (, h: <}
   - <
   - '>'
   - {t: ), h: '>'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '>'
   - {t: \, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -436,11 +436,11 @@ layers:
   - {type: held}
 combos:
 - p: [28, 27]
-  k: {t: LANGUAGE 2, h: F10}
-  l: [MAC, WIN]
+  k: '&eisu'
+  l: [MAC, WIN, CHROME]
 - p: [31, 32]
-  k: {t: LANGUAGE 1, h: INT HENKAN}
-  l: [MAC, WIN]
+  k: LANGUAGE 1
+  l: [MAC]
 - p: [40, 39]
   k: {t: ',', s: <}
 - p: [45, 46]
@@ -455,11 +455,14 @@ combos:
   k: Ctl+W
 - p: [19, 21]
   k: Ctl+R
-- p: [27, 28]
-  k: F10
-  l: [CHROME]
 - p: [31, 32]
   k: INT KANA
   l: [CHROME]
 - p: [39, 38]
   k: $$mdi:keyboard-tab$$
+- p: [31, 32]
+  k: '&kana_win'
+  l: [WIN]
+- p: [31, 32]
+  k: {t: INT2, h: 'Ctl+$$mdi:keyboard-space$$'}
+  l: [CHROME]
