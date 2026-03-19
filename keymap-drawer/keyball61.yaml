@@ -468,4 +468,4 @@ combos:
   l: [CHROME]
 - p: [28, 27]
   k: '&eisu_chrome'
-  l: [MAC, WIN]
+  l: [CHROME]
