@@ -148,7 +148,7 @@
         // スクロールレイヤーの設定
         // &zip_scroll_x_scaler はパラメーターを2つ受け取り、1つ目が分子、2つ目が分母となる。 例えば、&zip_xy_scaler 3 2なら、CPIが1.5倍 (3/2倍)になり、&zip_xy_scaler 1 3とすれば0.333倍(1/3倍)になる。
         scroll {
-                layers = <3 4>;
+                layers = <4 5>;
                 input-processors = <
                     &zip_xy_to_scroll_mapper
                     &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT

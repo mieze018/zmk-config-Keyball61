@@ -43,6 +43,7 @@ input processors で行う
 - マウスレイヤー番号
 	- [&zip_temp_layer](config/boards/shields/keyball61/keyball61_left.overlay#L141) 
 	- [&zip_temp_layer](config/keyball61.keymap#L13)
+- スクロールレイヤー番号 [trackball_listener.scroll.layers](config/boards/shields/keyball61/keyball61_left.overlay#L151)
 - 既存のレイヤー切り替えキーの切り替え先レイヤー番号
 
 
