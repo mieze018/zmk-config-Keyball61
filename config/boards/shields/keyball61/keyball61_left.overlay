@@ -138,7 +138,7 @@
         // zip_temp_layer: オートマウスレイヤー param: 切り替えるレイヤー番号 持続時間(ms)
         input-processors = <
             &pointer_accel 
-            &zip_temp_layer 2 3000
+            &zip_temp_layer 3 3000
         >;
         // snipe {
         //         layers = <7>;
