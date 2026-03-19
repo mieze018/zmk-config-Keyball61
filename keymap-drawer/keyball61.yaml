@@ -437,7 +437,7 @@ layers:
 combos:
 - p: [28, 27]
   k: '&eisu'
-  l: [MAC, WIN, CHROME]
+  l: [MAC, WIN]
 - p: [31, 32]
   k: LANGUAGE 1
   l: [MAC]
@@ -464,5 +464,8 @@ combos:
   k: '&kana_win'
   l: [WIN]
 - p: [31, 32]
-  k: {t: INT2, h: 'Ctl+$$mdi:keyboard-space$$'}
+  k: {t: INT HENKAN, h: 'Ctl+$$mdi:keyboard-space$$'}
   l: [CHROME]
+- p: [28, 27]
+  k: '&eisu_chrome'
+  l: [MAC, WIN]

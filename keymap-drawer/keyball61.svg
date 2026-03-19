@@ -686,6 +686,10 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="154" y="190" width="28" height="26" class="combo"/>
 <use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="159" y="194" height="18" width="18.0" class="combo tap glyph mdi:keyboard-tab"/>
 </g>
+<g class="combo combopos-10">
+<rect rx="6" ry="6" x="210" y="134" width="28" height="26" class="combo"/>
+<text x="224" y="147" class="combo tap"><tspan style="font-size: 60%">&amp;eisu_chr…</tspan></text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 364)" class="layer-WIN">
@@ -1054,6 +1058,10 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="658" y="134" width="28" height="26" class="combo"/>
 <text x="672" y="147" class="combo tap"><tspan style="font-size: 67%">&amp;kana_win</tspan></text>
 </g>
+<g class="combo combopos-10">
+<rect rx="6" ry="6" x="210" y="134" width="28" height="26" class="combo"/>
+<text x="224" y="147" class="combo tap"><tspan style="font-size: 60%">&amp;eisu_chr…</tspan></text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 728)" class="layer-CHROME">
@@ -1369,62 +1377,60 @@ rect.held, rect.combo.held {
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-9" y="-13" height="18" width="18.0" class="key trans tap glyph mdi:transfer"/>
 </g>
 <g class="combo combopos-0">
-<rect rx="6" ry="6" x="210" y="134" width="28" height="26" class="combo"/>
-<text x="224" y="147" class="combo tap">&amp;eisu</text>
-</g>
-<g class="combo combopos-1">
 <rect rx="6" ry="6" x="210" y="190" width="28" height="26" class="combo"/>
 <text x="224" y="203" class="combo tap">,</text>
 <text x="224" y="192" class="combo shifted">&lt;</text>
 </g>
-<g class="combo combopos-2">
+<g class="combo combopos-1">
 <rect rx="6" ry="6" x="658" y="190" width="28" height="26" class="combo"/>
 <text x="672" y="203" class="combo tap">.</text>
 </g>
-<g class="combo combopos-3">
+<g class="combo combopos-2">
 <rect rx="6" ry="6" x="98" y="92" width="28" height="26" class="combo"/>
 <text x="112" y="105" class="combo tap">
 <tspan x="112" dy="-0.6em">&amp;mkp</tspan><tspan x="112" dy="1.2em">MB4</tspan>
 </text>
 </g>
-<g class="combo combopos-4">
+<g class="combo combopos-3">
 <rect rx="6" ry="6" x="770" y="92" width="28" height="26" class="combo"/>
 <text x="784" y="105" class="combo tap">
 <tspan x="784" dy="-0.6em">&amp;mkp</tspan><tspan x="784" dy="1.2em">MB5</tspan>
 </text>
 </g>
-<g class="combo combopos-5">
+<g class="combo combopos-4">
 <path d="M448,280 l93,0" class="combo"/>
 <path d="M448,280 l-93,0" class="combo"/>
 <rect rx="6" ry="6" x="434" y="267" width="28" height="26" class="combo"/>
 <a href="#FUN">
 <text x="448" y="280" class="combo tap layer-activator">FUN</text>
 </a></g>
-<g class="combo combopos-6">
+<g class="combo combopos-5">
 <path d="M196,98 l37,0" class="combo"/>
 <path d="M196,98 l-37,0" class="combo"/>
 <rect rx="6" ry="6" x="182" y="85" width="28" height="26" class="combo"/>
 <text x="196" y="98" class="combo tap">Ctl+W</text>
 </g>
-<g class="combo combopos-7">
+<g class="combo combopos-6">
 <path d="M700,98 l-37,0" class="combo"/>
 <path d="M700,98 l37,0" class="combo"/>
 <rect rx="6" ry="6" x="686" y="85" width="28" height="26" class="combo"/>
 <text x="700" y="98" class="combo tap">Ctl+R</text>
 </g>
-<g class="combo combopos-8">
+<g class="combo combopos-7">
 <rect rx="6" ry="6" x="658" y="134" width="28" height="26" class="combo"/>
 <text x="672" y="147" class="combo tap">
 <tspan x="672" dy="-0.6em">INT</tspan><tspan x="672" dy="1.2em">KANA</tspan>
 </text>
 </g>
-<g class="combo combopos-9">
+<g class="combo combopos-8">
 <rect rx="6" ry="6" x="154" y="190" width="28" height="26" class="combo"/>
 <use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="159" y="194" height="18" width="18.0" class="combo tap glyph mdi:keyboard-tab"/>
 </g>
-<g class="combo combopos-10">
+<g class="combo combopos-9">
 <rect rx="6" ry="6" x="658" y="134" width="28" height="26" class="combo"/>
-<text x="672" y="147" class="combo tap">INT2</text>
+<text x="672" y="147" class="combo tap">
+<tspan x="672" dy="-0.6em">INT</tspan><tspan x="672" dy="1.2em">HENKAN</tspan>
+</text>
 <use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="664" y="143" height="15" width="15.0" class="combo hold glyph mdi:keyboard-space"/>
 </g>
 </g>
