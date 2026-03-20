@@ -691,6 +691,12 @@ rect.held, rect.combo.held {
 </text>
 <text x="672" y="158" class="combo hold"><tspan style="font-size: 67%">Gui+Sft+R</tspan></text>
 </g>
+<g class="combo combopos-10">
+<path d="M560,280 l-37,0" class="combo"/>
+<path d="M560,280 l37,0" class="combo"/>
+<rect rx="6" ry="6" x="546" y="267" width="28" height="26" class="combo"/>
+<text x="560" y="280" class="combo tap">A</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 364)" class="layer-WIN">
@@ -1066,6 +1072,12 @@ rect.held, rect.combo.held {
 <text x="672" y="158" class="combo hold">Gui+/</text>
 <text x="672" y="136" class="combo shifted"><tspan style="font-size: 67%">Alt+Sft+*</tspan></text>
 </g>
+<g class="combo combopos-10">
+<path d="M560,280 l-37,0" class="combo"/>
+<path d="M560,280 l37,0" class="combo"/>
+<rect rx="6" ry="6" x="546" y="267" width="28" height="26" class="combo"/>
+<text x="560" y="280" class="combo tap">A</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 728)" class="layer-CHROME">
@@ -1435,6 +1447,12 @@ rect.held, rect.combo.held {
 <tspan x="672" dy="-0.6em">INT</tspan><tspan x="672" dy="1.2em">HENKAN</tspan>
 </text>
 <use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="664" y="143" height="15" width="15.0" class="combo hold glyph mdi:keyboard-space"/>
+</g>
+<g class="combo combopos-10">
+<path d="M560,280 l-37,0" class="combo"/>
+<path d="M560,280 l37,0" class="combo"/>
+<rect rx="6" ry="6" x="546" y="267" width="28" height="26" class="combo"/>
+<text x="560" y="280" class="combo tap">A</text>
 </g>
 </g>
 </g>
@@ -1811,6 +1829,12 @@ rect.held, rect.combo.held {
 <tspan x="672" dy="-0.6em" style="font-size: 75%">LANGUAGE</tspan><tspan x="672" dy="1.2em" style="font-size: 75%">1</tspan>
 </text>
 <text x="672" y="158" class="combo hold"><tspan style="font-size: 67%">Gui+Sft+R</tspan></text>
+</g>
+<g class="combo combopos-10">
+<path d="M560,280 l-37,0" class="combo"/>
+<path d="M560,280 l37,0" class="combo"/>
+<rect rx="6" ry="6" x="546" y="267" width="28" height="26" class="combo"/>
+<text x="560" y="280" class="combo tap">A</text>
 </g>
 </g>
 </g>
@@ -2193,6 +2217,12 @@ rect.held, rect.combo.held {
 <tspan x="672" dy="-0.6em" style="font-size: 75%">LANGUAGE</tspan><tspan x="672" dy="1.2em" style="font-size: 75%">1</tspan>
 </text>
 <text x="672" y="158" class="combo hold"><tspan style="font-size: 67%">Gui+Sft+R</tspan></text>
+</g>
+<g class="combo combopos-10">
+<path d="M560,280 l-37,0" class="combo"/>
+<path d="M560,280 l37,0" class="combo"/>
+<rect rx="6" ry="6" x="546" y="267" width="28" height="26" class="combo"/>
+<text x="560" y="280" class="combo tap">A</text>
 </g>
 </g>
 </g>
@@ -2577,6 +2607,12 @@ rect.held, rect.combo.held {
 <text x="672" y="158" class="combo hold">Gui+/</text>
 <text x="672" y="136" class="combo shifted"><tspan style="font-size: 67%">Alt+Sft+*</tspan></text>
 </g>
+<g class="combo combopos-10">
+<path d="M560,280 l-37,0" class="combo"/>
+<path d="M560,280 l37,0" class="combo"/>
+<rect rx="6" ry="6" x="546" y="267" width="28" height="26" class="combo"/>
+<text x="560" y="280" class="combo tap">A</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 2184)" class="layer-FUN">
@@ -2861,19 +2897,26 @@ rect.held, rect.combo.held {
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-9" y="-13" height="18" width="18.0" class="key trans tap glyph mdi:transfer"/>
 </g>
-<g transform="translate(504, 280)" class="key trans keypos-54">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
-<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-9" y="-13" height="18" width="18.0" class="key trans tap glyph mdi:transfer"/>
+<g transform="translate(504, 280)" class="key keypos-54">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">MB3</tspan>
+</text>
 </g>
 <g transform="translate(560, 280)" class="key held alternate keypos-55">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held alternate side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key held alternate"/>
+<text x="0" y="-4" class="key held alternate tap">
+<tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">MB1</tspan>
+</text>
 </g>
-<g transform="translate(616, 280)" class="key trans keypos-56">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
-<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-9" y="-13" height="18" width="18.0" class="key trans tap glyph mdi:transfer"/>
+<g transform="translate(616, 280)" class="key keypos-56">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-0.6em">&amp;mkp</tspan><tspan x="0" dy="1.2em">MB2</tspan>
+</text>
 </g>
 <g transform="translate(700, 280)" class="key trans keypos-57">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
@@ -2951,6 +2994,12 @@ rect.held, rect.combo.held {
 <tspan x="672" dy="-0.6em" style="font-size: 75%">LANGUAGE</tspan><tspan x="672" dy="1.2em" style="font-size: 75%">1</tspan>
 </text>
 <text x="672" y="158" class="combo hold"><tspan style="font-size: 67%">Gui+Sft+R</tspan></text>
+</g>
+<g class="combo combopos-10">
+<path d="M560,280 l-37,0" class="combo"/>
+<path d="M560,280 l37,0" class="combo"/>
+<rect rx="6" ry="6" x="546" y="267" width="28" height="26" class="combo"/>
+<text x="560" y="280" class="combo tap">A</text>
 </g>
 </g>
 </g>

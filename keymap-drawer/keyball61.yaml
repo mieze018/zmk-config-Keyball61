@@ -427,9 +427,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&mkp MB3'
+  - {t: '&mkp MB1', type: held alternate}
+  - '&mkp MB2'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -469,3 +469,5 @@ combos:
 - p: [31, 32]
   k: {t: INT HENKAN, h: 'Ctl+$$mdi:keyboard-space$$'}
   l: [CHROME]
+- p: [54, 55, 56]
+  k: A
