@@ -464,7 +464,7 @@ combos:
   k: {t: LANGUAGE 1, h: Gui+Sft+R}
   l: [MAC, MOUSE, SCROLL_NUM Mac, FUN]
 - p: [31, 32]
-  k: {t: Alt+Sft+`, h: Gui+/, s: Alt+Sft+~}
+  k: {t: Alt+Sft+8, h: Gui+/, s: Alt+Sft+*}
   l: [WIN, SCROLL_NUM Win]
 - p: [31, 32]
   k: {t: INT HENKAN, h: 'Ctl+$$mdi:keyboard-space$$'}
