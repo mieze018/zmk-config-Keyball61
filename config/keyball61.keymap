@@ -62,14 +62,14 @@
             bindings = <&kp TAB>;
             key-positions = <39 38>;
         };
-        
+
         symbol_layer {
             bindings = <&mo 6>;
             key-positions = <55 52>;
             timeout-ms = <80>;
             require-prior-idle-ms = <175>;
         };
-        
+
         eisu_mac {
             bindings = <&eisu 0 LANGUAGE_2>;
             key-positions = <28 27>;
@@ -99,7 +99,7 @@
         };
 
         kana_win {
-            bindings = <&mc RG(SLASH) LA(LS(GRAVE))>;
+            bindings = <&mc RG(SLASH) LA(LS(N8))>;
             key-positions = <31 32>;
             require-prior-idle-ms = <40>;
             layers = <1 5>;
@@ -154,7 +154,7 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>;
         };
-        
+
         hml: home_mod_left {
             compatible = "zmk,behavior-hold-tap";
             label = "HOME_MOD_LEFT";
