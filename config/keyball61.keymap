@@ -36,6 +36,7 @@
             bindings = <&kp PERIOD>;
             key-positions = <45 46>;
         };
+
         mb3 {
             bindings = <&mkp MB3>;
             key-positions = <28 27>;
@@ -116,9 +117,22 @@
             layers = <2>;
         };
 
-        to_scan {
-            bindings = <&kp A>;
-            key-positions = <54 55 56>;
+        exit_mac {
+            bindings = <&to 0>;
+            key-positions = <28 27>;
+            layers = <7>;
+        };
+
+        exit_win {
+            bindings = <&to 1>;
+            key-positions = <28 27>;
+            layers = <8>;
+        };
+
+        exit_chrome {
+            bindings = <&to 2>;
+            key-positions = <28 27>;
+            layers = <9>;
         };
     };
 
@@ -326,7 +340,7 @@
             bindings = <
 &trans  &switch_mac  &switch_win  &switch_ipad  &switch_chromebook  &switch_mac2                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans       &trans       &trans        &trans              &trans                        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mkp MB3     &trans       &mkp MB2      &mkp MB1            &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mkp MB3     &trans       &mkp MB2      &mkp MB1            &trans                        &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans       &trans       &trans        &trans              &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans                                                      &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
@@ -363,6 +377,55 @@
 &trans               &trans     &trans    &kp CARET      &trans                          &trans                          &trans  &trans    &trans                              &kp DOLLAR                          &trans            &trans         &kp BACKSLASH  &trans
 &trans               &trans                                                              &trans                          &trans  &mkp MB3  &mkp MB1                            &mkp MB2                            &trans            &trans         &trans         &trans
             >;
+        };
+
+        exit_mac {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        exit_win {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        exit_chrome {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        tri_mac {
+            if-layers = <0 3>;
+            then-layer = <7>;
+        };
+
+        tri_win {
+            if-layers = <1 3>;
+            then-layer = <8>;
+        };
+
+        tri_chrome {
+            if-layers = <2 3>;
+            then-layer = <9>;
         };
     };
 };
