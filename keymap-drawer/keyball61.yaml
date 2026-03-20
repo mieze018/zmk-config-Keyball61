@@ -641,22 +641,22 @@ combos:
 - p: [55, 52]
   k: FUN
 - p: [28, 27]
-  k: {t: LANGUAGE 2, h: '&to_alphabet_then_enter'}
+  k: {t: LANGUAGE 2, h: '&to_eisu_then_confirm'}
   l: [MAC, SCROLL_NUM Mac, FUN]
 - p: [28, 27]
-  k: {t: Alt+Sft+9, h: '&to_alphabet_then_enter'}
+  k: {t: Alt+Sft+9, h: '&to_eisu_then_confirm'}
   l: [WIN, SCROLL_NUM Win]
 - p: [28, 27]
-  k: {t: 'Ctl+$$mdi:keyboard-space$$', h: '&to_alphabet_then_enter'}
+  k: {t: 'Ctl+$$mdi:keyboard-space$$', h: '&to_eisu_then_confirm'}
   l: [CHROME]
 - p: [31, 32]
-  k: {t: LANGUAGE 1, h: Gui+Sft+R}
+  k: {t: '&kana_mode', h: Gui+Sft+R}
   l: [MAC, MOUSE, SCROLL_NUM Mac, FUN]
 - p: [31, 32]
-  k: {t: Alt+Sft+8, h: Gui+/, s: Alt+Sft+*}
+  k: {t: '&kana_mode', h: Gui+/}
   l: [WIN, SCROLL_NUM Win]
 - p: [31, 32]
-  k: {t: INT HENKAN, h: 'Ctl+$$mdi:keyboard-space$$'}
+  k: {t: '&kana_mode', h: 'Ctl+$$mdi:keyboard-space$$'}
   l: [CHROME]
 - p: [28, 27]
   k: {t: MAC, h: toggle}
