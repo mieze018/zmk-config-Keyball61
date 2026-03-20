@@ -43,7 +43,7 @@ layers:
   - C
   - V
   - '&quotations_number'
-  - {t: Ctl+V, h: Ctl+S}
+  - $$mdi:alpha-w-box$$
   - {t: Ctl+Z, h: Ctl+Sft+Z}
   - G
   - D

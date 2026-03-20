@@ -28,20 +28,6 @@
     combos {
         compatible = "zmk,combos";
 
-        eisu_mac {
-            bindings = <&eisu 0 LANGUAGE_2>;
-            key-positions = <28 27>;
-            require-prior-idle-ms = <40>;
-            layers = <0 3 4 6>;
-        };
-
-        kana_mac {
-            bindings = <&mc RG(RS(R)) LANGUAGE_1>;
-            key-positions = <31 32>;
-            require-prior-idle-ms = <40>;
-            layers = <0 3 4 6>;
-        };
-
         comma {
             bindings = <&kp COMMA>;
             key-positions = <40 39>;
@@ -62,13 +48,6 @@
             key-positions = <21 22>;
         };
 
-        symbol_layer {
-            bindings = <&mo 6>;
-            key-positions = <55 52>;
-            timeout-ms = <80>;
-            require-prior-idle-ms = <175>;
-        };
-
         close {
             bindings = <&kp LC(W)>;
             key-positions = <16 14>;
@@ -83,6 +62,41 @@
             bindings = <&kp TAB>;
             key-positions = <39 38>;
         };
+        
+        symbol_layer {
+            bindings = <&mo 6>;
+            key-positions = <55 52>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <175>;
+        };
+        
+        eisu_mac {
+            bindings = <&eisu 0 LANGUAGE_2>;
+            key-positions = <28 27>;
+            require-prior-idle-ms = <40>;
+            layers = <0 3 4 6>;
+        };
+
+        eisu_win {
+            bindings = <&eisu 0 LA(LS(NUMBER_9))>;
+            key-positions = <28 27>;
+            require-prior-idle-ms = <40>;
+            layers = <1 5>;
+        };
+
+        eisu_chrome {
+            bindings = <&eisu 0 RC(SPACE)>;
+            key-positions = <28 27>;
+            require-prior-idle-ms = <40>;
+            layers = <2>;
+        };
+
+        kana_mac {
+            bindings = <&mc RG(RS(R)) LANGUAGE_1>;
+            key-positions = <31 32>;
+            require-prior-idle-ms = <40>;
+            layers = <0 3 4 6>;
+        };
 
         kana_win {
             bindings = <&mc RG(SLASH) LA(LS(GRAVE))>;
@@ -96,20 +110,6 @@
             key-positions = <31 32>;
             require-prior-idle-ms = <40>;
             layers = <2>;
-        };
-
-        eisu_chrome {
-            bindings = <&eisu 0 RC(SPACE)>;
-            key-positions = <28 27>;
-            require-prior-idle-ms = <40>;
-            layers = <2>;
-        };
-
-        eisu_win {
-            bindings = <&eisu 0 LA(LS(NUMBER_9))>;
-            key-positions = <28 27>;
-            require-prior-idle-ms = <40>;
-            layers = <1 5>;
         };
     };
 
@@ -151,9 +151,22 @@
             quick-tap-ms = <0>;
             flavor = "balanced";
             require-prior-idle-ms = <125>;
-            hold-trigger-key-positions = <0 1 5 12 13 14 15 16 17 27 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>;
             hold-trigger-on-release;
-            hold-while-undecided;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>;
+        };
+        
+        hml: home_mod_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOME_MOD_LEFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            require-prior-idle-ms = <125>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 43 44 45 46 47 48 49 54 55 56 57 58 59 60>;
         };
 
         hl: homerow_layer {
@@ -210,21 +223,6 @@
             quick-tap-ms = <175>;
             require-prior-idle-ms = <125>;
         };
-
-        hml: home_mod_light {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOME_MOD_LIGHT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <0>;
-            flavor = "balanced";
-            require-prior-idle-ms = <125>;
-            retro-tap;
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 43 44 45 46 47 48 49 54 55 56 57 58 59 60>;
-            hold-trigger-on-release;
-        };
     };
 
     macros {
@@ -269,9 +267,9 @@
             bindings =
                 <&kp F10>,
                 <&macro_wait_time 5>,
-                <&kp LANGUAGE_2 &kp LA(LS(GRAVE)) &kp LA(LS(N9))>,
+                <&kp LANGUAGE_2 &kp LA(LS(N9))>,
                 <&macro_wait_time 15>,
-                <&kp LANGUAGE_1 &kp INT2 &kp INTERNATIONAL_4>;
+                <&kp LANGUAGE_1 &kp LA(LS(N8)) &kp INT2>;
 
             label = "TO_ALPHABET_THEN_ENTER";
         };
