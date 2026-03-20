@@ -387,6 +387,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
+
+            label = "MAC_mouse";
         };
 
         exit_win {
@@ -397,6 +399,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
+
+            label = "WIN_mouse";
         };
 
         exit_chrome {
@@ -407,6 +411,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
+
+            label = "CHROME_mouse";
         };
     };
 
