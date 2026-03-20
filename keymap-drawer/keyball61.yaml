@@ -216,7 +216,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&mkp MB2'
   - '&mkp MB1'
-  - '&mkp MB3'
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -439,6 +439,9 @@ combos:
   k: {t: ',', s: <}
 - p: [45, 46]
   k: .
+- p: [28, 27]
+  k: '&mkp MB3'
+  l: [MOUSE]
 - p: [14, 13]
   k: '&mkp MB4'
 - p: [21, 22]
@@ -453,7 +456,7 @@ combos:
   k: FUN
 - p: [28, 27]
   k: {t: LANGUAGE 2, h: '&to_alphabet_then_enter'}
-  l: [MAC, MOUSE, SCROLL_NUM Mac, FUN]
+  l: [MAC, SCROLL_NUM Mac, FUN]
 - p: [28, 27]
   k: {t: Alt+Sft+9, h: '&to_alphabet_then_enter'}
   l: [WIN, SCROLL_NUM Win]
