@@ -437,10 +437,10 @@ layers:
 combos:
 - p: [28, 27]
   k: {t: LANGUAGE 2, h: '&to_alphabet_then_enter'}
-  l: [MAC, WIN]
+  l: [MAC, WIN, MOUSE]
 - p: [31, 32]
   k: {t: LANGUAGE 1, h: Gui+Sft+R}
-  l: [MAC]
+  l: [MAC, MOUSE]
 - p: [40, 39]
   k: {t: ',', s: <}
 - p: [45, 46]
