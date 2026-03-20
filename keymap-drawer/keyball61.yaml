@@ -437,10 +437,10 @@ layers:
 combos:
 - p: [28, 27]
   k: {t: LANGUAGE 2, h: '&to_alphabet_then_enter'}
-  l: [MAC, WIN, MOUSE]
+  l: [MAC, MOUSE, SCROLL_NUM Mac, FUN]
 - p: [31, 32]
   k: {t: LANGUAGE 1, h: Gui+Sft+R}
-  l: [MAC, MOUSE]
+  l: [MAC, MOUSE, SCROLL_NUM Mac, FUN]
 - p: [40, 39]
   k: {t: ',', s: <}
 - p: [45, 46]
@@ -458,11 +458,14 @@ combos:
 - p: [39, 38]
   k: $$mdi:keyboard-tab$$
 - p: [31, 32]
-  k: {t: LANGUAGE 1, h: Gui+/}
-  l: [WIN]
+  k: {t: Alt+Sft+`, h: Gui+/, s: Alt+Sft+~}
+  l: [WIN, SCROLL_NUM Win]
 - p: [31, 32]
   k: {t: INT HENKAN, h: 'Ctl+$$mdi:keyboard-space$$'}
   l: [CHROME]
 - p: [28, 27]
   k: {t: 'Ctl+$$mdi:keyboard-space$$', h: '&to_alphabet_then_enter'}
   l: [CHROME]
+- p: [28, 27]
+  k: {t: Alt+Sft+9, h: '&to_alphabet_then_enter'}
+  l: [WIN, SCROLL_NUM Win]
