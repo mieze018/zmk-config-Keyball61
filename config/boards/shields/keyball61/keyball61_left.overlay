@@ -109,12 +109,11 @@
 };
 
 &zip_temp_layer {
-    require-prior-idle-ms = <200>;  // トラックボール入力から200ms後にAML有効化（誤爆防止）
+    require-prior-idle-ms = <400>;  // トラックボール入力からms後にAML有効化（誤爆防止）
     // マウスキー以外のキーを押してマウスレイヤー自動解除 下記のキーをマウスキーとして除外。値はコンボキーの設定から参照するとよい
     excluded-positions = <
         27
         28
-        29
     >;
 };
 
@@ -138,7 +137,7 @@
         // zip_temp_layer: オートマウスレイヤー param: 切り替えるレイヤー番号 持続時間(ms)
         input-processors = <
             &pointer_accel 
-            &zip_temp_layer 3 3000
+            &zip_temp_layer 3 2000
         >;
         // snipe {
         //         layers = <7>;
