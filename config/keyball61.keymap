@@ -97,21 +97,21 @@
         };
 
         kana_mac {
-            bindings = <&mc RG(RS(R)) LANGUAGE_1>;
+            bindings = <&kana RG(RS(R)) 0>;
             key-positions = <31 32>;
             require-prior-idle-ms = <40>;
             layers = <0 3 4 6>;
         };
 
         kana_win {
-            bindings = <&mc RG(SLASH) LA(LS(N8))>;
+            bindings = <&kana RG(SLASH) 0>;
             key-positions = <31 32>;
             require-prior-idle-ms = <40>;
             layers = <1 5>;
         };
 
         kana_chrome {
-            bindings = <&mc LC(SPACE) INT_HENKAN>;
+            bindings = <&kana LC(SPACE) 0>;
             key-positions = <31 32>;
             require-prior-idle-ms = <40>;
             layers = <2>;
@@ -226,7 +226,7 @@
         eisu: eisu {
             compatible = "zmk,behavior-hold-tap";
             label = "EISU";
-            bindings = <&to_alphabet_then_enter>, <&kp>;
+            bindings = <&to_eisu_then_confirm>, <&kp>;
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -245,6 +245,18 @@
             flavor = "tap-preferred";
             quick-tap-ms = <175>;
             require-prior-idle-ms = <125>;
+        };
+
+        kana: kana {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KANA";
+            bindings = <&kp>, <&kana_mode>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+            require-prior-idle-ms = <125>;
+            quick-tap-ms = <175>;
         };
     };
 
@@ -284,17 +296,30 @@
             label = "SWITCH_MAC2";
         };
 
-        to_alphabet_then_enter: to_alphabet_then_enter {
+        to_eisu_then_confirm: to_alphabet_then_enter {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&kp F10>,
                 <&macro_wait_time 5>,
                 <&kp LANGUAGE_2 &kp LA(LS(N9))>,
-                <&macro_wait_time 15>,
-                <&kp LANGUAGE_1 &kp LA(LS(N8)) &kp INT2>;
+                <&macro_wait_time 5>,
+                <&kana LANGUAGE_1 0>;
 
             label = "TO_ALPHABET_THEN_ENTER";
+        };
+
+        kana_mode: to_kana {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LA(LS(N8))>,
+                <&macro_wait_time 1>,
+                <&kp INT_HENKAN>,
+                <&macro_wait_time 1>,
+                <&kp LANGUAGE_1>;
+
+            label = "TO_KANA";
         };
     };
 
