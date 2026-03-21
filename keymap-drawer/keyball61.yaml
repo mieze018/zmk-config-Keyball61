@@ -2,14 +2,14 @@ layout: {zmk_keyboard: keyball61}
 layers:
   MAC:
   - {t: <, h: F24}
-  - {t: '$$mdi:volume-off$$', h: F1}
-  - {t: PLAY PAUSE, h: F2}
-  - {t: '[', h: '{', s: '{'}
-  - {t: ']', h: '}', s: '}'}
-  - {t: '$$mdi:skip-previous$$', h: F5}
-  - {t: '$$mdi:skip-next$$', h: F6}
-  - {t: (, h: <}
-  - {t: ), h: '>'}
+  - {t: BLUE BUTTON, h: F1}
+  - {t: GREEN, h: F2}
+  - {t: RED BUTTON, h: F3}
+  - {t: YELLOW, h: F4}
+  - {t: PLAY PAUSE, h: F5}
+  - {t: '$$mdi:skip-previous$$', h: F6}
+  - {t: '$$mdi:skip-next$$', h: F7}
+  - {t: '$$mdi:volume-off$$', h: F8}
   - {t: '$$mdi:volume-low$$', h: F9}
   - {t: '$$mdi:volume-high$$', h: F10}
   - $$mdi:backspace-reverse-outline$$
@@ -628,9 +628,9 @@ combos:
 - p: [28, 27]
   k: '&mkp MB3'
   l: [MOUSE]
-- p: [14, 13]
+- p: [14, 15]
   k: '&mkp MB4'
-- p: [21, 22]
+- p: [21, 20]
   k: '&mkp MB5'
 - p: [16, 14]
   k: Ctl+W
@@ -651,7 +651,7 @@ combos:
   l: [CHROME]
 - p: [31, 32]
   k: {t: '&kana_mode', h: Gui+Sft+R}
-  l: [MAC, MOUSE, SCROLL_NUM Mac, FUN]
+  l: [MAC, SCROLL_NUM Mac, FUN]
 - p: [31, 32]
   k: {t: '&kana_mode', h: Gui+/}
   l: [WIN, SCROLL_NUM Win]
