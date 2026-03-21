@@ -35,7 +35,7 @@ layers:
   - {t: T, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: N, h: '$$mdi:apple-keyboard-option$$'}
   - {t: S, h: '$$mdi:apple-keyboard-control$$'}
-  - H
+  - {t: H, h: Gui+H}
   - P
   - {t: Ctl+V, h: Ctl+S}
   - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
@@ -274,11 +274,11 @@ layers:
   - '&mkp MB5'
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {t: 'Ctl+$$mdi:arrow-left-bold$$', type: held alternate}
+  - {t: 'Alt+$$mdi:arrow-left-bold$$', h: 'Ctl+$$mdi:arrow-left-bold$$', type: held alternate}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - Ctl+$$mdi:arrow-right-bold$$
+  - {t: 'Alt+$$mdi:arrow-right-bold$$', h: 'Ctl+$$mdi:arrow-right-bold$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - '4'
   - {t: '5', s: '%'}
@@ -336,11 +336,11 @@ layers:
   - '&mkp MB5'
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {t: 'Ctl+$$mdi:arrow-left-bold$$', type: held alternate}
+  - {t: 'Ctl+$$mdi:arrow-left-bold$$', h: HOME, type: held alternate}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - Ctl+$$mdi:arrow-right-bold$$
+  - {t: 'Ctl+$$mdi:arrow-right-bold$$', h: END}
   - {t: '$$mdi:transfer$$', type: trans}
   - '4'
   - {t: '5', s: '%'}
@@ -644,7 +644,7 @@ combos:
   k: {t: LANGUAGE 2, h: '&to_eisu_then_confirm'}
   l: [MAC, SCROLL_NUM Mac, FUN]
 - p: [28, 27]
-  k: {t: Alt+Sft+9, h: '&to_eisu_then_confirm'}
+  k: {t: Sft+Ctl+9, h: '&to_eisu_then_confirm'}
   l: [WIN, SCROLL_NUM Win]
 - p: [28, 27]
   k: {t: 'Ctl+$$mdi:keyboard-space$$', h: '&to_eisu_then_confirm'}
