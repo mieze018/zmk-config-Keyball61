@@ -35,27 +35,32 @@
         comma {
             bindings = <&kp COMMA>;
             key-positions = <40 39>;
+            require-prior-idle-ms = <40>;
         };
 
         period {
             bindings = <&kp PERIOD>;
             key-positions = <45 46>;
+            require-prior-idle-ms = <40>;
         };
 
         mb3 {
             bindings = <&mkp MB3>;
             key-positions = <28 27>;
             layers = <3>;
+            require-prior-idle-ms = <125>;
         };
 
         mb4 {
             bindings = <&mkp MB4>;
-            key-positions = <14 13>;
+            key-positions = <14 15>;
+            require-prior-idle-ms = <125>;
         };
 
         mb5 {
             bindings = <&mkp MB5>;
-            key-positions = <21 22>;
+            key-positions = <21 20>;
+            require-prior-idle-ms = <125>;
         };
 
         close {
@@ -71,6 +76,7 @@
         tab {
             bindings = <&kp TAB>;
             key-positions = <39 38>;
+            require-prior-idle-ms = <125>;
         };
 
         symbol_layer {
@@ -83,42 +89,42 @@
         eisu_mac {
             bindings = <&eisu 0 LANGUAGE_2>;
             key-positions = <28 27>;
-            require-prior-idle-ms = <40>;
+            require-prior-idle-ms = <125>;
             layers = <0 4 6>;
         };
 
         eisu_win {
             bindings = <&eisu 0 LA(LS(NUMBER_9))>;
             key-positions = <28 27>;
-            require-prior-idle-ms = <40>;
+            require-prior-idle-ms = <125>;
             layers = <1 5>;
         };
 
         eisu_chrome {
             bindings = <&eisu 0 RC(SPACE)>;
             key-positions = <28 27>;
-            require-prior-idle-ms = <40>;
+            require-prior-idle-ms = <125>;
             layers = <2>;
         };
 
         kana_mac {
             bindings = <&kana RG(RS(R)) 0>;
             key-positions = <31 32>;
-            require-prior-idle-ms = <40>;
-            layers = <0 3 4 6>;
+            require-prior-idle-ms = <125>;
+            layers = <0 4 6>;
         };
 
         kana_win {
             bindings = <&kana RG(SLASH) 0>;
             key-positions = <31 32>;
-            require-prior-idle-ms = <40>;
+            require-prior-idle-ms = <125>;
             layers = <1 5>;
         };
 
         kana_chrome {
             bindings = <&kana LC(SPACE) 0>;
             key-positions = <31 32>;
-            require-prior-idle-ms = <40>;
+            require-prior-idle-ms = <125>;
             layers = <2>;
         };
 
@@ -334,11 +340,11 @@
         default_mac {
             label = "MAC";
             bindings = <
-&mt F24 LESS_THAN          &mt F1 C_MUTE     &mt F2 C_PLAY_PAUSE  &mt LEFT_BRACE LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &mt F5 C_PREV                                                         &mt F6 C_NEXT             &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt F9 C_VOLUME_DOWN  &mt F10 C_VOLUME_UP  &kp DELETE
-&mt LC(LA(DELETE)) ESCAPE  &kp Q             &kp L                &kp U                        &kp F                          &mt SEMI COLON                                                        &mt QUESTION EXCLAMATION  &kp W                           &kp R                               &kp Y                 &mt EQUAL PLUS       &mt LG(H) PRINTSCREEN
-&hl 4 TAB                  &hl 4 E           &hml LCTRL I         &hml LEFT_ALT A              &hml LEFT_SHIFT O              &hyphen_underscore_tilda_equal                                        &kp K                     &hmr RIGHT_SHIFT T              &hmr RIGHT_ALT N                    &hmr RCTRL S          &kp H                &kp P
-&mt LC(S) LC(V)            &mt LEFT_SHIFT Z  &mt LEFT_ALT X       &kp C                        &kp V                          &quotations_number              &caps_word       &mt LC(LS(Z)) LC(Z)  &kp G                     &kp D                           &kp M                               &mt RIGHT_ALT J       &hmr RIGHT_SHIFT B   &mt BACKSLASH SLASH
-&mt LC(LS(Z)) LC(Z)        &tog 6                                                                                             &mt LCTRL ENTER                 &mt LC(X) LC(C)  &mt RC(S) RC(V)      &lt 4 SPACE               &mt RIGHT_SHIFT BACKSPACE       &kp RIGHT_ALT                       &kp RIGHT_GUI         &kp LEFT_SHIFT       &lt 6 RG(TAB)
+&mt F24 LESS_THAN          &mt F1 C_BLUE_BUTTON  &mt F2 C_GREEN  &mt F3 C_RED_BUTTON  &mt F4 C_YELLOW    &mt F5 C_PLAY_PAUSE                                                   &mt F6 C_PREV             &mt F7 C_NEXT              &mt F8 C_MUTE     &mt F9 C_VOLUME_DOWN  &mt F10 C_VOLUME_UP  &kp DELETE
+&mt LC(LA(DELETE)) ESCAPE  &kp Q                 &kp L           &kp U                &kp F              &mt SEMI COLON                                                        &mt QUESTION EXCLAMATION  &kp W                      &kp R             &kp Y                 &mt EQUAL PLUS       &mt LG(H) PRINTSCREEN
+&hl 4 TAB                  &hl 4 E               &hml LCTRL I    &hml LEFT_ALT A      &hml LEFT_SHIFT O  &hyphen_underscore_tilda_equal                                        &kp K                     &hmr RIGHT_SHIFT T         &hmr RIGHT_ALT N  &hmr RCTRL S          &kp H                &kp P
+&mt LC(S) LC(V)            &mt LEFT_SHIFT Z      &mt LEFT_ALT X  &kp C                &kp V              &quotations_number              &caps_word       &mt LC(LS(Z)) LC(Z)  &kp G                     &kp D                      &kp M             &mt RIGHT_ALT J       &hmr RIGHT_SHIFT B   &mt BACKSLASH SLASH
+&mt LC(LS(Z)) LC(Z)        &tog 6                                                                        &mt LCTRL ENTER                 &mt LC(X) LC(C)  &mt RC(S) RC(V)      &lt 4 SPACE               &mt RIGHT_SHIFT BACKSPACE  &kp RIGHT_ALT     &kp RIGHT_GUI         &kp LEFT_SHIFT       &lt 6 RG(TAB)
             >;
         };
 
