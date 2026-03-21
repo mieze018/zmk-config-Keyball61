@@ -23,6 +23,11 @@
     quick-tap-ms = <150>;
 };
 
+&caps_word {
+    continue-list = <UNDERSCORE BACKSPACE DELETE MINUS>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
