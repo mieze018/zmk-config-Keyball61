@@ -434,7 +434,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  MAC_mouse:
+  MOUSE_mac:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -496,7 +496,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  WIN_mouse:
+  MOUSE_win:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -558,7 +558,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  CHROME_mouse:
+  MOUSE_chrome:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -660,10 +660,10 @@ combos:
   l: [CHROME]
 - p: [28, 27]
   k: {t: MAC, h: toggle}
-  l: [MAC_mouse]
+  l: [MOUSE_mac]
 - p: [28, 27]
   k: {t: WIN, h: toggle}
-  l: [WIN_mouse]
+  l: [MOUSE_win]
 - p: [28, 27]
   k: {t: CHROME, h: toggle}
-  l: [CHROME_mouse]
+  l: [MOUSE_chrome]
