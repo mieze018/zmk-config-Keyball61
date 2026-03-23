@@ -365,6 +365,18 @@
             label = "TO_KANA";
         };
 
+        // パニックボタン: ゲームレイヤーの方向キーが刺さった時のリセット用
+        // Why: keybindプロセッサのcontinuous_key_pressにリリース漏れバグがあるため
+        // レイヤーをオフにして50ms待機（プロセッサのwork callbackがリリースを実行）→再度オン
+
+        game_panic: game_panic {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 10>, <&macro_wait_time 50>, <&tog 10>;
+
+            label = "GAME_PANIC";
+        };
+
         to_eisu_then_confirm_chrome: to_eisu_then_confirm_chrome {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -387,7 +399,7 @@
         default_mac {
             label = "MAC";
             bindings = <
-&mt F24 LESS_THAN          &mt F1 C_BLUE_BUTTON  &mt F2 C_GREEN  &mt F3 C_RED_BUTTON  &mt F4 C_YELLOW    &mt F5 C_PLAY_PAUSE                                                   &mt F6 C_PREV             &mt F7 C_NEXT              &mt F8 C_MUTE     &mt F9 C_VOLUME_DOWN  &mt F10 C_VOLUME_UP  &kp DELETE
+&tog 10                    &mt F1 C_BLUE_BUTTON  &mt F2 C_GREEN  &mt F3 C_RED_BUTTON  &mt F4 C_YELLOW    &mt F5 C_PLAY_PAUSE                                                   &mt F6 C_PREV             &mt F7 C_NEXT              &mt F8 C_MUTE     &mt F9 C_VOLUME_DOWN  &mt F10 C_VOLUME_UP  &kp DELETE
 &mt LC(LA(DELETE)) ESCAPE  &kp Q                 &kp L           &kp U                &kp F              &mt SEMI COLON                                                        &mt QUESTION EXCLAMATION  &kp W                      &kp R             &kp Y                 &mt EQUAL PLUS       &mt LS(LC(NUMBER_4)) PRINTSCREEN
 &lt 4 TAB                  &hl 4 E               &hml LCTRL I    &hml LEFT_ALT A      &hml LEFT_SHIFT O  &mt TILDE MINUS                                                       &kp K                     &hmr RIGHT_SHIFT T         &hmr RIGHT_ALT N  &hmr RCTRL S          &hmr_retro LG(H) H   &kp P
 &mt LC(S) LC(V)            &mt LEFT_SHIFT Z      &mt LEFT_ALT X  &kp C                &kp V              &mt DOUBLE_QUOTES SINGLE_QUOTE  &caps_word       &mt LC(LS(Z)) LC(Z)  &kp G                     &kp D                      &kp M             &kp J                 &kp B                &mt BACKSLASH SLASH
@@ -496,6 +508,17 @@
             >;
 
             label = "MOUSE_chrome";
+        };
+
+        game_layer {
+            label = "GAME";
+            bindings = <
+&trans  &trans  &trans      &trans          &trans       &trans                  &trans  &trans       &trans  &trans  &trans  &trans
+&trans  &trans  &trans      &mt UP_ARROW U  &trans       &trans                  &trans  &trans       &trans  &trans  &trans  &trans
+&trans  &trans  &mt LEFT I  &mt DOWN A      &mt RIGHT O  &trans                  &trans  &trans       &trans  &trans  &trans  &trans
+&trans  &trans  &trans      &trans          &trans       &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans
+&trans  &trans                                           &trans  &trans  &trans  &trans  &game_panic  &trans  &trans  &trans  &trans
+            >;
         };
     };
 

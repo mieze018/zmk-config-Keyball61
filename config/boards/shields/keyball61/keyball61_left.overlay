@@ -6,6 +6,7 @@
 #include <input/processors.dtsi>
 #include <behaviors/input_gestures_accel.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
+#include <dt-bindings/zmk/keys.h>
 #include <scroll-snap.dtsi>
 #include "keyball61.dtsi"
 
@@ -129,6 +130,22 @@
 };
 
 / {
+    // トラックボールの動きを矢印キーに変換するプロセッサ（ゲーム用）
+    zip_keybind_arrows: zip_keybind_arrows {
+        compatible = "zmk,input-processor-keybind";
+        #input-processor-cells = <0>;
+        mode = <1>;  // 4方向モード
+        // 順序: Right, Left, Down, Up（LeftBallのためUp/Downを入れ替えてY軸反転を補正）
+        bindings = <&kp RIGHT>, <&kp LEFT>, <&kp UP>, <&kp DOWN>;
+        tick = <1>;                    // 1回入力に必要な移動量（小さいほど敏感＝速い）
+        tap-ms = <40>;                 // キータップ間隔(ms)。長いほどゆっくり転がしても安定ホールド
+        continuous_key_press;          // キーホールドモード（ゲーム向き：押しっぱなし判定）
+        max_pending_activations = <1>; // delta蓄積上限=1回分。慣性による蓄積を防止
+        // Why: track_remaindersを意図的に省略（デフォルトfalse）
+        // delta毎cycle消去→ボール停止後5ms以内にキーリリース
+        // continuous_key_pressのリリース漏れバグの影響を最小化
+    };
+
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
@@ -143,6 +160,16 @@
         //         layers = <7>;
         //         input-processors = <&zip_xy_scaler 1 3>;
         // };
+
+        // ゲームレイヤー(10): トラックボールを方向キーに変換し、カーソル移動を無効化
+        // Why: process-next省略（デフォルトfalse）でデフォルトプロセッサ（pointer_accel等）の実行を阻止
+        // pointer_accelがdeltaを増幅→keybindのdelta蓄積→キー押しっぱなしの原因だった
+        game {
+                layers = <10>;
+                input-processors = <
+                    &zip_keybind_arrows
+                >;
+        };
 
         // スクロールレイヤーの設定
         // &zip_scroll_x_scaler はパラメーターを2つ受け取り、1つ目が分子、2つ目が分母となる。 例えば、&zip_xy_scaler 3 2なら、CPIが1.5倍 (3/2倍)になり、&zip_xy_scaler 1 3とすれば0.333倍(1/3倍)になる。
