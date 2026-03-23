@@ -10,15 +10,10 @@ manifest:
       url-base: https://github.com/kumamuk-git
     - name: kot149
       url-base: https://github.com/kot149
-    - name: zettaface
-      url-base: https://github.com/zettaface
   projects:
-    # Why: zettafaceフォークはinput_listener.cの1行修正を含む
-    # プロセッサのSTOP戻り値を正しく伝播し、keybind使用時にカーソル移動を停止できる
-    # See: https://github.com/zettaface/zmk/compare/zmkfirmware:main...zettaface:main
     - name: zmk
-      remote: zettaface
-      revision: main
+      remote: zmkfirmware
+      revision: v0.3
       import: app/west.yml
     - name: zmk-pmw3610-driver
       remote: tangbonze
@@ -29,8 +24,5 @@ manifest:
     - name: zmk-scroll-snap
       remote: kot149
       revision: v1
-    - name: zmk-input-processor-keybind
-      remote: zettaface
-      revision: main
   self:
     path: config

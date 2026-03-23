@@ -40,11 +40,6 @@ input processors で行う
 - [config/keyball61.conf](config/keyball61.conf)
 - https://zmk.dev/docs/features/debouncing
 
-## キー入力への変換
-
-### ゲーム用速度調整
-
-- [zip_keybind_arrows.tap-ms](config/boards/shields/keyball61/keyball61_left.overlay#L141)
 
 ## レイヤーを追加した後変更すべき点
 
