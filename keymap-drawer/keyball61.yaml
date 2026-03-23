@@ -24,13 +24,13 @@ layers:
   - R
   - Y
   - {t: +, h: '='}
-  - {t: PRINTSCREEN, h: Gui+H}
+  - {t: PRINTSCREEN, h: Sft+Ctl+4}
   - {t: '$$mdi:keyboard-tab$$', h: SCROLL_NUM Mac}
   - {t: E, h: SCROLL_NUM Mac}
   - {t: I, h: '$$mdi:apple-keyboard-control$$'}
   - {t: A, h: '$$mdi:apple-keyboard-option$$'}
   - {t: O, h: '$$mdi:apple-keyboard-shift$$'}
-  - '&hyphen_underscore_tilda_equal'
+  - {t: '-', h: '~', s: _}
   - K
   - {t: T, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: N, h: '$$mdi:apple-keyboard-option$$'}
@@ -42,14 +42,14 @@ layers:
   - {t: X, h: '$$mdi:apple-keyboard-option$$'}
   - C
   - V
-  - '&quotations_number'
+  - {t: '''', h: '"', s: '"'}
   - $$mdi:alpha-w-box$$
   - {t: Ctl+Z, h: Ctl+Sft+Z}
   - G
   - D
   - M
-  - {t: J, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: B, h: '$$mdi:apple-keyboard-shift$$'}
+  - J
+  - B
   - {t: /, h: \, s: '?'}
   - {t: Ctl+Z, h: Ctl+Sft+Z}
   - {t: FUN, h: toggle}
@@ -61,7 +61,7 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - RIGHT GUI
   - $$mdi:apple-keyboard-shift$$
-  - {t: 'Gui+$$mdi:keyboard-tab$$', h: FUN}
+  - {t: Gui+Sft+F10, h: Gui+F10}
   WIN:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -86,8 +86,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:keyboard-tab$$', h: SCROLL_NUM Win}
+  - {t: Gui+Sft+S, h: Gui+Alt+R}
+  - {t: '$$mdi:keyboard-tab$$', s: 'Alt+$$mdi:keyboard-tab$$'}
   - {t: E, h: SCROLL_NUM Win}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -148,7 +148,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Gui+F5, h: D}
+  - {t: PRINTSCREEN, h: D}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -185,7 +185,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: S, h: D}
   MOUSE:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&switch_mac'
@@ -273,7 +273,7 @@ layers:
   - {t: '9', s: (}
   - '&mkp MB5'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: F15, type: held}
   - {t: 'Alt+$$mdi:arrow-left-bold$$', h: 'Ctl+$$mdi:arrow-left-bold$$', type: held alternate}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -290,7 +290,7 @@ layers:
   - Gui+$$mdi:arrow-right-bold$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: Gui+PG DN, h: Gui+END}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '`', h: '|', s: '~'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - .
@@ -307,7 +307,7 @@ layers:
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '0', s: )}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:progress-download$$
   SCROLL_NUM Win:
@@ -335,8 +335,8 @@ layers:
   - {t: '9', s: (}
   - '&mkp MB5'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
-  - {t: 'Ctl+$$mdi:arrow-left-bold$$', h: HOME, type: held alternate}
+  - F15
+  - {t: 'Ctl+$$mdi:arrow-left-bold$$', h: HOME, type: held}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
@@ -352,7 +352,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: Ctl+PG DN, h: Ctl+END}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '`', h: '|', s: '~'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - .
@@ -369,7 +369,7 @@ layers:
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '0', s: )}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:progress-download$$
   FUN:
@@ -397,8 +397,8 @@ layers:
   - {t: \, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
-  - {t: '=', s: +, type: held alternate}
+  - {type: held}
+  - {t: '=', s: +, type: held}
   - '|'
   - '@'
   - {t: '[', h: '{', s: '{'}
@@ -425,15 +425,15 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&mkp MB3'
-  - {t: '&mkp MB1', type: held alternate}
+  - {t: '&mkp MB1', type: held}
   - '&mkp MB2'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   MOUSE_mac:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -636,7 +636,7 @@ combos:
   k: Ctl+W
 - p: [19, 21]
   k: Ctl+R
-- p: [39, 38]
+- p: [26, 27]
   k: $$mdi:keyboard-tab$$
 - p: [55, 52]
   k: FUN
@@ -647,7 +647,7 @@ combos:
   k: {t: Sft+Ctl+9, h: '&to_eisu_then_confirm'}
   l: [WIN, SCROLL_NUM Win]
 - p: [28, 27]
-  k: {t: 'Ctl+$$mdi:keyboard-space$$', h: '&to_eisu_then_confirm'}
+  k: {t: 'Ctl+$$mdi:keyboard-space$$', h: '&to_eisu_then_confirm_chrome'}
   l: [CHROME]
 - p: [31, 32]
   k: {t: '&kana_mode', h: Gui+Sft+R}
@@ -667,3 +667,8 @@ combos:
 - p: [28, 27]
   k: {t: CHROME, h: toggle}
   l: [MOUSE_chrome]
+- p: [47, 45]
+  k: Meh+F10
+- p: [26, 25]
+  k: {t: '$$mdi:keyboard-tab$$', s: 'Alt+$$mdi:keyboard-tab$$'}
+  l: [WIN]
