@@ -12,14 +12,14 @@
 &mkp_input_listener { input-processors = <&zip_temp_layer 3 1000>; };
 
 &lt {
-    tapping-term-ms = <185>;
+    tapping-term-ms = <280>;
     flavor = "balanced";
-    quick-tap-ms = <150>;
+    quick-tap-ms = <175>;
+    require-prior-idle-ms = <125>;
 };
 
 &mt {
     tapping-term-ms = <175>;
-    flavor = "tap-preferred";
     quick-tap-ms = <150>;
 };
 
@@ -75,7 +75,7 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <39 38>;
+            key-positions = <26 27>;
             require-prior-idle-ms = <125>;
         };
 
@@ -101,7 +101,7 @@
         };
 
         eisu_chrome {
-            bindings = <&eisu 0 RC(SPACE)>;
+            bindings = <&eisu_chrome 0 LC(SPACE)>;
             key-positions = <28 27>;
             require-prior-idle-ms = <125>;
             layers = <2>;
@@ -145,43 +145,28 @@
             key-positions = <28 27>;
             layers = <9>;
         };
+
+        launcher {
+            bindings = <&kp LS(LC(LA(F10)))>;
+            key-positions = <47 45>;
+            require-prior-idle-ms = <150>;
+        };
+
+        tab_win {
+            bindings = <&ctrl_tab_2_alt_tab>;
+            key-positions = <26 25>;
+            layers = <1>;
+        };
     };
 
     behaviors {
-        hyphen_underscore_tilda_equal: hyphen_underscore_tilda_equal {
-            compatible = "zmk,behavior-tap-dance";
-            label = "HYPHEN_UNDERSCORE_TILDA_EQUAL";
-            #binding-cells = <0>;
-            bindings = <&mt TILDE MINUS>, <&mt UNDERSCORE EQUAL>;
-
-            tapping-term-ms = <180>;
-        };
-
-        quotations_number: quotations_number {
-            compatible = "zmk,behavior-tap-dance";
-            label = "QUOTATIONS_NUMBER";
-            #binding-cells = <0>;
-            bindings = <&mt DOUBLE_QUOTES SINGLE_QUOTE>, <&mt PIPE GRAVE>;
-
-            tapping-term-ms = <180>;
-        };
-
-        editor_2D_selectio: editor_2D_selectio {
-            compatible = "zmk,behavior-tap-dance";
-            label = "EDITOR_2D_SELECTIO";
-            #binding-cells = <0>;
-            bindings = <&mt LC(D) L>, <&mt LC(A) M>;
-
-            tapping-term-ms = <175>;
-        };
-
         hmr: homerow_mods_right {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_RIGHT";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <280>;
+            tapping-term-ms = <290>;
             quick-tap-ms = <175>;
             flavor = "balanced";
             require-prior-idle-ms = <125>;
@@ -212,8 +197,7 @@
             tapping-term-ms = <220>;
             quick-tap-ms = <175>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <150>;
-            retro-tap;
+            require-prior-idle-ms = <125>;
         };
 
         ctrl_spc_to_meta: ctrl_spc_to_meta {
@@ -231,7 +215,10 @@
             bindings = <&mo>, <&ctrl_spc_to_meta>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <125>;
+            flavor = "balanced";
         };
 
         eisu: eisu {
@@ -241,9 +228,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            require-prior-idle-ms = <125>;
-            quick-tap-ms = <175>;
+            tapping-term-ms = <200>;
         };
 
         mc: mod_combo {
@@ -252,7 +237,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <220>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             quick-tap-ms = <175>;
             require-prior-idle-ms = <125>;
@@ -265,9 +250,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            require-prior-idle-ms = <125>;
-            quick-tap-ms = <175>;
+            tapping-term-ms = <200>;
         };
 
         hml_retro: hml_retro {
@@ -298,6 +281,27 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>;
             retro-tap;
+        };
+
+        eisu_chrome: eisu_chrome {
+            compatible = "zmk,behavior-hold-tap";
+            label = "EISU_CHROME";
+            bindings = <&to_eisu_then_confirm_chrome>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <125>;
+            quick-tap-ms = <175>;
+        };
+
+        ctrl_tab_2_alt_tab: ctrl_tab_2_alt_tab {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRL_TAB_2_ALT_TAB";
+            bindings = <&kp TAB>, <&kp LA(TAB)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
         };
     };
 
@@ -343,11 +347,9 @@
             bindings =
                 <&kp F10>,
                 <&macro_wait_time 1>,
-                <&kp LANGUAGE_2 &kp LS(LC(N9))>,
+                <&kp LANGUAGE_2>,
                 <&macro_wait_time 1>,
-                <&kana LANG1 0>,
-                <&macro_wait_time 1>,
-                <&kp LC(RIGHT)>;
+                <&kana LANG1 0>;
 
             label = "TO_ALPHABET_THEN_ENTER";
         };
@@ -358,9 +360,24 @@
             bindings =
                 <&kp LC(LS(N8))>,
                 <&macro_wait_time 1>,
-                <&kp LANGUAGE_1 &kp INT_HENKAN>;
+                <&kp LS(INTERNATIONAL_4) &kp LANGUAGE_1>;
 
             label = "TO_KANA";
+        };
+
+        to_eisu_then_confirm_chrome: to_eisu_then_confirm_chrome {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp F10>,
+                <&macro_wait_time 1>,
+                <&kp LANGUAGE_2>,
+                <&macro_wait_time 1>,
+                <&kana INTERNATIONAL_4 0>,
+                <&macro_wait_time 1>,
+                <&kp LC(RIGHT)>;
+
+            label = "TO_EISU_THEN_CONFIRM_CHROME";
         };
     };
 
@@ -371,31 +388,31 @@
             label = "MAC";
             bindings = <
 &mt F24 LESS_THAN          &mt F1 C_BLUE_BUTTON  &mt F2 C_GREEN  &mt F3 C_RED_BUTTON  &mt F4 C_YELLOW    &mt F5 C_PLAY_PAUSE                                                   &mt F6 C_PREV             &mt F7 C_NEXT              &mt F8 C_MUTE     &mt F9 C_VOLUME_DOWN  &mt F10 C_VOLUME_UP  &kp DELETE
-&mt LC(LA(DELETE)) ESCAPE  &kp Q                 &kp L           &kp U                &kp F              &mt SEMI COLON                                                        &mt QUESTION EXCLAMATION  &kp W                      &kp R             &kp Y                 &mt EQUAL PLUS       &mt LG(H) PRINTSCREEN
-&hl 4 TAB                  &hl 4 E               &hml LCTRL I    &hml LEFT_ALT A      &hml LEFT_SHIFT O  &hyphen_underscore_tilda_equal                                        &kp K                     &hmr RIGHT_SHIFT T         &hmr RIGHT_ALT N  &hmr RCTRL S          &hmr_retro LG(H) H   &kp P
-&mt LC(S) LC(V)            &mt LEFT_SHIFT Z      &mt LEFT_ALT X  &kp C                &kp V              &quotations_number              &caps_word       &mt LC(LS(Z)) LC(Z)  &kp G                     &kp D                      &kp M             &mt RIGHT_ALT J       &hmr RIGHT_SHIFT B   &mt BACKSLASH SLASH
-&mt LC(LS(Z)) LC(Z)        &tog 6                                                                        &mt LCTRL ENTER                 &mt LC(X) LC(C)  &mt RC(S) RC(V)      &lt 4 SPACE               &mt RIGHT_SHIFT BACKSPACE  &kp RIGHT_ALT     &kp RIGHT_GUI         &kp LEFT_SHIFT       &lt 6 RG(TAB)
+&mt LC(LA(DELETE)) ESCAPE  &kp Q                 &kp L           &kp U                &kp F              &mt SEMI COLON                                                        &mt QUESTION EXCLAMATION  &kp W                      &kp R             &kp Y                 &mt EQUAL PLUS       &mt LS(LC(NUMBER_4)) PRINTSCREEN
+&lt 4 TAB                  &hl 4 E               &hml LCTRL I    &hml LEFT_ALT A      &hml LEFT_SHIFT O  &mt TILDE MINUS                                                       &kp K                     &hmr RIGHT_SHIFT T         &hmr RIGHT_ALT N  &hmr RCTRL S          &hmr_retro LG(H) H   &kp P
+&mt LC(S) LC(V)            &mt LEFT_SHIFT Z      &mt LEFT_ALT X  &kp C                &kp V              &mt DOUBLE_QUOTES SINGLE_QUOTE  &caps_word       &mt LC(LS(Z)) LC(Z)  &kp G                     &kp D                      &kp M             &kp J                 &kp B                &mt BACKSLASH SLASH
+&mt LC(LS(Z)) LC(Z)        &tog 6                                                                        &mt LCTRL ENTER                 &mt LC(X) LC(C)  &mt LC(S) LC(V)      &lt 4 SPACE               &mt RIGHT_SHIFT BACKSPACE  &kp RIGHT_ALT     &kp RIGHT_GUI         &kp LEFT_SHIFT       &mt LG(F10) RG(RS(F10))
             >;
         };
 
         default_win {
             label = "WIN";
             bindings = <
-&trans     &trans   &trans  &trans  &trans  &trans                  &trans       &trans  &trans  &trans  &trans  &trans
-&trans     &trans   &trans  &trans  &trans  &trans                  &trans       &trans  &trans  &trans  &trans  &trans
-&lt 5 TAB  &lt 5 E  &trans  &trans  &trans  &trans                  &trans       &trans  &trans  &trans  &trans  &trans
-&trans     &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
-&trans     &trans                           &trans  &trans  &trans  &lt 5 SPACE  &trans  &trans  &trans  &trans  &trans
+&trans               &trans   &trans  &trans  &trans  &trans                  &trans       &trans  &trans  &trans  &trans  &trans
+&trans               &trans   &trans  &trans  &trans  &trans                  &trans       &trans  &trans  &trans  &trans  &mt LG(LA(R)) LG(LS(S))
+&ctrl_tab_2_alt_tab  &hl 5 E  &trans  &trans  &trans  &trans                  &trans       &trans  &trans  &trans  &trans  &trans
+&trans               &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans
+&trans               &trans                           &trans  &trans  &trans  &lt 5 SPACE  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         chromebook {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans            &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans            &trans  &trans  &trans  &trans  &mt LG(D) LG(F5)
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans            &trans  &trans  &trans  &trans  &mt LG(D) PRINTSCREEN
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans            &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans
-&trans  &trans                          &trans  &trans  &trans  &ht_cb_space 5 0  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                          &trans  &trans  &trans  &ht_cb_space 5 0  &trans  &trans  &trans  &trans  &mt LG(D) LG(S)
             >;
 
             label = "CHROME";
@@ -417,9 +434,9 @@
             bindings = <
 &trans       &switch_mac            &switch_win          &switch_ipad    &switch_chromebook      &switch_mac2                             &trans      &trans        &trans        &trans        &trans    &bt BT_CLR
 &trans       &mkp MB4               &trans               &kp UP_ARROW    &mt LG(HOME) LG(PG_UP)  &kp LC(R)                                &trans      &kp N7        &kp N8        &kp N9        &mkp MB5  &trans
-&trans       &mt LC(LEFT) LA(LEFT)  &kp LEFT_ARROW       &kp DOWN_ARROW  &kp RIGHT               &mt LC(RIGHT) LA(RIGHT)                  &trans      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans    &trans
-&trans       &kp LG(LEFT)           &kp LG(RIGHT_ARROW)  &trans          &mt LG(END) LG(PG_DN)   &trans                   &trans  &trans  &kp PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0    &trans
-&bootloader  &trans                                                                              &mo 6                    &trans  &trans  &trans      &trans        &trans        &trans        &trans    &bootloader
+&kp F15      &mt LC(LEFT) LA(LEFT)  &kp LEFT_ARROW       &kp DOWN_ARROW  &kp RIGHT               &mt LC(RIGHT) LA(RIGHT)                  &trans      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans    &trans
+&trans       &kp LG(LEFT)           &kp LG(RIGHT_ARROW)  &trans          &mt LG(END) LG(PG_DN)   &mt PIPE GRAVE           &trans  &trans  &kp PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0    &trans
+&bootloader  &trans                                                                              &mo 6                    &trans  &trans  &trans      &trans        &trans        &kp N0        &trans    &bootloader
             >;
         };
 
@@ -428,9 +445,9 @@
             bindings = <
 &trans       &switch_mac              &switch_win     &switch_ipad    &switch_chromebook      &switch_mac2                       &trans      &trans        &trans        &trans        &trans    &bt BT_CLR
 &trans       &mkp MB4                 &trans          &kp UP_ARROW    &mt LC(HOME) LC(PG_UP)  &kp LC(R)                          &trans      &kp N7        &kp N8        &kp N9        &mkp MB5  &trans
-&trans       &mt HOME LC(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT               &mt END LC(RIGHT)                  &trans      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans    &trans
-&trans       &trans                   &trans          &trans          &mt LC(END) LC(PG_DN)   &trans             &trans  &trans  &kp PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0    &trans
-&bootloader  &trans                                                                           &mo 6              &trans  &trans  &trans      &trans        &trans        &trans        &trans    &bootloader
+&kp F15      &mt HOME LC(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT               &mt END LC(RIGHT)                  &trans      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans    &trans
+&trans       &trans                   &trans          &trans          &mt LC(END) LC(PG_DN)   &mt PIPE GRAVE     &trans  &trans  &kp PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0    &trans
+&bootloader  &trans                                                                           &mo 6              &trans  &trans  &trans      &trans        &trans        &kp N0        &trans    &bootloader
             >;
         };
 
