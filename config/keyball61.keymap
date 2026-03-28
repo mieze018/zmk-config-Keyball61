@@ -146,16 +146,22 @@
             layers = <9>;
         };
 
-        launcher {
-            bindings = <&kp LS(LC(LA(F10)))>;
+        switcher_mac {
+            bindings = <&ctrl_tab>;
             key-positions = <47 45>;
             require-prior-idle-ms = <150>;
+            layers = <0 4 6>;
         };
-
-        tab_win {
-            bindings = <&ctrl_tab_2_alt_tab>;
-            key-positions = <26 25>;
-            layers = <1>;
+        switcher_win {
+            bindings = <&alt_tab>;
+            key-positions = <47 45>;
+            require-prior-idle-ms = <150>;
+            layers = <1 2 5>;
+        };
+        launcher {
+            bindings = <&kp LS(LC(LA))>;
+            key-positions = <12 14>;
+            require-prior-idle-ms = <125>;
         };
     };
 
@@ -378,6 +384,24 @@
                 <&kp LC(RIGHT)>;
 
             label = "TO_EISU_THEN_CONFIRM_CHROME";
+        };
+        ctrl_tab: ctrl_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press &kp LCTRL>,
+                <&macro_tap &kp TAB>,
+                <&macro_pause_for_release>,
+                <&macro_release &kp LCTRL>;
+        };
+        alt_tab: alt_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp TAB>,
+                <&macro_pause_for_release>,
+                <&macro_release &kp LALT>;
         };
     };
 
