@@ -673,5 +673,5 @@ combos:
 - p: [47, 45]
   k: '&alt_tab'
   l: [WIN, CHROME, SCROLL_NUM Win]
-- p: [12, 14]
-  k: Sft+Ctl+LA
+- p: [45, 46, 47]
+  k: Meh+$$mdi:apple-keyboard-command$$
