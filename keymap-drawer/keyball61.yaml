@@ -668,7 +668,10 @@ combos:
   k: {t: CHROME, h: toggle}
   l: [MOUSE_chrome]
 - p: [47, 45]
-  k: Meh+F10
-- p: [26, 25]
-  k: {t: '$$mdi:keyboard-tab$$', s: 'Alt+$$mdi:keyboard-tab$$'}
-  l: [WIN]
+  k: '&ctrl_tab'
+  l: [MAC, SCROLL_NUM Mac, FUN]
+- p: [47, 45]
+  k: '&alt_tab'
+  l: [WIN, CHROME, SCROLL_NUM Win]
+- p: [12, 14]
+  k: Sft+Ctl+LA
