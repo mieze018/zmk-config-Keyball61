@@ -461,22 +461,22 @@
         scroll_num_bt_layer-mac {
             label = "SCROLL_NUM Mac";
             bindings = <
-&trans       &switch_mac            &switch_win          &switch_ipad    &switch_chromebook      &switch_mac2                             &trans      &trans        &trans        &trans        &trans    &bt BT_CLR
-&trans       &mkp MB4               &trans               &kp UP_ARROW    &mt LG(HOME) LG(PG_UP)  &kp LC(R)                                &trans      &kp N7        &kp N8        &kp N9        &mkp MB5  &trans
-&kp F15      &mt LC(LEFT) LA(LEFT)  &kp LEFT_ARROW       &kp DOWN_ARROW  &kp RIGHT               &mt LC(RIGHT) LA(RIGHT)                  &trans      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans    &trans
-&trans       &kp LG(LEFT)           &kp LG(RIGHT_ARROW)  &trans          &mt LG(END) LG(PG_DN)   &mt PIPE GRAVE           &trans  &trans  &kp PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0    &trans
-&bootloader  &trans                                                                              &mo 6                    &trans  &trans  &trans      &trans        &trans        &kp N0        &trans    &bootloader
+&trans       &switch_mac            &switch_win          &switch_ipad    &switch_chromebook      &switch_mac2                             &trans      &trans                     &trans                   &trans                       &trans    &bt BT_CLR
+&trans       &mkp MB4               &trans               &kp UP_ARROW    &mt LG(HOME) LG(PG_UP)  &kp LC(R)                                &trans      &kp N7                     &kp N8                   &kp N9                       &mkp MB5  &trans
+&kp F15      &mt LC(LEFT) LA(LEFT)  &kp LEFT_ARROW       &kp DOWN_ARROW  &kp RIGHT               &mt LC(RIGHT) LA(RIGHT)                  &trans      &hmr RIGHT_SHIFT NUMBER_4  &hmr RIGHT_ALT NUMBER_5  &hmr RIGHT_CONTROL NUMBER_6  &trans    &trans
+&trans       &kp LG(LEFT)           &kp LG(RIGHT_ARROW)  &trans          &mt LG(END) LG(PG_DN)   &mt PIPE GRAVE           &trans  &trans  &kp PERIOD  &kp NUMBER_1               &kp NUMBER_2             &kp NUMBER_3                 &kp N0    &trans
+&bootloader  &trans                                                                              &mo 6                    &trans  &trans  &trans      &trans                     &trans                   &kp N0                       &trans    &bootloader
             >;
         };
 
         scroll_num_bt_layer-win {
             label = "SCROLL_NUM Win";
             bindings = <
-&trans       &switch_mac              &switch_win     &switch_ipad    &switch_chromebook      &switch_mac2                       &trans      &trans        &trans        &trans        &trans    &bt BT_CLR
-&trans       &mkp MB4                 &trans          &kp UP_ARROW    &mt LC(HOME) LC(PG_UP)  &kp LC(R)                          &trans      &kp N7        &kp N8        &kp N9        &mkp MB5  &trans
-&kp F15      &mt HOME LC(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT               &mt END LC(RIGHT)                  &trans      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans    &trans
-&trans       &trans                   &trans          &trans          &mt LC(END) LC(PG_DN)   &mt PIPE GRAVE     &trans  &trans  &kp PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0    &trans
-&bootloader  &trans                                                                           &mo 6              &trans  &trans  &trans      &trans        &trans        &kp N0        &trans    &bootloader
+&trans       &switch_mac              &switch_win     &switch_ipad    &switch_chromebook      &switch_mac2                       &trans      &trans                    &trans                  &trans                      &trans    &bt BT_CLR
+&trans       &mkp MB4                 &trans          &kp UP_ARROW    &mt LC(HOME) LC(PG_UP)  &kp LC(R)                          &trans      &kp N7                    &kp N8                  &kp N9                      &mkp MB5  &trans
+&kp F15      &mt HOME LC(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT               &mt END LC(RIGHT)                  &trans      &mt RIGHT_SHIFT NUMBER_4  &mt RIGHT_ALT NUMBER_5  &mt RIGHT_CONTROL NUMBER_6  &trans    &trans
+&trans       &trans                   &trans          &trans          &mt LC(END) LC(PG_DN)   &mt PIPE GRAVE     &trans  &trans  &kp PERIOD  &kp NUMBER_1              &kp NUMBER_2            &kp NUMBER_3                &kp N0    &trans
+&bootloader  &trans                                                                           &mo 6              &trans  &trans  &trans      &trans                    &trans                  &kp N0                      &trans    &bootloader
             >;
         };
 
