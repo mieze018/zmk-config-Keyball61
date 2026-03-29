@@ -352,12 +352,7 @@
         to_eisu_then_confirm: to_alphabet_then_enter {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp F10>,
-                <&macro_wait_time 1>,
-                <&kp LANGUAGE_2>,
-                <&macro_wait_time 1>,
-                <&kana LANG1 0>;
+            bindings = <&kp F10>, <&macro_wait_time 1>, <&kp LANGUAGE_2>;
 
             label = "TO_ALPHABET_THEN_ENTER";
         };
@@ -368,7 +363,7 @@
             bindings =
                 <&kp LC(LS(N8))>,
                 <&macro_wait_time 1>,
-                <&kp LS(INTERNATIONAL_4) &kp LANGUAGE_1>;
+                <&kp INTERNATIONAL_4 &kp LANGUAGE_1>;
 
             label = "TO_KANA";
         };
@@ -392,28 +387,26 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&mo 4>,
                 <&macro_press>,
-                <&kp LCTRL>,
+                <&kp LCTRL &mo 4>,
                 <&macro_tap>,
                 <&kp TAB>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LCTRL>;
+                <&kp LCTRL &mo 4>;
         };
 
         alt_tab: alt_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&mo 5>,
                 <&macro_press>,
-                <&kp LALT>,
+                <&kp LALT &mo 5>,
                 <&macro_tap>,
                 <&kp TAB>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LALT>;
+                <&kp LALT &mo 5>;
         };
     };
 
