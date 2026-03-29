@@ -5,7 +5,6 @@
  */
 #include <input/processors.dtsi>
 #include <behaviors/input_gestures_accel.dtsi>
-#include <input/processors/report_rate_limit.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 #include <scroll-snap.dtsi>
 #include "keyball61.dtsi"
@@ -129,20 +128,14 @@
     track-remainders;          // 細かい動きを蓄積して反映
 };
 
-&zip_report_rate_limit {
-  limit-ble-only; // BLE接続時のみレポートレート制限を有効化
-};
-
 / {
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
         // Input Processors
-        // zip_report_rate_limit: param: レポートレート制限
         // pointer_accel: ポインター加速
         // zip_temp_layer: オートマウスレイヤー param: 切り替えるレイヤー番号 持続時間(ms)
         input-processors = <
-            &zip_report_rate_limit 16
             &pointer_accel 
             &zip_temp_layer 3 3000
         >;
