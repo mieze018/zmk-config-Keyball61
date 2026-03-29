@@ -636,7 +636,7 @@ combos:
   k: Ctl+W
 - p: [19, 21]
   k: Ctl+R
-- p: [26, 27]
+- p: [38, 40]
   k: $$mdi:keyboard-tab$$
 - p: [55, 52]
   k: FUN
