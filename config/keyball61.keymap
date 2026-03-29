@@ -75,7 +75,7 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <26 27>;
+            key-positions = <38 40>;
             require-prior-idle-ms = <125>;
         };
 
