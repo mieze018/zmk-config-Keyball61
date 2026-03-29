@@ -392,6 +392,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
+                <&mo 4>,
                 <&macro_press>,
                 <&kp LCTRL>,
                 <&macro_tap>,
@@ -405,6 +406,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
+                <&mo 5>,
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
