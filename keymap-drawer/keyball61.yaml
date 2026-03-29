@@ -280,9 +280,9 @@ layers:
   - $$mdi:arrow-right-bold$$
   - {t: 'Alt+$$mdi:arrow-right-bold$$', h: 'Ctl+$$mdi:arrow-right-bold$$'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '4'
-  - {t: '5', s: '%'}
-  - '6'
+  - {t: '4', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '5', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '6', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -342,9 +342,9 @@ layers:
   - $$mdi:arrow-right-bold$$
   - {t: 'Ctl+$$mdi:arrow-right-bold$$', h: END}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '4'
-  - {t: '5', s: '%'}
-  - '6'
+  - {t: '4', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '5', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '6', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
