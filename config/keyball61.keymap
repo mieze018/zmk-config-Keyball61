@@ -94,7 +94,7 @@
         };
 
         eisu_win {
-            bindings = <&eisu 0 LS(LC(NUMBER_9))>;
+            bindings = <&eisu 0 LS(LA(NUMBER_9))>;
             key-positions = <28 27>;
             require-prior-idle-ms = <125>;
             layers = <1 5>;
@@ -361,7 +361,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LC(LS(N8))>,
+                <&kp LS(LA(N8))>,
                 <&macro_wait_time 1>,
                 <&kp INTERNATIONAL_4 &kp LANGUAGE_1>;
 
