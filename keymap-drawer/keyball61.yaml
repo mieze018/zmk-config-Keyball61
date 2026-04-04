@@ -644,7 +644,7 @@ combos:
   k: {t: LANGUAGE 2, h: '&to_eisu_then_confirm'}
   l: [MAC, SCROLL_NUM Mac, FUN]
 - p: [28, 27]
-  k: {t: Sft+Alt+9, h: '&to_eisu_then_confirm'}
+  k: {t: Sft+Ctl+9, h: '&to_eisu_then_confirm'}
   l: [WIN, SCROLL_NUM Win]
 - p: [28, 27]
   k: {t: 'Ctl+$$mdi:keyboard-space$$', h: '&to_eisu_then_confirm_chrome'}
