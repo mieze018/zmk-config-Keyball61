@@ -115,7 +115,7 @@
         };
 
         kana_win {
-            bindings = <&mc RG(SLASH) LA(LS(NUMBER_8))>;
+            bindings = <&kana_win>;
             key-positions = <31 32>;
             require-prior-idle-ms = <125>;
             layers = <1 5>;
@@ -386,6 +386,17 @@
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&kp LALT &mo 5>;
+        };
+
+        kana_win: kana_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&mc LG(SLASH) LA(LS(NUMBER_9))>,
+                <&macro_wait_time 1>,
+                <&kp LANG1>;
+
+            label = "KANA_WIN";
         };
     };
 
