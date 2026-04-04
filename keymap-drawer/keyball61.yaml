@@ -653,7 +653,7 @@ combos:
   k: {t: LANGUAGE 1, h: Gui+Sft+R}
   l: [MAC, SCROLL_NUM Mac, FUN]
 - p: [31, 32]
-  k: {t: Alt+Sft+8, h: Gui+/}
+  k: '&kana_win'
   l: [WIN, SCROLL_NUM Win]
 - p: [31, 32]
   k: {t: INT4, h: 'Ctl+$$mdi:keyboard-space$$'}
