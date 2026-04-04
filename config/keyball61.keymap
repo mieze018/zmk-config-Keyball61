@@ -392,7 +392,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&mc LG(SLASH) LA(LS(NUMBER_9))>,
+                <&mc LG(SLASH) LA(LS(NUMBER_8))>,
                 <&macro_wait_time 1>,
                 <&kp LANG1>;
 
