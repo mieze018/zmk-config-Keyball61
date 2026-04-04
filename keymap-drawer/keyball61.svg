@@ -694,7 +694,9 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-9">
 <rect rx="6" ry="6" x="658" y="134" width="28" height="26" class="combo"/>
-<text x="672" y="147" class="combo tap"><tspan style="font-size: 60%">&amp;kana_mode</tspan></text>
+<text x="672" y="147" class="combo tap">
+<tspan x="672" dy="-0.6em" style="font-size: 75%">LANGUAGE</tspan><tspan x="672" dy="1.2em" style="font-size: 75%">1</tspan>
+</text>
 <text x="672" y="158" class="combo hold"><tspan style="font-size: 67%">Gui+Sft+R</tspan></text>
 </g>
 <g class="combo combopos-10">
@@ -1082,7 +1084,9 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-9">
 <rect rx="6" ry="6" x="658" y="134" width="28" height="26" class="combo"/>
-<text x="672" y="147" class="combo tap"><tspan style="font-size: 60%">&amp;kana_mode</tspan></text>
+<text x="672" y="147" class="combo tap">
+<tspan x="672" dy="-0.6em">Alt+</tspan><tspan x="672" dy="1.2em">Sft+8</tspan>
+</text>
 <text x="672" y="158" class="combo hold">Gui+/</text>
 </g>
 <g class="combo combopos-10">
@@ -1465,7 +1469,7 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-9">
 <rect rx="6" ry="6" x="658" y="134" width="28" height="26" class="combo"/>
-<text x="672" y="147" class="combo tap"><tspan style="font-size: 60%">&amp;kana_mode</tspan></text>
+<text x="672" y="147" class="combo tap">INT4</text>
 <use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="664" y="143" height="15" width="15.0" class="combo hold glyph mdi:keyboard-space"/>
 </g>
 <g class="combo combopos-10">
@@ -2241,7 +2245,9 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-9">
 <rect rx="6" ry="6" x="658" y="134" width="28" height="26" class="combo"/>
-<text x="672" y="147" class="combo tap"><tspan style="font-size: 60%">&amp;kana_mode</tspan></text>
+<text x="672" y="147" class="combo tap">
+<tspan x="672" dy="-0.6em" style="font-size: 75%">LANGUAGE</tspan><tspan x="672" dy="1.2em" style="font-size: 75%">1</tspan>
+</text>
 <text x="672" y="158" class="combo hold"><tspan style="font-size: 67%">Gui+Sft+R</tspan></text>
 </g>
 <g class="combo combopos-10">
@@ -2643,7 +2649,9 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-9">
 <rect rx="6" ry="6" x="658" y="134" width="28" height="26" class="combo"/>
-<text x="672" y="147" class="combo tap"><tspan style="font-size: 60%">&amp;kana_mode</tspan></text>
+<text x="672" y="147" class="combo tap">
+<tspan x="672" dy="-0.6em">Alt+</tspan><tspan x="672" dy="1.2em">Sft+8</tspan>
+</text>
 <text x="672" y="158" class="combo hold">Gui+/</text>
 </g>
 <g class="combo combopos-10">
@@ -3040,7 +3048,9 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-9">
 <rect rx="6" ry="6" x="658" y="134" width="28" height="26" class="combo"/>
-<text x="672" y="147" class="combo tap"><tspan style="font-size: 60%">&amp;kana_mode</tspan></text>
+<text x="672" y="147" class="combo tap">
+<tspan x="672" dy="-0.6em" style="font-size: 75%">LANGUAGE</tspan><tspan x="672" dy="1.2em" style="font-size: 75%">1</tspan>
+</text>
 <text x="672" y="158" class="combo hold"><tspan style="font-size: 67%">Gui+Sft+R</tspan></text>
 </g>
 <g class="combo combopos-10">

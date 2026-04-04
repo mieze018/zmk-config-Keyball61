@@ -650,13 +650,13 @@ combos:
   k: {t: 'Ctl+$$mdi:keyboard-space$$', h: '&to_eisu_then_confirm_chrome'}
   l: [CHROME]
 - p: [31, 32]
-  k: {t: '&kana_mode', h: Gui+Sft+R}
+  k: {t: LANGUAGE 1, h: Gui+Sft+R}
   l: [MAC, SCROLL_NUM Mac, FUN]
 - p: [31, 32]
-  k: {t: '&kana_mode', h: Gui+/}
+  k: {t: Alt+Sft+8, h: Gui+/}
   l: [WIN, SCROLL_NUM Win]
 - p: [31, 32]
-  k: {t: '&kana_mode', h: 'Ctl+$$mdi:keyboard-space$$'}
+  k: {t: INT4, h: 'Ctl+$$mdi:keyboard-space$$'}
   l: [CHROME]
 - p: [28, 27]
   k: {t: MAC, h: toggle}
