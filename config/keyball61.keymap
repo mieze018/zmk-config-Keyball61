@@ -108,21 +108,21 @@
         };
 
         kana_mac {
-            bindings = <&kana RG(RS(R)) 0>;
+            bindings = <&mc RG(RS(R)) LANGUAGE_1>;
             key-positions = <31 32>;
             require-prior-idle-ms = <125>;
             layers = <0 4 6>;
         };
 
         kana_win {
-            bindings = <&kana RG(SLASH) 0>;
+            bindings = <&mc RG(SLASH) LA(LS(NUMBER_8))>;
             key-positions = <31 32>;
             require-prior-idle-ms = <125>;
             layers = <1 5>;
         };
 
         kana_chrome {
-            bindings = <&kana LC(SPACE) 0>;
+            bindings = <&mc LC(SPACE) INT4>;
             key-positions = <31 32>;
             require-prior-idle-ms = <125>;
             layers = <2>;
@@ -251,16 +251,6 @@
             require-prior-idle-ms = <125>;
         };
 
-        kana: kana {
-            compatible = "zmk,behavior-hold-tap";
-            label = "KANA";
-            bindings = <&kp>, <&kana_mode>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-        };
-
         hml_retro: hml_retro {
             compatible = "zmk,behavior-hold-tap";
             label = "HML_RETRO";
@@ -357,13 +347,6 @@
             label = "TO_ALPHABET_THEN_ENTER";
         };
 
-        kana_mode: to_kana {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp INTERNATIONAL_4 &kp LANGUAGE_1>;
-            label = "TO_KANA";
-        };
-
         to_eisu_then_confirm_chrome: to_eisu_then_confirm_chrome {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -372,7 +355,7 @@
                 <&macro_wait_time 1>,
                 <&kp LANGUAGE_2>,
                 <&macro_wait_time 1>,
-                <&kana INTERNATIONAL_4 0>,
+                <&kp INTERNATIONAL_4>,
                 <&macro_wait_time 1>,
                 <&kp LC(RIGHT)>;
 
@@ -403,17 +386,6 @@
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&kp LALT &mo 5>;
-        };
-
-        kana_mode_win: kana_mode_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LS(LA(N8))>,
-                <&macro_wait_time 1>,
-                <&kp INTERNATIONAL_4 &kp LANGUAGE_1>;
-
-            label = "KANA_MODE_WIN";
         };
     };
 
