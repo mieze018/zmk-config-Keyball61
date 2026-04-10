@@ -75,7 +75,7 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <38 39>;
+            key-positions = <38 40>;
             require-prior-idle-ms = <125>;
         };
 
@@ -148,14 +148,14 @@
 
         switcher_mac {
             bindings = <&ctrl_tab>;
-            key-positions = <38 40>;
+            key-positions = <45 47>;
             require-prior-idle-ms = <150>;
             layers = <0 4 6>;
         };
 
         switcher_win {
             bindings = <&alt_tab>;
-            key-positions = <40 38>;
+            key-positions = <45 47>;
             require-prior-idle-ms = <150>;
             layers = <1 2 5>;
         };
