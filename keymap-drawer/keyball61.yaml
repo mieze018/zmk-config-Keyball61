@@ -192,7 +192,7 @@ layers:
   - '&switch_win'
   - '&switch_ipad'
   - '&switch_chromebook'
-  - '&switch_mac2'
+  - '&switch_win2'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -254,7 +254,7 @@ layers:
   - '&switch_win'
   - '&switch_ipad'
   - '&switch_chromebook'
-  - '&switch_mac2'
+  - '&switch_win2'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -316,7 +316,7 @@ layers:
   - '&switch_win'
   - '&switch_ipad'
   - '&switch_chromebook'
-  - '&switch_mac2'
+  - '&switch_win2'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
