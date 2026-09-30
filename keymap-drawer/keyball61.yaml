@@ -23,7 +23,7 @@ layers:
   - W
   - R
   - Y
-  - {t: +, h: '='}
+  - {t: '=', h: +, s: +}
   - {t: PRINTSCREEN, h: Sft+Ctl+4}
   - {t: '$$mdi:keyboard-tab$$', h: SCROLL_NUM Mac}
   - {t: E, h: SCROLL_NUM Mac}
