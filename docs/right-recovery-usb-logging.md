@@ -104,9 +104,25 @@ script -q ~/Desktop/keyball-right-usb.log screen /dev/cu.usbmodemXXXXX 115200
 
 左側ログを開いた状態で右側を通電し、スキャン・接続・サービス探索・購読・キー通知・切断理由を保存します。MacへのBLE HID接続ログと、右側Peripheralへの接続ログを区別します。
 
+左側の診断UF2を書き込んだ後も、文字入力とトラックボールが動くことを実機で確認済みです。
+
+左側をUSB接続したまま、Macのターミナルで次を実行します。
+
+```sh
+bash /Users/nakataayu/Documents/GitHub/zmk-config-Keyball61/scripts/capture-left-usb.sh
+```
+
+「ログ取得を開始しました」と表示されてから右側をUSBで通電します。すでに右側が通電中なら右側を1回だけリセットします。30秒待ち、Mac本体のControl+Cで終了します。保存先はDesktopの `keyball-left-usb.log` です。
+
+この診断ビルドの左側はUSB data interface 1がStudio、4がログです。スクリプトはMacのUSB情報から製品名 `Keyball61` とinterface 4を照合し、実行時のポートを選びます。指定の構成に限定する代わりに、ユーザーが2ポートを試す手数を減らします。ログ用ポートを1つに特定できない場合はファイルを上書きせず終了します。
+
+USBポート名は抜き差しや接続するUSBハブ・ポートによって変わるため、以前の `/dev/cu.usbmodem...` を固定して使わないでください。固定したポートが存在しなかった実行では `keyball-left-usb.log` は0バイトで、ログ取得は失敗していました。
+
 ## ログの読み方
 
 実機から受け取った結果: 右側USBログ取得は成功しました。ディスプレイ初期化失敗・I2Cエラーが記録され、右側の全キーを押してもログは変化しませんでした。GPIO初期化のログは未確認のため、断線やGPIO故障はまだ確定していません。
+
+その後 `keyball-right-startup.log` を取得し、入力5本・出力7本すべてのGPIO設定APIが成功したことを確認しました。Bluetoothコントローラーの初期化とIdentityの設定も記録されています。OLED初期化失敗は引き続き記録されています。GPIO設定成功はPCB・コンスルーの導通を保証せず、BLE接続成立もこのログでは確認できません。次は左側の診断UF2でCentral側の接続・探索・購読ログを取得します。
 
 ### 起動直後のログを取得する
 
