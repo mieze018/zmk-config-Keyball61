@@ -27,6 +27,40 @@
 
 ## 操作手順
 
+### 確認済みのビルド結果（2026-10-12）
+
+[Actions run 38204254401](https://github.com/mieze018/zmk-config-Keyball61/actions/runs/38204254401) は左右・settings_reset・成果物統合の全ジョブが成功しました。対象ソースは診断コミット `aea145c3539f4d2a3d92fb48101a89a4bd28d97d` です。
+
+| 項目 | 左側 | 右側 |
+|---|---|---|
+| USBログ / CDC ACM / UART console | 有効 | 有効 |
+| ZMKログレベル | DEBUG（4） | DEBUG（4） |
+| 起動ログ出力遅延 / バッファ | 8000ms / 8192バイト | 8000ms / 8192バイト |
+| splitの役割 | Central | Peripheral |
+| Studio / PMW3610 / pointing / USB HID / BLE | 有効 | USBログとBLEが有効。USB HIDは無効 |
+| Devicetreeのconsole | ログ用CDCノード | ログ用CDCノード |
+| Studio用CDC | ログ用とは別ノード | なし |
+| UF2ファイルサイズ | 893952バイト | 627200バイト |
+
+右側のDevicetreeはrowが4・5・6・7・8、colが21・20・19・18・15・14・16で、元の設定と一致しました。両UF2の全ブロックについてマジック値・連番・総ブロック数・アドレスの連続性・nRF52840 family IDを検証しました。両UF2にGPIO初期化・キーイベント・切断・認証エラーの文字列、左側UF2にsplitサービス探索・購読の文字列を確認しました。
+
+SHA-256:
+
+- 右側: `486ee7008bbf46386d85dabcc68e132825368b7e2bf0cfe104d0c572a1a6b3a7`
+- 左側: `b423f77acdaacfe4b6222d634728a4788a07a13c1f532599d92dd652e3b8ad70`
+
+依存取得ログで確認したリビジョン:
+
+- ZMK: `edf5c08`（v0.3）
+- Zephyr: `dacab487`（v3.5.0+zmk-fixes）
+- zmk-pmw3610-driver: `9c44206`
+- zmk-pointing-acceleration: `0da8f97`
+- zmk-scroll-snap: `62a669c`
+
+右側のKconfig警告は、共通設定のUSB HIDとCentral専用バッテリー取得・代理通知がPeripheralでは無効になるという内容でした。USBログ用CDCは有効です。ほかに上流コードの非推奨設定とコンパイラ警告が記録されていますが、ビルドは成功しています。
+
+未確認なのは実機のUSBシリアル認識・BLE接続・キー入力・左側の各機能です。ビルドとUF2の検証だけでは断線・無線故障・動作正常を確定できません。
+
 ### 1. ビルドの確認
 
 診断ブランチのBuild ZMK Firmwareが成功したことを確認します。ActionsログのKconfigとDevicetreeで次を確認します。
