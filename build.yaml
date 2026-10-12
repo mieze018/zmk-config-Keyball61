@@ -1,8 +1,11 @@
 include:
   - board: nice_nano
     shield: keyball61_left
-    snippet: studio-rpc-usb-uart
+    snippet: studio-rpc-usb-uart zmk-usb-logging
+    artifact-name: keyball61_left-usb-diagnostic
   - board: nice_nano
     shield: keyball61_right
+    snippet: zmk-usb-logging
+    artifact-name: keyball61_right-usb-diagnostic
   - board: nice_nano
     shield: settings_reset
