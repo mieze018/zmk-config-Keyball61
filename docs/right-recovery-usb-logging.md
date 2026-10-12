@@ -124,6 +124,20 @@ USBポート名は抜き差しや接続するUSBハブ・ポートによって�
 
 その後 `keyball-right-startup.log` を取得し、入力5本・出力7本すべてのGPIO設定APIが成功したことを確認しました。Bluetoothコントローラーの初期化とIdentityの設定も記録されています。OLED初期化失敗は引き続き記録されています。GPIO設定成功はPCB・コンスルーの導通を保証せず、BLE接続成立もこのログでは確認できません。次は左側の診断UF2でCentral側の接続・探索・購読ログを取得します。
 
+左側ログの取得後、右側のIdentityと一致するアドレスについて次を確認しました。
+
+- 起動後03:37.339: BLEリンクが成立しました。
+- 03:37.350: splitサービスを発見しました。
+- 03:37.356および03:37.730: `pairing failed (peer reason 0x3)`。右側が認証要件エラーを返しました。
+- `Security failed ... level 1 err 4`: 暗号化されていないレベル1のまま、要求されたセキュリティレベルへ到達できませんでした。
+- キー状態の購読を開始した後に `[UNSUBSCRIBED]` が記録され、キー状態通知は記録されていません。
+
+エラーの意味は、今回のZephyrリビジョン [conn.h](https://github.com/zmkfirmware/zephyr/blob/dacab4875df7/include/zephyr/bluetooth/conn.h) の `BT_SECURITY_ERR_AUTH_REQUIREMENT` と、[smp.h](https://github.com/zmkfirmware/zephyr/blob/dacab4875df7/subsys/bluetooth/host/smp.h) の `BT_SMP_ERR_AUTH_REQUIREMENTS=0x03` で照合しました。[smp.c](https://github.com/zmkfirmware/zephyr/blob/dacab4875df7/subsys/bluetooth/host/smp.c) には、保存済み鍵の更新拒否・認証方式やSecure Connectionsの要件不一致など複数の失敗経路があります。このログだけで保存済み鍵の不一致を断定しません。
+
+別アドレスの `SKIPPING FOR ROLE 1` を伴う接続・切断はMac側のHID経路と区別します。`Failed to release peripheral slot (-22)` だけを右側の失敗として扱いません。
+
+次の実機操作は、左側を通電したまま右側の起動ログを取得することです。前回の右側ログには含まれなかった、実際の左右ペアリング時に右側が拒否した側のログを確認します。右側のログ取得が始まった後はキー押下を追加し、認証失敗と右側キースキャン無反応を別々に調査します。両側の設定初期化は繰り返しません。
+
 ### 起動直後のログを取得する
 
 目的は、前回のログに含まれていないGPIO初期化の成功・失敗を確認することです。`scripts/` の独立スクリプトと手順書へのコマンド埋め込みを比較し、コピーするコマンドが短くなる独立スクリプトを採用しました。その代わり管理ファイルが1つ増えます。
