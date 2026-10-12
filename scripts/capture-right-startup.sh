@@ -29,16 +29,54 @@ done
 printf '接続先: %s\n保存先: %s\n' "$serial" "$output"
 printf 'ログ取得中。終了はMac本体のControl+Cです。\n'
 
-# ポートを開いたまま設定し、USB CDCの接続状態を維持する。
-exec 3<> "$serial"
-saved_settings=$(stty -f "$serial" -g)
-finish() {
-    stty -f "$serial" "$saved_settings" 2>/dev/null || true
-    exec 3>&-
-    printf '\nログ取得を終了しました。保存先: %s\n' "$output"
-}
-trap finish EXIT
-trap 'exit 130' INT
-trap 'exit 143' TERM
-stty -f "$serial" raw -echo 115200
-cat <&3 | tee "$output"
+# ログ送信先が接続されたことをUSB CDCへDTRで明示する。
+/usr/bin/python3 - "$serial" "$output" <<'PY'
+import fcntl
+import os
+import select
+import struct
+import sys
+import termios
+
+serial, output = sys.argv[1:]
+fd = os.open(serial, os.O_RDWR | os.O_NOCTTY | os.O_NONBLOCK)
+previous = termios.tcgetattr(fd)
+received = 0
+try:
+    config = termios.tcgetattr(fd)
+    config[0] = config[1] = config[3] = 0
+    config[2] = (config[2] & ~(termios.CSIZE | termios.PARENB | termios.CSTOPB)) | termios.CS8 | termios.CLOCAL | termios.CREAD
+    config[4] = config[5] = termios.B115200
+    config[6][termios.VMIN] = config[6][termios.VTIME] = 0
+    termios.tcsetattr(fd, termios.TCSANOW, config)
+    fcntl.ioctl(fd, termios.TIOCMBIS, struct.pack('I', termios.TIOCM_DTR))
+    with open(output, 'wb') as log:
+        while True:
+            ready, _, _ = select.select([fd], [], [], 1)
+            if not ready:
+                continue
+            try:
+                data = os.read(fd, 65536)
+            except BlockingIOError:
+                continue
+            if not data:
+                continue
+            log.write(data)
+            log.flush()
+            received += len(data)
+            sys.stdout.buffer.write(data)
+            sys.stdout.buffer.flush()
+except KeyboardInterrupt:
+    pass
+except OSError as error:
+    print('\nUSBログの読み取りが終了しました: ' + str(error), file=sys.stderr)
+finally:
+    try:
+        termios.tcsetattr(fd, termios.TCSANOW, previous)
+    except OSError:
+        pass
+    os.close(fd)
+    print('\n保存先: {} / 取得バイト数: {}'.format(output, received))
+    if received == 0:
+        print('ログ取得は未成功です。画面の接続先とエラーを担当AIへ共有してください。')
+PY
